@@ -11,6 +11,13 @@
   --white-semi: #ffffff80;
   --deep-teal: #133d51;
   --brand-red: #b10239;
+  --dark-gray: #262931;
+  --slate-gray: #474e5d;
+  --soft-blue: #e8eef1;
+  --charcoal: #2e2f30;
+  --almost-white: #f9fafa;
+  --dark-navy: #111c1c;
+  --light-gray: #c0c4cd;
 }
 
 @theme inline {
@@ -32,6 +39,13 @@
     --off-white: #ecf0f0;
     --white-semi: #ffffff80;
     --brand-red: #b10239;
+    --dark-gray: #262931;
+    --slate-gray: #474e5d;
+    --soft-blue: #e8eef1;
+    --charcoal: #2e2f30;
+    --almost-white: #f9fafa;
+    --dark-navy: #111c1c;
+    --light-gray: #c0c4cd;
   }
 }
 
