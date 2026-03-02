@@ -12,7 +12,7 @@ const CoreDifferentiatorSection = () => {
           </h2>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="mt-20 grid gap-8 grid-cols-2">
           <div className="bg-(--extra-light) px-10 pt-10 pb-60">
             <p className="font-medium text-(--charcoal)">
               Organizational model

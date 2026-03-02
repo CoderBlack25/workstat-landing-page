@@ -22,6 +22,7 @@
   --rose-light: #f7e6eb;
   --medium-blue: #42748b;
   --primary-blue-alt: #1b5773;
+  --cool-light: #f0f1f3;
 }
 
 @theme inline {
@@ -52,6 +53,7 @@
     --light-gray: #c0c4cd;
     --medium-blue: #42748b;
     --primary-blue-alt: #1b5773;
+    --cool-light: #f0f1f3;
   }
 }
 

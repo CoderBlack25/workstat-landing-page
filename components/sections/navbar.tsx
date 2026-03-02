@@ -1,5 +1,6 @@
 "use client";
 
+// import { ChevronDown } from "lucide-react";
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -48,7 +49,7 @@ const Navbar = () => {
 
           <Link
             href="#"
-            className="bg-white text-(--midnight) px-6 py-2 rounded text-sm font-medium"
+            className="bg-white text-(--midnight) px-6 py-2 text-sm font-medium"
           >
             Contact Us
           </Link>
