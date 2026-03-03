@@ -4,13 +4,13 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import ProductDropdown from "./productDropdown";
+import ProductDropdown from "../workstat/productDropdown";
 
-const Navbar = () => {
+const WorkstatNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-(--midnight) text-white relative">
+    <nav className="sticky top-0 left-0 w-full z-50 bg-(--midnight) text-white">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between font-inter">
         <div className="hidden md:flex items-center gap-10">
           <Link href="/">
@@ -59,4 +59,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default WorkstatNavbar;

@@ -23,6 +23,8 @@
   --medium-blue: #42748b;
   --primary-blue-alt: #1b5773;
   --cool-light: #f0f1f3;
+  --cool-gray: #667085;
+  --lighter-gray: #f6f7f8;
 }
 
 @theme inline {
@@ -54,6 +56,8 @@
     --medium-blue: #42748b;
     --primary-blue-alt: #1b5773;
     --cool-light: #f0f1f3;
+    --cool-gray: #667085;
+    --lighter-gray: #f6f7f8;
   }
 }
 

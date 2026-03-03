@@ -140,6 +140,8 @@ const footerColumns: FooterColumn[] = [
   },
 ];
 
+const date = new Date();
+
 const footer = () => {
   return (
     <footer className="bg-(--midnight) text-(--light-overlay)">
@@ -180,7 +182,7 @@ const footer = () => {
         </div>
 
         <div className="border-t border-gray-600/30 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-(--white-semi)">
-          <p>© 2026 Timestat. All Rights Reserved.</p>
+          <p>© {date.getFullYear()} Timestat. All Rights Reserved.</p>
 
           <div className="flex items-center gap-6">
             <Link href="#" className="hover:text-white transition">

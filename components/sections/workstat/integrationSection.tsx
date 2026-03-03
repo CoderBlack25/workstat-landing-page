@@ -51,9 +51,9 @@ const integrationSection = () => {
             Designed for organizations of all sizes
           </h1>
           <div className="flex gap-10">
-            <div className="bg-(--almost-white) p-50"></div>
-            <div className="bg-(--almost-white) p-50"></div>
-            <div className="bg-(--almost-white) p-50"></div>
+            <div className="bg-(--almost-white) p-50" />
+            <div className="bg-(--almost-white) p-50" />
+            <div className="bg-(--almost-white) p-50" />
           </div>
         </div>
       </div>

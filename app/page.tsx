@@ -1,16 +1,16 @@
-import Navbar from "@/components/sections/navbar";
-import IntegrationSection from "@/components/sections/integrationSection";
-import CoreDifferentiatorSection from "@/components/sections/coreDifferentiatorSection";
-import ExperienceSection from "@/components/sections/experienceSection";
-import ModuleSelection from "@/components/sections/moduleSection";
-import PlatformOverview from "@/components/sections/platfromOverview";
-import SolutionSection from "@/components/sections/solutionSection";
-import Hero from "@/components/sections/hero";
+import WorkstatNavbar from "@/components/sections/navbars/workstatNavbar";
+import IntegrationSection from "@/components/sections/workstat/integrationSection";
+import CoreDifferentiatorSection from "@/components/sections/workstat/coreDifferentiatorSection";
+import ExperienceSection from "@/components/sections/workstat/experienceSection";
+import ModuleSelection from "@/components/sections/workstat/moduleSection";
+import PlatformOverview from "@/components/sections/workstat/platfromOverview";
+import SolutionSection from "@/components/sections/workstat/solutionSection";
+import Hero from "@/components/sections/workstat/hero";
 
 const page = () => {
   return (
     <div>
-      <Navbar />
+      <WorkstatNavbar />
       <Hero />
       <SolutionSection />
       <PlatformOverview />

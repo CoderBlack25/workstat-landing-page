@@ -13,7 +13,6 @@ type Feature = {
   title: string;
   productPost?: string;
   description: string;
-  href: string;
 };
 
 const products: Product[] = [
@@ -21,63 +20,57 @@ const products: Product[] = [
     image: "/icons/workstat-logo2.svg",
     name: "Workstat",
     description: "Employee data management and payment platform",
-    href: "#",
+    href: "/",
   },
   {
     image: "/icons/paystat-logo.svg",
     name: "Paystat",
     description: "Employee payment tool to ensure timely salary disbursement",
-    href: "#",
+    href: "/paystat",
   },
   {
     image: "/icons/timestat-logo2.svg",
     name: "Timestat",
     description: "Accurate & Efficient Employee Attendance tracking",
-    href: "#",
+    href: "/timestat",
   },
 ];
 
 const features: Feature[] = [
   {
-    productPre: "Workstat",
     title: "Employee Self-Service",
+    productPost: "Workstat",
     description:
       "Empower your workforce with easy access to their data, boosting engagement and productivity.",
-    href: "#",
   },
   {
     title: "Human Resource Management",
     productPost: "Workstat",
     description: "Content here",
-    href: "#",
   },
   {
     title: "Payroll Processing",
     productPost: "Paystat",
     description:
       "Empower your workforce with easy access to their data, boosting engagement and productivity.",
-    href: "#",
   },
   {
     title: "Learning- Training & Orientation",
     productPost: "Workstat",
     description:
       "Empower your workforce with easy access to their data, boosting engagement and productivity.",
-    href: "#",
   },
   {
     title: "Time and Attendance Management",
     productPost: "Timestat",
     description:
       "Empower your workforce with easy access to their data, boosting engagement and productivity.",
-    href: "#",
   },
   {
     title: "Leave and Holiday Management",
     productPost: "Timestat",
     description:
       "Empower your workforce with easy access to their data, boosting engagement and productivity.",
-    href: "#",
   },
 ];
 
@@ -118,9 +111,9 @@ const productDropdown = ({ isOpen }: ProductDropdownProps) => {
             <Link
               key={product.name}
               href={product.href}
-              className="group flex gap-5 items-start"
+              className="group flex gap-5 items-stretch h-20"
             >
-              <div className="bg-[#f0f3f5] w-35 h-20 shrink-0 flex items-center justify-center transition-colors group-hover:bg-[#e4ebf1]">
+              <div className="bg-(--soft-blue) w-35 shrink-0 flex items-center justify-center transition-colors group-hover:bg-[#e4ebf1]">
                 <Image
                   src={product.image}
                   alt={`${product.name} logo`}
@@ -130,11 +123,12 @@ const productDropdown = ({ isOpen }: ProductDropdownProps) => {
                 />
               </div>
 
-              <div className="pt-1">
-                <h4 className="font-medium text-lg text-[#1a2b3c] group-hover:text-teal-700 transition-colors">
+              <div className="flex flex-col justify-between flex-1">
+                <h4 className="font-medium text-(--midnight) group-hover:text-teal-700 transition-colors">
                   {product.name}
                 </h4>
-                <p className="text-[#64748b] mt-1.5 text-[15px] leading-relaxed pr-4">
+
+                <p className="text-(--slate-gray) text-sm pr-4">
                   {product.description}
                 </p>
               </div>
@@ -142,36 +136,29 @@ const productDropdown = ({ isOpen }: ProductDropdownProps) => {
           ))}
         </div>
 
-        <h3 className="text-[22px] font-medium text-gray-800 mb-6 mt-4">
+        <h3 className="font-medium text-(--dark-gray) mb-6 mt-4">
           Feature Highlight
         </h3>
 
         <div className="grid grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <Link
+            <div
               key={index}
-              href={feature.href}
-              className="bg-[#f8f9fa] p-6 hover:bg-[#f1f3f5] transition-colors group"
+              className="bg-(--lighter-gray) p-3 hover:bg-[#f1f3f5] transition-colors group"
             >
               <h4 className="text-[17px] mb-2 font-sans tracking-tight">
-                {feature.productPre && (
-                  <span className="text-[#6c757d] font-normal mr-1.5">
-                    {feature.productPre}
-                  </span>
-                )}
-                <span className="text-[#212529] font-semibold">
+                <span className="text-(--dark-gray) font-semibold">
                   {feature.title}
                 </span>
-                {feature.productPost && (
-                  <span className="text-[#6c757d] font-normal ml-1.5">
-                    {feature.productPost}
-                  </span>
-                )}
+
+                <span className="text-(--slate-gray) ml-1.5">
+                  {feature.productPost}
+                </span>
               </h4>
-              <p className="text-[#6c757d] text-[15px] leading-relaxed">
+              <p className="text-(--cool-gray) text-sm">
                 {feature.description}
               </p>
-            </Link>
+            </div>
           ))}
         </div>
       </div>
