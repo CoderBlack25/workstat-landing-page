@@ -5,10 +5,14 @@ import HowItWorks from "@/components/sections/timestat/howItworks";
 import Adaptability from "@/components/sections/timestat/adaptability";
 import QuickSetup from "@/components/sections/timestat/quickSetup";
 import TryTimestat from "@/components/sections/timestat/tryTimestat";
+import TimestatNavbar from "@/components/sections/navbars/timestatNavbar";
+import Hero from "@/components/sections/timestat/hero";
 
 const page = () => {
   return (
     <div>
+      <TimestatNavbar />
+      <Hero />
       <TryTimestat />
       <QuickSetup />
       <Adaptability />

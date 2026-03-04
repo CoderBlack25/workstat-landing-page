@@ -27,6 +27,7 @@
   --cool-gray: #667085;
   --lighter-gray: #f6f7f8;
   --tone-gray: #d8dade;
+  --soft-cloud: #f5f8f9;
 }
 
 @theme inline {
@@ -62,6 +63,7 @@
     --cool-gray: #667085;
     --lighter-gray: #f6f7f8;
     --tone-gray: #d8dade;
+    --soft-cloud: #f5f8f9;
   }
 }
 

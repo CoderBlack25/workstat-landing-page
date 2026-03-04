@@ -1,5 +1,11 @@
+import PaystatNavbar from "@/components/sections/navbars/paystatNavbar";
+
 const page = () => {
-  return <div>Paystat page</div>;
+  return (
+    <div>
+      <PaystatNavbar />
+    </div>
+  );
 };
 
 export default page;
