@@ -7,17 +7,17 @@ const adaptability = () => {
   return (
     <section className="w-full bg-white py-20">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-[36px] font-normal text-center text-[#2b2b2b] mb-16">
+        <h2 className="text-[44px] text-(--dark-gray) mb-16">
           Timestat works and adapts to organizations at all levels
         </h2>
 
         <div className="grid grid-cols-2 gap-6 mb-6">
-          <div className="flex flex-col gap-6 bg-[#e9e9e9] px-10 pt-10">
-            <p className="text-[14px] text-[#5c5c5c]">
+          <div className="flex flex-col gap-6 bg-(--extra-light) px-10 pt-10">
+            <p className="font-medium text-(--charcoal)">
               SMEs (Small Medium Enterprises)
             </p>
 
-            <h3 className="text-[24px] text-[#2b2b2b] leading-[1.4]">
+            <h3 className="text-[32px] text-(--dark-gray)">
               Timestat offers scalable attendance solutions with enterprise
               features for small and medium-sized businesses.
             </h3>
@@ -27,10 +27,10 @@ const adaptability = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-6 bg-[#e6d7db] px-10 pt-10">
-            <p className="text-[14px] text-[#5c5c5c]">Large Enterprises</p>
+          <div className="flex flex-col gap-6 bg-(--extra-light) px-10 pt-10">
+            <p className="font-medium text-(--charcoal)">Large Enterprises</p>
 
-            <h3 className="text-[24px] text-[#2b2b2b] leading-[1.4]">
+            <h3 className="text-[32px] text-(--dark-gray)">
               Timestat streamlines business management with bulk employee
               handling and advanced scheduling.
             </h3>
@@ -41,10 +41,12 @@ const adaptability = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-6 bg-[#e9e9e9] px-10 pt-10">
-          <p className="text-[14px] text-[#5c5c5c]">Government Organisations</p>
+        <div className="flex flex-col gap-6 bg-(--extra-light) px-10 pt-10">
+          <p className="font-medium text-(--charcoal)">
+            Government Organisations
+          </p>
 
-          <h3 className="text-[24px] text-[#2b2b2b] leading-[1.4]">
+          <h3 className="text-[32px] text-(--dark-gray)">
             Government organizations need secure data handling and thorough{" "}
             <br />
             documentation. Timestat offers on-premise deployment, access <br />
