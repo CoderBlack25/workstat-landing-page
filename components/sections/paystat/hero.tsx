@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const hero = () => {
   return (
-    <section className="bg-(--soft-cloud)">
-      <div className="max-w-7xl mx-auto grid grid-cols-2 pb-30 pt-20">
+    <section className="bg-(--soft-cloud) py-30">
+      <div className="max-w-7xl mx-auto grid grid-cols-2">
         <div className="flex flex-col gap-6">
           <h1 className="text-[52px] leading-tight text-(--midnight)">
             Run payroll with accuracy and complete control
