@@ -4,10 +4,12 @@ import Deployment from "@/components/sections/timestat/deployment";
 import HowItWorks from "@/components/sections/timestat/howItworks";
 import Adaptability from "@/components/sections/timestat/adaptability";
 import QuickSetup from "@/components/sections/timestat/quickSetup";
+import TryTimestat from "@/components/sections/timestat/tryTimestat";
 
 const page = () => {
   return (
     <div>
+      <TryTimestat />
       <QuickSetup />
       <Adaptability />
       <HowItWorks />
