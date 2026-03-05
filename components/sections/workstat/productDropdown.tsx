@@ -1,8 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
+import workstat from "@/public/icons/workstat-logo2.svg";
+import paystat from "@/public/icons/paystat-logo.svg";
+import timestat from "@/public/icons/timestat-logo2.svg";
+import { StaticImageData } from "next/image";
 
 type Product = {
-  image: string;
+  image: StaticImageData;
   name: string;
   description: string;
   href: string;
@@ -17,19 +21,19 @@ type Feature = {
 
 const products: Product[] = [
   {
-    image: "/icons/workstat-logo2.svg",
+    image: workstat,
     name: "Workstat",
     description: "Employee data management and payment platform",
     href: "/",
   },
   {
-    image: "/icons/paystat-logo.svg",
+    image: paystat,
     name: "Paystat",
     description: "Employee payment tool to ensure timely salary disbursement",
     href: "/paystat",
   },
   {
-    image: "/icons/timestat-logo2.svg",
+    image: timestat,
     name: "Timestat",
     description: "Accurate & Efficient Employee Attendance tracking",
     href: "/timestat",
@@ -114,13 +118,7 @@ const productDropdown = ({ isOpen }: ProductDropdownProps) => {
               className="group flex gap-5 items-stretch h-20"
             >
               <div className="bg-(--soft-blue) w-35 shrink-0 flex items-center justify-center transition-colors group-hover:bg-[#e4ebf1]">
-                <Image
-                  src={product.image}
-                  alt={`${product.name} logo`}
-                  width={90}
-                  height={40}
-                  className="object-contain"
-                />
+                <Image src={product.image} alt={`${product.name} logo`} />
               </div>
 
               <div className="flex flex-col justify-between flex-1">
