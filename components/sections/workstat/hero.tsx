@@ -10,7 +10,7 @@ const hero = () => {
           <h1 className="text-[52px] leading-tight">
             Manage your entire workforce from one unified platform
           </h1>
-          <p className="font-medium">
+          <p className="font-medium text-(--light-white)">
             Workstat brings together employee management, attendance tracking,
             payroll processing, recruitment, and performance tools into one
             connected system—so your team can operate efficiently from hire to
@@ -31,7 +31,7 @@ const hero = () => {
               Get Started
             </Link>
           </div>
-          <p className="mt-6 font-medium text-(--light-overlay)">
+          <p className="mt-6 font-medium text-(--less-white)">
             Built for organizations that want clarity, control, and scale in
             workforce management.
           </p>
