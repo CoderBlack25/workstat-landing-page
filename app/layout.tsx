@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layouts/header";
 import Footer from "@/components/layouts/footer";
 import BookDemo from "@/components/layouts/bookDemo";
+// import Navbar from "@/components/layouts/navbar";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -36,6 +37,7 @@ export default function RootLayout({
         className={`${inter.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
+        {/* <Navbar /> */}
         {children}
         <BookDemo />
         <Footer />

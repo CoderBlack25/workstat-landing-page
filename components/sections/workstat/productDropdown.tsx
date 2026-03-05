@@ -13,10 +13,11 @@ type Product = {
 };
 
 type Feature = {
-  productPre?: string;
+  // productPre?: string;
   title: string;
   productPost?: string;
   description: string;
+  href: string;
 };
 
 const products: Product[] = [
@@ -46,35 +47,41 @@ const features: Feature[] = [
     productPost: "Workstat",
     description:
       "Empower your workforce with easy access to their data, boosting engagement and productivity.",
+    href: "/employee-self-service",
   },
   {
     title: "Human Resource Management",
     productPost: "Workstat",
     description: "Content here",
+    href: "/human-resource-management",
   },
   {
     title: "Payroll Processing",
     productPost: "Paystat",
     description:
       "Empower your workforce with easy access to their data, boosting engagement and productivity.",
+    href: "/payroll-processing",
   },
   {
     title: "Learning- Training & Orientation",
     productPost: "Workstat",
     description:
       "Empower your workforce with easy access to their data, boosting engagement and productivity.",
+    href: "/learning",
   },
   {
     title: "Time and Attendance Management",
     productPost: "Timestat",
     description:
       "Empower your workforce with easy access to their data, boosting engagement and productivity.",
+    href: "/time-management",
   },
   {
     title: "Leave and Holiday Management",
     productPost: "Timestat",
     description:
       "Empower your workforce with easy access to their data, boosting engagement and productivity.",
+    href: "/holiday-management",
   },
 ];
 
@@ -140,8 +147,9 @@ const productDropdown = ({ isOpen }: ProductDropdownProps) => {
 
         <div className="grid grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <div
+            <Link
               key={index}
+              href={feature.href}
               className="bg-(--lighter-gray) p-3 hover:bg-[#f1f3f5] transition-colors group"
             >
               <h4 className="text-[17px] mb-2 font-sans tracking-tight">
@@ -156,7 +164,7 @@ const productDropdown = ({ isOpen }: ProductDropdownProps) => {
               <p className="text-(--cool-gray) text-sm">
                 {feature.description}
               </p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
