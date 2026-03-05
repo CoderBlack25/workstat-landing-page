@@ -1,30 +1,76 @@
-const integrationSection = () => {
+"use client";
+
+import { motion, Variants } from "framer-motion";
+
+const IntegrationSection = () => {
   const items = [
     "Attendance feeds into payroll",
     "Organizational structure drives approvals",
     "Performance and training connect to employee growth",
   ];
 
+  const container: Variants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const fadeUp: Variants = {
+    hidden: {
+      opacity: 0,
+      y: 40,
+    },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
-    <section className="w-full bg-white py-28">
+    <motion.section
+      className="w-full bg-white py-28"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={container}
+    >
       <div className="mx-auto max-w-7xl">
         <div className="mb-40">
-          <p className="text-(--dark-navy) font-medium mb-6">
+          <motion.p
+            variants={fadeUp}
+            className="text-(--dark-navy) font-medium mb-6"
+          >
             Integration of modules
-          </p>
+          </motion.p>
 
-          <h1 className="text-[44px] leading-[1.1] text-(--dark-gray) mb-16">
+          <motion.h1
+            variants={fadeUp}
+            className="text-[44px] leading-[1.1] text-(--dark-gray) mb-16"
+          >
             Everything works better together
-          </h1>
+          </motion.h1>
 
-          <p className="text-(--dark-navy) font-medium mb-8">
+          <motion.p
+            variants={fadeUp}
+            className="text-(--dark-navy) font-medium mb-8"
+          >
             Employee data flows across all modules:
-          </p>
+          </motion.p>
 
-          <div className="space-y-0">
+          <motion.div variants={container} className="space-y-0">
             {items.map((text, index) => (
-              <div
+              <motion.div
                 key={index}
+                variants={fadeUp}
+                style={{ willChange: "transform, opacity" }}
                 className="flex items-center justify-between border-b border-(--light-gray) py-6"
               >
                 <div className="flex items-center gap-4">
@@ -36,51 +82,58 @@ const integrationSection = () => {
                 <span className="text-(--dark-navy) font-medium whitespace-nowrap">
                   Employee data flows across all modules:
                 </span>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
-          <p className="mt-10 text-(--dark-navy)">
+          <motion.p variants={fadeUp} className="mt-10 text-(--dark-navy)">
             No duplication. No inconsistencies.
-          </p>
+          </motion.p>
         </div>
 
-        <div className="flex flex-col gap-5">
-          <p className="text-(--charcoal) font-medium">Who it&apos;s for</p>
-          <h1 className="text-(--dark-gray) text-[44px]">
+        <motion.div variants={container} className="flex flex-col gap-5">
+          <motion.p variants={fadeUp} className="text-(--charcoal) font-medium">
+            Who it&apos;s for
+          </motion.p>
+
+          <motion.h1
+            variants={fadeUp}
+            className="text-(--dark-gray) text-[44px]"
+          >
             Designed for organizations of all sizes
-          </h1>
+          </motion.h1>
 
           <div className="flex gap-10">
-            <div className="bg-(--almost-white) px-10 pt-10 pb-50">
-              <p className="font-medium text-(--dark-navy)">
-                Growing businesses
-              </p>
-              <h1 className="text-[24px] text-(--dark-gray)">
-                Building structure as you scale
-              </h1>
-            </div>
+            {[
+              {
+                title: "Growing businesses",
+                desc: "Building structure as you scale",
+              },
+              {
+                title: "Enterprises",
+                desc: "Managing complex teams at scale",
+              },
+              {
+                title: "Government & institutions",
+                desc: "Requiring compliance and accountability",
+              },
+            ].map((card, index) => (
+              <motion.div
+                key={index}
+                variants={fadeUp}
+                style={{ willChange: "transform, opacity" }}
+                className="bg-(--almost-white) px-10 pt-10 pb-50"
+              >
+                <p className="font-medium text-(--dark-navy)">{card.title}</p>
 
-            <div className="bg-(--almost-white) px-10 pt-10 pb-50">
-              <p className="font-medium text-(--dark-navy)">Enterprises</p>
-              <h1 className="text-[24px] text-(--dark-gray)">
-                Managing complex teams at scale
-              </h1>
-            </div>
-
-            <div className="bg-(--almost-white) px-10 pt-10 pb-50">
-              <p className="font-medium text-(--dark-navy)">
-                Government & institutions
-              </p>
-              <h1 className="text-[24px] text-(--dark-gray)">
-                Requiring compliance and accountability
-              </h1>
-            </div>
+                <h1 className="text-[24px] text-(--dark-gray)">{card.desc}</h1>
+              </motion.div>
+            ))}
           </div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
-export default integrationSection;
+export default IntegrationSection;

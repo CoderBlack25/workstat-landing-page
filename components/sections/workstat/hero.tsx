@@ -1,22 +1,76 @@
+"use client";
+
 import Link from "next/link";
+import { motion, Variants } from "framer-motion";
 
-// import { ArrowRight } from "lucide-react";
+const container: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.18,
+    },
+  },
+};
 
-const hero = () => {
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
+
+const buttons: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
+const Hero = () => {
   return (
-    <section className="bg-(--midnight) text-white py-30">
+    <motion.section
+      className="bg-(--midnight) text-white py-30"
+      variants={container}
+      initial="hidden"
+      animate="show"
+    >
       <div className="max-w-7xl mx-auto grid grid-cols-2">
         <div className="flex flex-col gap-6">
-          <h1 className="text-[52px] leading-tight">
+          <motion.h1
+            variants={fadeUp}
+            style={{ willChange: "transform, opacity" }}
+            className="text-[52px] leading-tight"
+          >
             Manage your entire workforce from one unified platform
-          </h1>
-          <p className="font-medium text-(--light-white)">
+          </motion.h1>
+
+          <motion.p
+            variants={fadeUp}
+            style={{ willChange: "transform, opacity" }}
+            className="font-medium text-(--light-white)"
+          >
             Workstat brings together employee management, attendance tracking,
             payroll processing, recruitment, and performance tools into one
             connected system—so your team can operate efficiently from hire to
             retirement.
-          </p>
-          <div className="flex flex-row items-center gap-4">
+          </motion.p>
+
+          <motion.div
+            variants={buttons}
+            style={{ willChange: "transform, opacity" }}
+            className="flex flex-row items-center gap-4"
+          >
             <Link
               href="#"
               className="flex items-center gap-2 bg-(--brand-red) px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-pink-700"
@@ -30,16 +84,25 @@ const hero = () => {
             >
               Get Started
             </Link>
-          </div>
-          <p className="mt-6 font-medium text-(--less-white)">
+          </motion.div>
+
+          <motion.p
+            variants={fadeUp}
+            style={{ willChange: "transform, opacity" }}
+            className="mt-6 font-medium text-(--less-white)"
+          >
             Built for organizations that want clarity, control, and scale in
             workforce management.
-          </p>
+          </motion.p>
         </div>
-        <div></div>
+
+        <motion.div
+          variants={fadeUp}
+          style={{ willChange: "transform, opacity" }}
+        />
       </div>
-    </section>
+    </motion.section>
   );
 };
 
-export default hero;
+export default Hero;

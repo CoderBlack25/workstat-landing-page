@@ -1,11 +1,71 @@
+"use client";
+
 import Image from "next/image";
 import article from "@/public/images/article.png";
+import { motion, Variants } from "framer-motion";
 
-const platformOverview = () => {
+const container: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.18,
+    },
+  },
+};
+
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      ease: "easeOut",
+    },
+  },
+};
+
+const slideLeft: Variants = {
+  hidden: { opacity: 0, x: -60 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.7,
+      ease: "easeOut",
+    },
+  },
+};
+
+const slideRight: Variants = {
+  hidden: { opacity: 0, x: 60, scale: 0.96 },
+  show: {
+    opacity: 1,
+    x: 0,
+    scale: 1,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
+
+const PlatformOverview = () => {
   return (
-    <section className="w-full bg-white py-24">
+    <motion.section
+      className="w-full bg-white py-24"
+      variants={container}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
+    >
       <div className="max-w-7xl mx-auto">
-        <div className="max-w-180">
+        <motion.div
+          variants={fadeUp}
+          style={{ willChange: "transform, opacity" }}
+          className="max-w-180"
+        >
           <p className="font-medium text-(--charcoal) mb-4">
             Platform Overview
           </p>
@@ -18,10 +78,14 @@ const platformOverview = () => {
             Workstat is designed as a modular system where each function works
             independently but becomes more powerful when combined.
           </p>
-        </div>
+        </motion.div>
 
         <div className="mt-20 grid grid-cols-2 gap-16 items-start">
-          <div className="space-y-8">
+          <motion.div
+            variants={slideLeft}
+            style={{ willChange: "transform, opacity" }}
+            className="space-y-8"
+          >
             <div>
               <h3 className="text-[24px] font-medium text-(--midnight)">
                 Manage employees and organizational structure
@@ -59,15 +123,19 @@ const platformOverview = () => {
                 </h3>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="relative flex justify-center">
+          <motion.div
+            variants={slideRight}
+            style={{ willChange: "transform, opacity" }}
+            className="relative flex justify-center"
+          >
             <Image src={article} alt="" priority />
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
-export default platformOverview;
+export default PlatformOverview;

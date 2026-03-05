@@ -1,10 +1,59 @@
-const experienceSection = () => {
+"use client";
+
+import { motion, Variants } from "framer-motion";
+
+const container: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 50 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      ease: "easeOut",
+    },
+  },
+};
+
+const card: Variants = {
+  hidden: { opacity: 0, y: 60, scale: 0.96 },
+  show: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.7,
+      ease: "easeOut",
+    },
+  },
+};
+
+const ExperienceSection = () => {
   return (
-    <section className="w-full bg-(--deep-teal) py-24">
+    <motion.section
+      className="w-full bg-(--deep-teal) py-24"
+      variants={container}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
+    >
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-rows-2 gap-20">
+        <motion.div className="grid grid-rows-2 gap-20" variants={container}>
           <div className="grid grid-cols-[1.5fr_2fr] gap-6">
-            <div className="flex flex-col gap-6">
+            <motion.div
+              variants={fadeUp}
+              style={{ willChange: "transform, opacity" }}
+              className="flex flex-col gap-6"
+            >
               <p className="text-white font-medium">
                 Built for control and flexibility
               </p>
@@ -20,28 +69,40 @@ const experienceSection = () => {
                 Modify organizational structure with full visibility <br />
                 Maintain system integrity with validation and audit logs
               </h3>
-            </div>
+            </motion.div>
 
-            <div className="bg-(--primary-blue) flex flex-col p-10">
+            <motion.div
+              variants={card}
+              style={{ willChange: "transform, opacity" }}
+              className="bg-(--primary-blue) flex flex-col p-10"
+            >
               <p className="text-white font-medium mb-4">Admin Dashboard</p>
 
               <h2 className="text-white text-4xl leading-tight mb-10">
                 Complete visibility and control over your entire workforce
                 system
               </h2>
-            </div>
+            </motion.div>
           </div>
 
           <div className="grid grid-cols-[2fr_1.5fr] gap-6">
-            <div className="bg-(--primary-blue) flex flex-col p-10">
+            <motion.div
+              variants={card}
+              style={{ willChange: "transform, opacity" }}
+              className="bg-(--primary-blue) flex flex-col p-10"
+            >
               <p className="text-white font-medium mb-4">Employee Portal</p>
 
               <h2 className="text-white text-4xl leading-tight mb-10">
                 Simple, structured, and accessible for every team member
               </h2>
-            </div>
+            </motion.div>
 
-            <div className="flex flex-col gap-6">
+            <motion.div
+              variants={fadeUp}
+              style={{ willChange: "transform, opacity" }}
+              className="flex flex-col gap-6"
+            >
               <p className="text-white font-medium">
                 Simple, structured, and accessible
               </p>
@@ -59,12 +120,12 @@ const experienceSection = () => {
                 Participate in training programs <br />
                 Receive updates via the message center
               </h3>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
-export default experienceSection;
+export default ExperienceSection;

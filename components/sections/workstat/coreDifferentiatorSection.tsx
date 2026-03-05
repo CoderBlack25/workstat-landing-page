@@ -1,8 +1,57 @@
+"use client";
+
+import { motion, Variants } from "framer-motion";
+
+const container: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.18,
+    },
+  },
+};
+
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      ease: "easeOut",
+    },
+  },
+};
+
+const cardAnimation: Variants = {
+  hidden: { opacity: 0, y: 60, scale: 0.96 },
+  show: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.7,
+      ease: "easeOut",
+    },
+  },
+};
+
 const CoreDifferentiatorSection = () => {
   return (
-    <section className="w-full bg-white py-28">
+    <motion.section
+      className="w-full bg-white py-28"
+      variants={container}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
+    >
       <div className="mx-auto max-w-7xl">
-        <div className="text-center">
+        <motion.div
+          variants={fadeUp}
+          style={{ willChange: "transform, opacity" }}
+          className="text-center"
+        >
           <p className="font-medium text-(--charcoal)">Core Differentiator</p>
 
           <h2 className="mt-6 text-[44px] leading-11 text-(--dark-gray)">
@@ -10,10 +59,17 @@ const CoreDifferentiatorSection = () => {
             <br />
             actually work
           </h2>
-        </div>
+        </motion.div>
 
-        <div className="mt-20 grid gap-8 grid-cols-2">
-          <div className="bg-(--extra-light) px-10 pt-10 pb-60">
+        <motion.div
+          variants={container}
+          className="mt-20 grid gap-8 grid-cols-2"
+        >
+          <motion.div
+            variants={cardAnimation}
+            style={{ willChange: "transform, opacity" }}
+            className="bg-(--extra-light) px-10 pt-10 pb-60"
+          >
             <p className="font-medium text-(--charcoal)">
               Organizational model
             </p>
@@ -23,9 +79,13 @@ const CoreDifferentiatorSection = () => {
               <br />
               (Executive → Management → Department)
             </h3>
-          </div>
+          </motion.div>
 
-          <div className="bg-(--rose-light) px-10 pt-10 pb-60">
+          <motion.div
+            variants={cardAnimation}
+            style={{ willChange: "transform, opacity" }}
+            className="bg-(--rose-light) px-10 pt-10 pb-60"
+          >
             <p className="font-medium text-(--charcoal)">
               Configurable workflow
             </p>
@@ -35,17 +95,25 @@ const CoreDifferentiatorSection = () => {
               <br />
               across modules
             </h3>
-          </div>
+          </motion.div>
 
-          <div className="bg-(--rose-light) px-10 pt-10 pb-60">
+          <motion.div
+            variants={cardAnimation}
+            style={{ willChange: "transform, opacity" }}
+            className="bg-(--rose-light) px-10 pt-10 pb-60"
+          >
             <p className="font-medium text-(--charcoal)">Cloud Deployment</p>
 
             <h3 className="mt-6 text-[32px] leading-8 text-(--dark-gray)">
               Centralized employee data powering all features
             </h3>
-          </div>
+          </motion.div>
 
-          <div className="bg-(--extra-light) px-10 pt-10 pb-60">
+          <motion.div
+            variants={cardAnimation}
+            style={{ willChange: "transform, opacity" }}
+            className="bg-(--extra-light) px-10 pt-10 pb-60"
+          >
             <p className="font-medium text-(--charcoal)">
               On-Premise Deployment & Training
             </p>
@@ -53,10 +121,10 @@ const CoreDifferentiatorSection = () => {
             <h3 className="mt-6 text-[32px] leading-8 text-(--dark-gray)">
               Audit trails and system integrity controls
             </h3>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

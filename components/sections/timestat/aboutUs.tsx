@@ -1,16 +1,60 @@
+"use client";
+
+import { motion, Variants } from "framer-motion";
+
+const container: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.18,
+    },
+  },
+};
+
+const fadeUp: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
 const aboutUs = () => {
   return (
-    <section className="bg-white py-24">
+    <motion.section
+      className="bg-white py-24"
+      variants={container}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, margin: "-120px" }}
+      style={{ willChange: "transform, opacity" }}
+    >
       <div className="max-w-7xl mx-auto">
-        <p className="text-(--charcoal) font-medium mb-8">About Us</p>
+        <motion.p
+          variants={fadeUp}
+          className="text-(--charcoal) font-medium mb-8"
+        >
+          About Us
+        </motion.p>
 
-        <h2 className="text-(--dark-gray) text-[44px] max-w-5xl">
+        <motion.h2
+          variants={fadeUp}
+          className="text-(--dark-gray) text-[44px] max-w-5xl leading-tight"
+        >
           Timestat is the time and attendance management module of Workstat — a
           complete workforce management platform designed to help organizations
           manage their people, processes, and performance from one place.
-        </h2>
+        </motion.h2>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
