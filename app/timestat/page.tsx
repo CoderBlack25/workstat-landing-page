@@ -1,7 +1,7 @@
-import AboutUs from "@/components/sections/timestat/aboutUs";
-import Pricing from "@/components/sections/timestat/pricing";
+// import AboutUs from "@/components/sections/timestat/aboutUs";
+// import Pricing from "@/components/sections/workstat/pricing";
 import Deployment from "@/components/sections/timestat/deployment";
-import HowItWorks from "@/components/sections/timestat/howItworks";
+// import HowItWorks from "@/components/sections/workstat/howItworks";
 import Adaptability from "@/components/sections/timestat/adaptability";
 import QuickSetup from "@/components/sections/timestat/quickSetup";
 import TryTimestat from "@/components/sections/timestat/tryTimestat";
@@ -16,10 +16,10 @@ const page = () => {
       <TryTimestat />
       <QuickSetup />
       <Adaptability />
-      <HowItWorks />
+      {/* <HowItWorks /> */}
       <Deployment />
-      <Pricing />
-      <AboutUs />
+      {/* <Pricing /> */}
+      {/* <AboutUs /> */}
     </div>
   );
 };

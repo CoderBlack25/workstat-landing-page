@@ -1,9 +1,10 @@
 import Image from "next/image";
+import article from "@/public/images/article.png";
 
 const platformOverview = () => {
   return (
-    <section className="w-full bg-(--white) py-24">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="w-full bg-white py-24">
+      <div className="max-w-7xl mx-auto">
         <div className="max-w-180">
           <p className="font-medium text-(--charcoal) mb-4">
             Platform Overview
@@ -26,7 +27,10 @@ const platformOverview = () => {
                 Manage employees and organizational structure
               </h3>
 
-              <div className="mt-4 h-0.5 w-82.5 bg-(--brand-red)" />
+              <div className="flex items-center">
+                <div className="mt-4 h-0.5 w-82.5 bg-(--brand-red)" />
+                <div className="mt-4 h-0.5 w-70 bg-(--cool-light)" />
+              </div>
 
               <p className="mt-6 leading-6 text-(--slate-gray) max-w-130">
                 Oversee the management of employees while ensuring a
@@ -37,19 +41,19 @@ const platformOverview = () => {
             </div>
 
             <div className="space-y-6">
-              <div className="pb-4 border-b border-(--cool-light)">
+              <div className="pb-4 border-b-2 border-(--cool-light)">
                 <h3 className="text-[24px] text-(--midnight)">
                   Track attendance and working hours in real time
                 </h3>
               </div>
 
-              <div className="pb-4 border-b border-(--cool-light)">
+              <div className="pb-4 border-b-2 border-(--cool-light)">
                 <h3 className="text-[24px] text-(--midnight)">
                   Process payroll with accuracy and compliance
                 </h3>
               </div>
 
-              <div className="pb-4 border-b border-(--cool-light)">
+              <div className="pb-4 border-b-2 border-(--cool-light)">
                 <h3 className="text-[24px] text-(--midnight)">
                   Recruit, onboard, and develop talent
                 </h3>
@@ -58,14 +62,7 @@ const platformOverview = () => {
           </div>
 
           <div className="relative flex justify-center">
-            <Image
-              src="/images/article.png"
-              alt="article"
-              width={680}
-              height={440}
-              className="object-contain"
-              priority
-            />
+            <Image src={article} alt="" priority />
           </div>
         </div>
       </div>

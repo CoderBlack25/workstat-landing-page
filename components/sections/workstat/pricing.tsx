@@ -1,12 +1,14 @@
 import { Check, Plus } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import basic from "@/public/icons/basic.svg";
+import pro from "@/public/icons/pro.svg";
 
 const pricing = () => {
   return (
-    <section className="py-16 bg-(--white)">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col gap-4 items-center justify-center my-14">
+    <section className="bg-white py-20">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col gap-4 items-center justify-center mb-14 text-center">
           <p className="font-medium text-(--charcoal)">Pricing</p>
           <h1 className="text-[44px] text-(--dark-gray)">
             Choose the right plan that works for you
@@ -24,12 +26,7 @@ const pricing = () => {
 
             <div className="flex gap-4 bg-(--primary-blue) my-12 p-4">
               <div className="bg-(--medium-blue) flex items-center justify-center p-6">
-                <Image
-                  src="/icons/basic.svg"
-                  alt="logo"
-                  width={32}
-                  height={32}
-                />
+                <Image src={basic} alt="" />
               </div>
               <div>
                 <h1 className="text-[32px] text-white">30 Days free</h1>
@@ -90,7 +87,7 @@ const pricing = () => {
 
             <div className="flex gap-4 bg-(--medium-blue) my-12 p-4">
               <div className="bg-(--primary-blue) flex items-center justify-center p-6">
-                <Image src="/icons/pro.svg" alt="logo" width={32} height={32} />
+                <Image src={pro} alt="" />
               </div>
               <div>
                 <h1 className="text-[32px] font-medium">

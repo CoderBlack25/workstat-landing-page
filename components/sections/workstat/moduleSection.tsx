@@ -33,8 +33,8 @@ const modules: Module[] = [
 
 const moduleSelection = () => {
   return (
-    <section className="w-full bg-(--white) py-24">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="w-full bg-white py-24">
+      <div className="mx-auto max-w-7xl">
         <p className="text-center font-medium text-(--charcoal)">
           Module selection
         </p>

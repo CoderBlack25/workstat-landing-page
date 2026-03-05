@@ -3,9 +3,12 @@ import IntegrationSection from "@/components/sections/workstat/integrationSectio
 import CoreDifferentiatorSection from "@/components/sections/workstat/coreDifferentiatorSection";
 import ExperienceSection from "@/components/sections/workstat/experienceSection";
 import ModuleSelection from "@/components/sections/workstat/moduleSection";
-import PlatformOverview from "@/components/sections/workstat/platfromOverview";
+import PlatformOverview from "@/components/sections/workstat/platformOverview";
 import SolutionSection from "@/components/sections/workstat/solutionSection";
 import Hero from "@/components/sections/workstat/hero";
+import HowItworks from "@/components/sections/workstat/howItworks";
+import Pricing from "@/components/sections/workstat/pricing";
+import AboutUs from "@/components/sections/timestat/aboutUs";
 
 const page = () => {
   return (
@@ -15,9 +18,12 @@ const page = () => {
       <SolutionSection />
       <PlatformOverview />
       <ModuleSelection />
+      <HowItworks />
       <CoreDifferentiatorSection />
       <ExperienceSection />
       <IntegrationSection />
+      <Pricing />
+      <AboutUs />
     </div>
   );
 };

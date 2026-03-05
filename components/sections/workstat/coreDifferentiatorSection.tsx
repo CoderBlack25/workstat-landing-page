@@ -1,7 +1,7 @@
 const CoreDifferentiatorSection = () => {
   return (
-    <section className="w-full bg-(--white) py-28">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="w-full bg-white py-28">
+      <div className="mx-auto max-w-7xl">
         <div className="text-center">
           <p className="font-medium text-(--charcoal)">Core Differentiator</p>
 
@@ -41,9 +41,7 @@ const CoreDifferentiatorSection = () => {
             <p className="font-medium text-(--charcoal)">Cloud Deployment</p>
 
             <h3 className="mt-6 text-[32px] leading-8 text-(--dark-gray)">
-              Centralized employee data powering all
-              <br />
-              features
+              Centralized employee data powering all features
             </h3>
           </div>
 

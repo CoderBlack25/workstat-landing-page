@@ -6,8 +6,8 @@ const integrationSection = () => {
   ];
 
   return (
-    <section className="w-full bg-(--white) font-inter">
-      <div className="mx-auto max-w-7xl px-6 py-20">
+    <section className="w-full bg-white py-28">
+      <div className="mx-auto max-w-7xl">
         <div className="mb-40">
           <p className="text-(--dark-navy) font-medium mb-6">
             Integration of modules
@@ -28,7 +28,7 @@ const integrationSection = () => {
                 className="flex items-center justify-between border-b border-(--light-gray) py-6"
               >
                 <div className="flex items-center gap-4">
-                  <span className="w-2 h-2 bg-[#8fa7b3] block" />
+                  <span className="w-2 h-2 bg-[#A2BAC6] block" />
 
                   <span className="text-2xl text-(--dark-gray)">{text}</span>
                 </div>
@@ -50,10 +50,32 @@ const integrationSection = () => {
           <h1 className="text-(--dark-gray) text-[44px]">
             Designed for organizations of all sizes
           </h1>
+
           <div className="flex gap-10">
-            <div className="bg-(--almost-white) p-50" />
-            <div className="bg-(--almost-white) p-50" />
-            <div className="bg-(--almost-white) p-50" />
+            <div className="bg-(--almost-white) px-10 pt-10 pb-50">
+              <p className="font-medium text-(--dark-navy)">
+                Growing businesses
+              </p>
+              <h1 className="text-[24px] text-(--dark-gray)">
+                Building structure as you scale
+              </h1>
+            </div>
+
+            <div className="bg-(--almost-white) px-10 pt-10 pb-50">
+              <p className="font-medium text-(--dark-navy)">Enterprises</p>
+              <h1 className="text-[24px] text-(--dark-gray)">
+                Managing complex teams at scale
+              </h1>
+            </div>
+
+            <div className="bg-(--almost-white) px-10 pt-10 pb-50">
+              <p className="font-medium text-(--dark-navy)">
+                Government & institutions
+              </p>
+              <h1 className="text-[24px] text-(--dark-gray)">
+                Requiring compliance and accountability
+              </h1>
+            </div>
           </div>
         </div>
       </div>

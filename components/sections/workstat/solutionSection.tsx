@@ -12,31 +12,36 @@ const solutionSection = () => {
         </div>
 
         <div className="grid grid-cols-[2fr_1fr] gap-6">
-          <div className="bg-(--soft-blue) px-10 pt-10 pb-30 flex flex-col justify-start gap-4">
-            <span className="text-sm text-(--slate-gray)">
-              Complex staff/people management
-            </span>
+          <div className="bg-(--soft-blue) p-10 flex flex-col justify-start gap-4 text-(--slate-gray)">
+            <span className="text-sm">Complex staff/people management</span>
             <h3 className="text-2xl text-(--midnight)">
-              Managing people shouldn’t require multiple disconnected tools
+              Managing people shouldn’t require multiple <br /> disconnected
+              tools
             </h3>
-            <p className="text-(--slate-gray)">
+            <p className="mb-4">
               Most organizations rely on separate systems for HR, attendance,
-              payroll, and performance—leading to duplicated data, manual
+              payroll, and <br /> performance—leading to duplicated data, manual
               processes, and costly errors.
             </p>
+            <p>Disconnected systems and data silos</p>
+            <p>Manual processes and duplication</p>
+            <p>Costly errors and inconsistencies</p>
           </div>
 
-          <div className="bg-(--rose-light) px-10 pt-10 pb-30 flex flex-col justify-start gap-4">
-            <span className="text-sm text-(--slate-gray)">Multiple Tools</span>
+          <div className="bg-(--rose-light) p-10 flex flex-col justify-start gap-4 text-(--slate-gray)">
+            <span className="text-sm">Multiple Tools</span>
             <h3 className="text-2xl text-(--midnight)">
               Workstat replaces fragmented systems with a single, connected
               platform
             </h3>
-            <p className="text-(--slate-gray)">
+            <p className="mb-4">
               From onboarding new employees to processing payroll and tracking
               performance, every workflow is structured, automated, and
               centralized.
             </p>
+            <p>Single, connected platform</p>
+            <p>Structured and automated workflows</p>
+            <p>Centralized data and processes</p>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 const howItworks = () => {
   return (
     <section className="py-30 bg-(--primary-blue)">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-4 mb-14">
           <p className="font-medium text-white">How It Works</p>
           <h1 className="text-[44px] text-white">
