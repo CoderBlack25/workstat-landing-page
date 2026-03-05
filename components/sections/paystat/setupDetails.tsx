@@ -1,7 +1,7 @@
 const setupDetails = () => {
   return (
     <section className="w-full bg-white py-20">
-      <div className="flex flex-col gap-30 max-w-7xl mx-auto px-6">
+      <div className="flex flex-col gap-30 max-w-7xl mx-auto">
         <div className="grid grid-cols-2 gap-10">
           <div className="flex flex-col gap-4">
             <h1 className="text-[44px] text-(--dark-gray) leading-tight">

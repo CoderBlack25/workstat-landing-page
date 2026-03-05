@@ -1,7 +1,7 @@
 const payrollFeatures = () => {
   return (
-    <section className="w-full bg-white pb-24">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="w-full bg-white py-24">
+      <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-12 gap-20">
           <div className="col-span-5">
             <p className="font-medium text-(--charcoal) mb-4">

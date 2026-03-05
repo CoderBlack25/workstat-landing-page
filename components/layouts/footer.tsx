@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import timestat from "@/public/icons/timestat-logo.svg";
 import { FaXTwitter, FaLinkedinIn } from "react-icons/fa6";
 
 type FooterLink = {
@@ -145,15 +146,10 @@ const date = new Date();
 const footer = () => {
   return (
     <footer className="bg-(--midnight) text-(--light-overlay)">
-      <div className="max-w-7xl mx-auto px-6 pt-20 pb-16 font-inter text-sm">
+      <div className="max-w-7xl mx-auto pt-20 pb-16 text-sm">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12">
           <div>
-            <Image
-              src="/icons/timestat-logo.svg"
-              alt="logo"
-              width={127}
-              height={127}
-            />
+            <Image src={timestat} alt="" />
           </div>
 
           {footerColumns.map((column, colIndex) => (

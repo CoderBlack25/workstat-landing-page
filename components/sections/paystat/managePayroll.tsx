@@ -1,9 +1,9 @@
 const managePayroll = () => {
   return (
-    <section className="w-full bg-(--white) py-28">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="w-full bg-white py-28">
+      <div className="mx-auto max-w-7xl">
         <div className="">
-          <h2 className="mt-6 text-[44px] leading-11 text-(--dark-gray)">
+          <h2 className="mt-6 text-[44px] leading-11 text-(--dark-gray) text-center">
             Spend less time on payroll. Gain more confidence in every cycle.
           </h2>
         </div>

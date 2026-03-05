@@ -3,7 +3,7 @@ import Link from "next/link";
 const bookDemo = () => {
   return (
     <section className="w-full bg-(--deep-teal)">
-      <div className="font-inter mx-auto max-w-7xl px-6 py-10">
+      <div className="mx-auto max-w-7xl py-10">
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <h1 className="text-3xl font-medium leading-snug text-white">
             Bring structure, clarity, and control to your workforce
