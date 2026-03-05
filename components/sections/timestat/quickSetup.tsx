@@ -5,7 +5,7 @@ import article2 from "@/public/images/article2.png";
 const quickSetup = () => {
   return (
     <section className="w-full bg-white py-20">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-4 mb-10">
           <p className="font-medium text-(--charcoal)">
             Features for Quick Setup
@@ -21,10 +21,10 @@ const quickSetup = () => {
 
         <div className="grid grid-cols-2 gap-6">
           <div>
-            <Image src={article1} alt="" className="" />
+            <Image src={article1} alt="" />
           </div>
           <div>
-            <Image src={article2} alt="" className="" />
+            <Image src={article2} alt="" />
           </div>
         </div>
       </div>

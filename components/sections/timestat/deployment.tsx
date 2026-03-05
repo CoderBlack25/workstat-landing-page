@@ -6,8 +6,8 @@ import deploy4 from "@/public/images/deploy4.png";
 
 const deployment = () => {
   return (
-    <section className="py-16 bg-(--white)">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-4 items-center justify-center my-14 text-center">
           <p className="font-medium text-(--charcoal)">Deployment</p>
           <h1 className="text-[44px] text-(--dark-gray)">

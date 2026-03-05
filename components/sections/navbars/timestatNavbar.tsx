@@ -5,10 +5,10 @@ import workstat from "@/public/icons/workstat-logo3.svg";
 
 const TimestatNavbar = () => {
   return (
-    <nav className="sticky top-0 left-0 w-full z-50 bg-white text-(--slate-gray)">
-      <div className="max-w-full mx-auto px-14 py-4 flex items-center justify-between">
+    <nav className="sticky top-0 left-0 w-full px-14 py-4 z-50 bg-white text-(--slate-gray)">
+      <div className="max-w-full mx-auto flex items-center justify-between">
         <div className="flex items-center gap-16">
-          <div className="flex items-center gap-26">
+          <div className="flex items-center gap-24">
             <Link href="/">
               <Image src={workstat} alt="logo" />
             </Link>
@@ -28,7 +28,7 @@ const TimestatNavbar = () => {
           </div>
         </div>
 
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 mr-25">
           <Link href="#" className="text-sm">
             Sign In
           </Link>

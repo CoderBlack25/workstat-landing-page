@@ -6,8 +6,8 @@ import Image from "next/image";
 const adaptability = () => {
   return (
     <section className="w-full bg-white py-20">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-[44px] text-(--dark-gray) mb-16">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-[44px] text-(--dark-gray) mb-16 text-center">
           Timestat works and adapts to organizations at all levels
         </h2>
 

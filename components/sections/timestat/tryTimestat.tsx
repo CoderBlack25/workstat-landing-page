@@ -10,7 +10,7 @@ import timestat6 from "@/public/images/timestat6.png";
 const tryTimestat = () => {
   return (
     <section className="w-full bg-white py-20">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-4 mb-14">
           <p className="font-medium text-(--charcoal)">Solutions</p>
           <h2 className="text-[44px] text-(--dark-gray) leading-tight">
