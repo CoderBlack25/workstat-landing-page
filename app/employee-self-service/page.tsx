@@ -7,7 +7,7 @@ import Simple from "@/components/sections/employee-self-service/simple";
 
 const page = () => {
   return (
-    <div className="overflow-hidden">
+    <div className="">
       <Navbar />
       <Hero />
       <EmployeeNeed />

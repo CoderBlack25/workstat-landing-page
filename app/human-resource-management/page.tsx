@@ -8,7 +8,7 @@ import Simple from "@/components/sections/human-resource/simple";
 
 const page = () => {
   return (
-    <div className="overflow-hidden">
+    <div className="">
       <Navbar />
       <Hero />
       <Centralize />

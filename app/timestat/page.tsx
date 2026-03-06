@@ -10,7 +10,7 @@ import Hero from "@/components/sections/timestat/hero";
 
 const page = () => {
   return (
-    <div className="overflow-hidden">
+    <div className="">
       <TimestatNavbar />
       <Hero />
       <TryTimestat />

@@ -8,7 +8,7 @@ import SetupDetails from "@/components/sections/paystat/setupDetails";
 
 const page = () => {
   return (
-    <div className="overflow-hidden">
+    <div className="">
       <PaystatNavbar />
       <Hero />
       <Payroll />

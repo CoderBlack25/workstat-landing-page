@@ -5,7 +5,7 @@ import Howitworks from "@/components/sections/learning/howitworks";
 
 const page = () => {
   return (
-    <div className="overflow-hidden">
+    <div className="">
       <Navbar />
       <Hero />
       <Improvement />

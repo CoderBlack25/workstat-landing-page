@@ -2,7 +2,7 @@ import Navbar from "@/components/sections/navbars/navbar";
 
 const page = () => {
   return (
-    <div className="overflow-hidden">
+    <div className="">
       <Navbar />
     </div>
   );
