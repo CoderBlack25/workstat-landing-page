@@ -1,26 +1,26 @@
-const improvement = () => {
+const clarity = () => {
   return (
     <section className="w-full bg-(--primary-blue) py-20 text-white">
       <div className="max-w-7xl mx-auto flex flex-col justify-center items-stretch gap-14">
         <h1 className="text-[44px] text-center">
-          Build a culture of continuous improvement
+          Clarity, structure, and control across your <br /> organization
         </h1>
 
         <div className="grid grid-cols-2 gap-4 text-[18px]">
           <div className="bg-(--medium-blue) p-6">
-            <p>Improve employee onboarding experience</p>
+            <p>Maintain accurate employee records</p>
           </div>
 
           <div className="bg-(--medium-blue) p-6">
-            <p>Track training progress across teams</p>
+            <p>Organize teams with clear structure</p>
           </div>
 
           <div className="bg-(--medium-blue) p-6">
-            <p>Provide structured learning resources</p>
+            <p>Manage employee lifecycle efficiently</p>
           </div>
 
           <div className="bg-(--medium-blue) p-6">
-            <p>Support long-term employee development</p>
+            <p>Reduce manual data handling</p>
           </div>
         </div>
       </div>
@@ -28,4 +28,4 @@ const improvement = () => {
   );
 };
 
-export default improvement;
+export default clarity;
