@@ -12,7 +12,7 @@ import AboutUs from "@/components/sections/timestat/aboutUs";
 
 const page = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <WorkstatNavbar />
       <Hero />
       <SolutionSection />

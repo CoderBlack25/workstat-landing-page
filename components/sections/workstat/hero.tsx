@@ -40,12 +40,12 @@ const buttons: Variants = {
 const Hero = () => {
   return (
     <motion.section
-      className="bg-(--midnight) text-white py-30"
+      className="bg-(--midnight) text-white pt-30 pb-40"
       variants={container}
       initial="hidden"
       animate="show"
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-2">
+      <div className="max-w-screen-2xl mx-auto px-20 grid grid-cols-2">
         <div className="flex flex-col gap-6">
           <motion.h1
             variants={fadeUp}

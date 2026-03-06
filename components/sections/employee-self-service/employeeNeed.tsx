@@ -1,7 +1,7 @@
 const employeeNeed = () => {
   return (
-    <section className="w-full bg-(--primary-blue) py-28">
-      <div className="max-w-7xl mx-auto flex flex-col justify-center items-center text-center gap-6">
+    <section className="w-full bg-(--primary-blue) py-28 text-white">
+      <div className="max-w-7xl mx-auto px-30 flex flex-col justify-center items-center text-center gap-6">
         <p className="font-medium">Everything employees need in one place</p>
         <h1 className="text-[44px]">
           Workstat provides employees with a centralized space where they can
