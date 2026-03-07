@@ -5,7 +5,7 @@ import workstat from "@/public/icons/workstat-logo3.svg";
 
 const PaystatNavbar = () => {
   return (
-    <nav className="sticky top-0 left-0 w-full px-14 py-4 z-50 bg-white text-(--slate-gray)">
+    <nav className="sticky top-0 left-0 w-full px-14 py-4 z-50 bg-white text-(--slate-gray) overflow-hidden">
       <div className="max-w-full mx-auto flex items-center justify-between">
         <div className="flex items-center gap-16">
           <div className="flex items-center gap-24">

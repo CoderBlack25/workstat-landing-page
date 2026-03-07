@@ -54,7 +54,7 @@ const lineDraw: Variants = {
 const HowItWorks = () => {
   return (
     <motion.section
-      className="py-30 bg-(--primary-blue)"
+      className="py-30 bg-(--primary-blue) overflow-hidden"
       variants={container}
       initial="hidden"
       whileInView="show"

@@ -1,28 +1,47 @@
 import Link from "next/link";
+import { IoArrowForwardOutline } from "react-icons/io5";
 
-const bookDemo = () => {
+type BookDemoProps = {
+  title: string;
+  description: string;
+  getStartedHref: string;
+  bookDemoHref: string;
+};
+
+const BookDemo = ({
+  title,
+  description,
+  getStartedHref,
+  bookDemoHref,
+}: BookDemoProps) => {
   return (
-    <section className="w-full bg-(--deep-teal)">
+    <section className="w-full bg-(--deep-teal) text-white overflow-hidden">
       <div className="mx-auto max-w-7xl py-10">
-        <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
-          <h1 className="text-3xl font-medium leading-snug text-white">
-            Bring structure, clarity, and control to your workforce
-          </h1>
+        <div className="flex items-start justify-between gap-6 md:flex-row md:items-center">
+          {/* Text */}
+          <div className="flex flex-col gap-2">
+            <h1 className="text-3xl font-medium leading-snug">{title}</h1>
 
+            <p className="font-medium">{description}</p>
+          </div>
+
+          {/* Buttons */}
           <div className="flex flex-row items-center gap-4">
             <Link
-              href="#"
-              className="border border-(--primary-blue) px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10"
+              href={getStartedHref}
+              className="border border-(--primary-blue) px-6 py-3 text-sm font-medium transition-colors hover:bg-white/10"
             >
               Get Started
             </Link>
 
             <Link
-              href="#"
-              className="flex items-center gap-2 bg-(--brand-red) px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-pink-700"
+              href={bookDemoHref}
+              className="flex items-center gap-2 bg-(--brand-red) px-6 py-3 text-sm font-medium transition-colors hover:bg-pink-700"
             >
               Book a Demo
-              <span aria-hidden="true">→</span>
+              <span aria-hidden="true">
+                <IoArrowForwardOutline />
+              </span>
             </Link>
           </div>
         </div>
@@ -31,4 +50,4 @@ const bookDemo = () => {
   );
 };
 
-export default bookDemo;
+export default BookDemo;

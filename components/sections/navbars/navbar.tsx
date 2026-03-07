@@ -6,7 +6,7 @@ import workstat from "@/public/icons/workstat-logo2.svg";
 
 const Navbar = () => {
   return (
-    <nav className="sticky top-0 left-0 w-full z-50 bg-white text-(--slate-gray) py-4">
+    <nav className="sticky top-0 left-0 w-full z-50 bg-white text-(--slate-gray) py-4 overflow-hidden">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="hidden md:flex items-center gap-10">
           <Link href="/">

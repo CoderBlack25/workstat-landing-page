@@ -40,7 +40,7 @@ const cardAnimation: Variants = {
 const CoreDifferentiatorSection = () => {
   return (
     <motion.section
-      className="w-full bg-white py-28"
+      className="w-full bg-white py-28 overflow-hidden"
       variants={container}
       initial="hidden"
       whileInView="show"

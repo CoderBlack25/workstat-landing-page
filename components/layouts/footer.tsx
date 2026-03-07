@@ -145,7 +145,7 @@ const date = new Date();
 
 const footer = () => {
   return (
-    <footer className="bg-(--midnight) text-(--light-overlay)">
+    <footer className="bg-(--midnight) text-(--light-overlay) overflow-hidden">
       <div className="max-w-7xl mx-auto pt-20 pb-16 text-sm">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12">
           <div>

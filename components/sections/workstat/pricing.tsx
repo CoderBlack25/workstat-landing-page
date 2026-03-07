@@ -52,7 +52,7 @@ const card: Variants = {
 const pricing = () => {
   return (
     <motion.section
-      className="bg-white py-20"
+      className="bg-white py-20 overflow-hidden"
       variants={container}
       initial="hidden"
       whileInView="show"

@@ -1,6 +1,6 @@
 const centralize = () => {
   return (
-    <section className="w-full bg-(--deep-teal) py-28 text-white">
+    <section className="w-full bg-(--deep-teal) py-28 text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-30 flex flex-col justify-center items-center text-center gap-6">
         <p className="font-medium">
           Centralize and organize your workforce data

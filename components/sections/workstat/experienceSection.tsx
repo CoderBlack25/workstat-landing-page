@@ -40,7 +40,7 @@ const card: Variants = {
 const ExperienceSection = () => {
   return (
     <motion.section
-      className="w-full bg-(--deep-teal) py-24"
+      className="w-full bg-(--deep-teal) py-24 overflow-hidden"
       variants={container}
       initial="hidden"
       whileInView="show"

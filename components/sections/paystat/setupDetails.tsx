@@ -1,6 +1,6 @@
 const setupDetails = () => {
   return (
-    <section className="w-full bg-white py-20">
+    <section className="w-full bg-white py-20 overflow-hidden">
       <div className="flex flex-col gap-30 max-w-7xl mx-auto">
         <div className="grid grid-cols-2 gap-10">
           <div className="flex flex-col gap-4">

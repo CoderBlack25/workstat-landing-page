@@ -40,7 +40,7 @@ const buttons: Variants = {
 const Hero = () => {
   return (
     <motion.section
-      className="bg-(--midnight) text-white pt-30 pb-40"
+      className="bg-(--midnight) text-white pt-30 pb-40 overflow-hidden"
       variants={container}
       initial="hidden"
       animate="show"

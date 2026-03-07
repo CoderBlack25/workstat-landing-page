@@ -9,10 +9,11 @@ import Hero from "@/components/sections/workstat/hero";
 import HowItworks from "@/components/sections/workstat/howItworks";
 import Pricing from "@/components/sections/workstat/pricing";
 import AboutUs from "@/components/sections/timestat/aboutUs";
+import BookDemo from "@/components/layouts/bookDemo";
 
 const page = () => {
   return (
-    <div className="">
+    <div>
       <WorkstatNavbar />
       <Hero />
       <SolutionSection />
@@ -24,6 +25,12 @@ const page = () => {
       <IntegrationSection />
       <Pricing />
       <AboutUs />
+      <BookDemo
+        title="Bring structure, clarity, and control to your workforce"
+        description="Start with a single module or deploy the full Workstat platform."
+        getStartedHref=""
+        bookDemoHref=""
+      />
     </div>
   );
 };

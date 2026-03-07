@@ -36,7 +36,7 @@ const IntegrationSection = () => {
 
   return (
     <motion.section
-      className="w-full bg-white py-28"
+      className="w-full bg-white py-28 overflow-hidden"
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, margin: "-100px" }}

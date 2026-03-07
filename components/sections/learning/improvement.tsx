@@ -1,6 +1,6 @@
 const improvement = () => {
   return (
-    <section className="w-full bg-(--primary-blue) py-20 text-white">
+    <section className="w-full bg-(--primary-blue) py-20 text-white overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col justify-center items-stretch gap-14">
         <h1 className="text-[44px] text-center">
           Build a culture of continuous improvement

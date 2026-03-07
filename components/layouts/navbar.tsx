@@ -24,7 +24,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`sticky top-0 left-0 w-full z-50 py-4 ${
+      className={`sticky top-0 left-0 w-full z-50 py-4 overflow-hidden ${
         isWorkstat
           ? "bg-(--midnight) text-white"
           : "bg-white text-(--slate-gray) px-14"

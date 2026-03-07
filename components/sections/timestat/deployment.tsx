@@ -6,7 +6,7 @@ import deploy4 from "@/public/images/deploy4.png";
 
 const deployment = () => {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-4 items-center justify-center my-14 text-center">
           <p className="font-medium text-(--charcoal)">Deployment</p>

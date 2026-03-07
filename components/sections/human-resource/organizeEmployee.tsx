@@ -1,6 +1,6 @@
 const organizeEmployee = () => {
   return (
-    <section className="w-full bg-white py-20">
+    <section className="w-full bg-white py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-4 mb-14">
           <p className="font-medium text-(--charcoal)">

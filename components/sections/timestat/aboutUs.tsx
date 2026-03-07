@@ -30,7 +30,7 @@ const fadeUp: Variants = {
 const aboutUs = () => {
   return (
     <motion.section
-      className="bg-white py-24"
+      className="bg-white py-24 overflow-hidden"
       variants={container}
       initial="hidden"
       whileInView="show"

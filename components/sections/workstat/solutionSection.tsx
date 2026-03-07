@@ -51,7 +51,7 @@ const slideRight: Variants = {
 const SolutionSection = () => {
   return (
     <motion.section
-      className="w-full bg-white py-24"
+      className="w-full bg-white py-24 overflow-hidden"
       variants={container}
       initial="hidden"
       whileInView="show"

@@ -1,6 +1,6 @@
 const managePayroll = () => {
   return (
-    <section className="w-full bg-white py-28">
+    <section className="w-full bg-white py-28 overflow-hidden">
       <div className="mx-auto max-w-7xl">
         <div className="">
           <h2 className="mt-6 text-[44px] leading-11 text-(--dark-gray) text-center">

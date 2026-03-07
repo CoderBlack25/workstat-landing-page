@@ -1,6 +1,6 @@
 const employeeData = () => {
   return (
-    <section className="w-full bg-white py-28">
+    <section className="w-full bg-white py-28 overflow-hidden">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col gap-4 justify-center items-center text-center">
           <h2 className="mt-6 text-[42px] leading-11 text-(--dark-gray)">
