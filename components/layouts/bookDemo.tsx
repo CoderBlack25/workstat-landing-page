@@ -18,14 +18,12 @@ const BookDemo = ({
     <section className="w-full bg-(--deep-teal) text-white overflow-hidden">
       <div className="mx-auto max-w-7xl py-10">
         <div className="flex items-start justify-between gap-6 md:flex-row md:items-center">
-          {/* Text */}
           <div className="flex flex-col gap-2">
             <h1 className="text-3xl font-medium leading-snug">{title}</h1>
 
             <p className="font-medium">{description}</p>
           </div>
 
-          {/* Buttons */}
           <div className="flex flex-row items-center gap-4">
             <Link
               href={getStartedHref}
@@ -38,10 +36,9 @@ const BookDemo = ({
               href={bookDemoHref}
               className="flex items-center gap-2 bg-(--brand-red) px-6 py-3 text-sm font-medium transition-colors hover:bg-pink-700"
             >
-              Book a Demo
-              <span aria-hidden="true">
-                <IoArrowForwardOutline />
-              </span>
+              <p>Book a Demo</p>
+
+              <IoArrowForwardOutline />
             </Link>
           </div>
         </div>

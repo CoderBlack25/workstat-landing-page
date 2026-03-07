@@ -1,5 +1,5 @@
 import PaystatNavbar from "@/components/sections/navbars/paystatNavbar";
-import Hero from "@/components/sections/paystat/hero";
+import Hero from "@/components/layouts/hero";
 import ManagePayroll from "@/components/sections/paystat/managePayroll";
 import Payroll from "@/components/sections/paystat/payroll";
 import PayrollFeatures from "@/components/sections/paystat/payrollFeatures";
@@ -11,7 +11,12 @@ const page = () => {
   return (
     <div>
       <PaystatNavbar />
-      <Hero />
+      <Hero
+        title="Paystat"
+        heading="Run payroll with accuracy and complete control"
+        description="Paystat helps you process payroll faster, reduce errors, and maintain clear, reliable compensation records—so you can focus on running your organization, not fixing payroll issues."
+        secondbutton="Get Started"
+      />
       <Payroll />
       <ManagePayroll />
       <PayrollFeatures />

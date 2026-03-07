@@ -1,5 +1,5 @@
 import Navbar from "@/components/sections/navbars/navbar";
-import Hero from "@/components/sections/employee-self-service/hero";
+import Hero from "@/components/layouts/hero";
 import EmployeeNeed from "@/components/sections/employee-self-service/employeeNeed";
 import Efficiency from "@/components/sections/employee-self-service/efficiency";
 import Organized from "@/components/sections/employee-self-service/orgainized";
@@ -10,7 +10,12 @@ const page = () => {
   return (
     <div>
       <Navbar />
-      <Hero />
+      <Hero
+        title="Employee Self Service"
+        heading="Give employees direct access to what they need"
+        description="Employee Self-Service allows your team to manage their records, track activity, and access important information—without relying on HR for every request."
+        secondbutton="Get Started"
+      />
       <EmployeeNeed />
       <Efficiency />
       <Organized />

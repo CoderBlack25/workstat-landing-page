@@ -1,5 +1,5 @@
 import Navbar from "@/components/sections/navbars/navbar";
-import Hero from "@/components/sections/holiday-management/hero";
+import Hero from "@/components/layouts/hero";
 import Management from "@/components/sections/holiday-management/management";
 import LeaveWorkflow from "@/components/sections/holiday-management/leaveWorkflow";
 import BookDemo from "@/components/layouts/bookDemo";
@@ -8,7 +8,12 @@ const page = () => {
   return (
     <div>
       <Navbar />
-      <Hero />
+      <Hero
+        title="Leave Managment"
+        heading="Manage employee leave with clarity and control"
+        description="Workstat allows employees to apply for leave while giving administrators full control over approvals and tracking."
+        secondbutton="Get Started"
+      />
       <Management />
       <LeaveWorkflow />
       <BookDemo

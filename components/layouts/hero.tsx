@@ -1,33 +1,40 @@
 import Link from "next/link";
+import { IoArrowForwardOutline } from "react-icons/io5";
 
-// import { ArrowRight } from "lucide-react";
+type HeroProps = {
+  title: string;
+  heading: string;
+  description: string;
+  secondbutton: string;
+};
 
-const hero = () => {
+const Hero = ({ title, heading, description, secondbutton }: HeroProps) => {
   return (
     <section className="bg-(--soft-cloud) py-40 overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-2">
         <div className="flex flex-col gap-6">
-          <h2 className="font-medium text-(--charcoal)">HRMS</h2>
+          <h2 className="font-medium text-(--charcoal)">{title}</h2>
           <h1 className="text-[52px] leading-tight text-(--midnight)">
-            Manage your entire workforce from a single system
+            {heading}
           </h1>
-          <p className="font-medium text-(--slate-gray)">
-            Workstat&apos;s HRMS gives you full control over employee data,
-            structure, and lifecycle management—from onboarding to offboarding.
-          </p>
+          <p className="font-medium text-(--slate-gray)">{description}</p>
           <div className="flex flex-row items-center gap-4">
             <Link
               href="#"
               className="flex items-center gap-2 bg-(--brand-red) px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-pink-700"
             >
-              Book a Demo
+              <p>Book a Demo</p>
+
+              <IoArrowForwardOutline />
             </Link>
 
             <Link
               href="#"
-              className="border border-(--light-gray) bg-white px-6 py-3 text-sm font-medium text-(--slate-gray) transition-colors hover:bg-white/10"
+              className="flex items-center gap-2 border border-(--light-gray) bg-white px-6 py-3 text-sm font-medium text-(--slate-gray) transition-colors hover:bg-white/10"
             >
-              Get Started
+              {secondbutton}
+
+              <IoArrowForwardOutline />
             </Link>
           </div>
         </div>
@@ -37,4 +44,4 @@ const hero = () => {
   );
 };
 
-export default hero;
+export default Hero;

@@ -1,5 +1,5 @@
 import Navbar from "@/components/sections/navbars/navbar";
-import Hero from "@/components/sections/learning/hero";
+import Hero from "@/components/layouts/hero";
 import Improvement from "@/components/sections/learning/improvement";
 import Howitworks from "@/components/sections/learning/howitworks";
 import BookDemo from "@/components/layouts/bookDemo";
@@ -8,7 +8,12 @@ const page = () => {
   return (
     <div>
       <Navbar />
-      <Hero />
+      <Hero
+        title="Learning and training"
+        heading="Support employee growth with structured learning"
+        description="Workstat helps you create, assign, and manage training programs that support onboarding, upskilling, and continuous development."
+        secondbutton="Get Started"
+      />
       <Improvement />
       <Howitworks />
       <BookDemo

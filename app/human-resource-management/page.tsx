@@ -1,5 +1,5 @@
 import Navbar from "@/components/sections/navbars/navbar";
-import Hero from "@/components/sections/human-resource/hero";
+import Hero from "@/components/layouts/hero";
 import Centralize from "@/components/sections/human-resource/centralize";
 import Clarity from "@/components/sections/human-resource/clarity";
 import EmployeeData from "@/components/sections/human-resource/emloyeeData";
@@ -11,7 +11,12 @@ const page = () => {
   return (
     <div>
       <Navbar />
-      <Hero />
+      <Hero
+        title="HRMS"
+        heading="Manage your entire workforce from a single system"
+        description="Workstat's HRMS gives you full control over employee data, structure, and lifecycle management—from onboarding to offboarding."
+        secondbutton="Get Started"
+      />
       <Centralize />
       <Clarity />
       <EmployeeData />
