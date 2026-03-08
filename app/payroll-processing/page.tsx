@@ -1,9 +1,10 @@
-import Navbar from "@/components/sections/navbars/navbar";
+import SubNavbar from "@/components/layouts/subNavbar";
+import workstat from "@/public/icons/workstat-logo2.svg";
 
 const page = () => {
   return (
     <div>
-      <Navbar />
+      <SubNavbar logo={workstat} logoAlt="logo" />
     </div>
   );
 };
