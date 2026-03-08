@@ -20,7 +20,7 @@ const StatNavbar = ({
 }: StatNavbarProps) => {
   return (
     <nav
-      className={`sticky top-16 left-0 w-full z-50 ${bgColor} ${textColor} py-4`}
+      className={`sticky top-18 left-0 w-full z-50 ${bgColor} ${textColor} py-4`}
     >
       <div className="max-w-screen-2xl px-25 mx-auto flex items-center justify-between">
         <Link href={href}>

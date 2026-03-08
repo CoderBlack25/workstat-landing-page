@@ -1,6 +1,6 @@
 import SubNavbar from "@/components/layouts/subNavbar";
 import Hero from "@/components/layouts/hero";
-import Improvement from "@/components/sections/learning/improvement";
+import QuadLayout from "@/components/layouts/quadLayout";
 import Howitworks from "@/components/sections/learning/howitworks";
 import BookDemo from "@/components/layouts/bookDemo";
 import workstat from "@/public/icons/workstat-logo2.svg";
@@ -15,7 +15,15 @@ const page = () => {
         description="Workstat helps you create, assign, and manage training programs that support onboarding, upskilling, and continuous development."
         secondbutton="Get Started"
       />
-      <Improvement />
+      <QuadLayout
+        heading="Build a culture of continuous improvement"
+        items={[
+          "Improve employee onboarding experience",
+          "Track training progress across teams",
+          "Provide structured learning resources",
+          "Support long-term employee development",
+        ]}
+      />
       <Howitworks />
       <BookDemo
         title="Build a culture of learning and continuous improvement"

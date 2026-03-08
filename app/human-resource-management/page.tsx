@@ -1,11 +1,11 @@
 import SubNavbar from "@/components/layouts/subNavbar";
 import Hero from "@/components/layouts/hero";
 import ValueProp from "@/components/layouts/valueProp";
-import Clarity from "@/components/sections/human-resource/clarity";
 import FeatureGrid from "@/components/layouts/featureGrid";
 import OrganizeEmployee from "@/components/sections/human-resource/organizeEmployee";
 import BookDemo from "@/components/layouts/bookDemo";
 import workstat from "@/public/icons/workstat-logo2.svg";
+import QuadLayout from "@/components/layouts/quadLayout";
 
 const page = () => {
   return (
@@ -22,7 +22,15 @@ const page = () => {
         title="Keep all employee information structured, up to date, and easy to manage across departments, roles, and reporting lines."
         bgColor="bg-(--deep-teal)"
       />
-      <Clarity />
+      <QuadLayout
+        heading="Clarity, structure, and control across your organization"
+        items={[
+          "Maintain accurate employee records",
+          "Organize teams with clear structure",
+          "Manage employee lifecycle efficiently",
+          "Reduce manual data handling",
+        ]}
+      />
       <FeatureGrid
         heading="All employee data is centralized and connected across the system."
         subheading="Workstat allows you to:"
