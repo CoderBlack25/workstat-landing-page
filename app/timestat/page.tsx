@@ -2,14 +2,22 @@ import Deployment from "@/components/sections/timestat/deployment";
 import Adaptability from "@/components/sections/timestat/adaptability";
 import QuickSetup from "@/components/sections/timestat/quickSetup";
 import TryTimestat from "@/components/sections/timestat/tryTimestat";
-import TimestatNavbar from "@/components/sections/navbars/timestatNavbar";
+import MainNavbar from "@/components/layouts/mainNavbar";
 import Hero from "@/components/layouts/hero";
 import BookDemo from "@/components/layouts/bookDemo";
+import workstat from "@/public/icons/workstat-logo2.svg";
 
 const page = () => {
   return (
     <div>
-      <TimestatNavbar />
+      <MainNavbar
+        logo={workstat}
+        logoAlt="logo"
+        textColor="text-(--slate-gray)"
+        bgColor="bg-white"
+        buttonBgColor="bg-(--primary-blue)"
+        buttonTextColor="text-white"
+      />
       <Hero
         title="Timestat"
         heading="Accurate & Efficient Employee Attendance tracking & Management Solution"

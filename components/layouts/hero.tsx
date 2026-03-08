@@ -11,7 +11,7 @@ type HeroProps = {
 const Hero = ({ title, heading, description, secondbutton }: HeroProps) => {
   return (
     <section className="bg-(--soft-cloud) py-40 overflow-hidden">
-      <div className="max-w-7xl mx-auto grid grid-cols-2">
+      <div className="max-w-screen-2xl mx-auto px-20 grid grid-cols-2">
         <div className="flex flex-col gap-6">
           <h2 className="font-medium text-(--charcoal)">{title}</h2>
           <h1 className="text-[52px] leading-tight text-(--midnight)">

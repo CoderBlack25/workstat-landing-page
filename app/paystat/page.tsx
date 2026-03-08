@@ -1,4 +1,4 @@
-import PaystatNavbar from "@/components/sections/navbars/paystatNavbar";
+import MainNavbar from "@/components/layouts/mainNavbar";
 import Hero from "@/components/layouts/hero";
 import ManagePayroll from "@/components/sections/paystat/managePayroll";
 import Payroll from "@/components/sections/paystat/payroll";
@@ -6,11 +6,19 @@ import PayrollFeatures from "@/components/sections/paystat/payrollFeatures";
 import Setup from "@/components/sections/paystat/setup";
 import SetupDetails from "@/components/sections/paystat/setupDetails";
 import BookDemo from "@/components/layouts/bookDemo";
+import workstat from "@/public/icons/workstat-logo2.svg";
 
 const page = () => {
   return (
     <div>
-      <PaystatNavbar />
+      <MainNavbar
+        logo={workstat}
+        logoAlt="logo"
+        textColor="text-(--slate-gray)"
+        bgColor="bg-white"
+        buttonBgColor="bg-(--primary-blue)"
+        buttonTextColor="text-white"
+      />
       <Hero
         title="Paystat"
         heading="Run payroll with accuracy and complete control"

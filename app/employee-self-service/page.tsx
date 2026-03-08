@@ -1,15 +1,16 @@
-import Navbar from "@/components/sections/navbars/navbar";
+import SubNavbar from "@/components/layouts/subNavbar";
 import Hero from "@/components/layouts/hero";
 import EmployeeNeed from "@/components/sections/employee-self-service/employeeNeed";
 import Efficiency from "@/components/sections/employee-self-service/efficiency";
 import Organized from "@/components/sections/employee-self-service/orgainized";
 import Simple from "@/components/sections/employee-self-service/simple";
 import BookDemo from "@/components/layouts/bookDemo";
+import workstat from "@/public/icons/workstat-logo2.svg";
 
 const page = () => {
   return (
     <div>
-      <Navbar />
+      <SubNavbar logo={workstat} logoAlt="logo" />
       <Hero
         title="Employee Self Service"
         heading="Give employees direct access to what they need"

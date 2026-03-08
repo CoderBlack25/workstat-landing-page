@@ -1,13 +1,14 @@
-import Navbar from "@/components/sections/navbars/navbar";
+import SubNavbar from "@/components/layouts/subNavbar";
 import Hero from "@/components/layouts/hero";
 import Management from "@/components/sections/holiday-management/management";
 import LeaveWorkflow from "@/components/sections/holiday-management/leaveWorkflow";
 import BookDemo from "@/components/layouts/bookDemo";
+import workstat from "@/public/icons/workstat-logo2.svg";
 
 const page = () => {
   return (
     <div>
-      <Navbar />
+      <SubNavbar logo={workstat} logoAlt="logo" />
       <Hero
         title="Leave Managment"
         heading="Manage employee leave with clarity and control"

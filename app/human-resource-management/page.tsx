@@ -1,4 +1,4 @@
-import Navbar from "@/components/sections/navbars/navbar";
+import SubNavbar from "@/components/layouts/subNavbar";
 import Hero from "@/components/layouts/hero";
 import Centralize from "@/components/sections/human-resource/centralize";
 import Clarity from "@/components/sections/human-resource/clarity";
@@ -6,11 +6,12 @@ import EmployeeData from "@/components/sections/human-resource/emloyeeData";
 import OrganizeEmployee from "@/components/sections/human-resource/organizeEmployee";
 import Simple from "@/components/sections/human-resource/simple";
 import BookDemo from "@/components/layouts/bookDemo";
+import workstat from "@/public/icons/workstat-logo2.svg";
 
 const page = () => {
   return (
     <div>
-      <Navbar />
+      <SubNavbar logo={workstat} logoAlt="logo" />
       <Hero
         title="HRMS"
         heading="Manage your entire workforce from a single system"

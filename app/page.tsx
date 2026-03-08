@@ -1,4 +1,4 @@
-import WorkstatNavbar from "@/components/sections/navbars/workstatNavbar";
+import MainNavbar from "@/components/layouts/mainNavbar";
 import IntegrationSection from "@/components/sections/workstat/integrationSection";
 import CoreDifferentiatorSection from "@/components/sections/workstat/coreDifferentiatorSection";
 import ExperienceSection from "@/components/sections/workstat/experienceSection";
@@ -10,11 +10,12 @@ import HowItworks from "@/components/sections/workstat/howItworks";
 import Pricing from "@/components/sections/workstat/pricing";
 import AboutUs from "@/components/sections/timestat/aboutUs";
 import BookDemo from "@/components/layouts/bookDemo";
+import workstat from "@/public/icons/workstat-logo.svg";
 
 const page = () => {
   return (
     <div>
-      <WorkstatNavbar />
+      <MainNavbar logo={workstat} logoAlt="logo" />
       <Hero />
       <SolutionSection />
       <PlatformOverview />

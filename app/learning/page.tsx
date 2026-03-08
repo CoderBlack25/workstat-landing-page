@@ -1,13 +1,14 @@
-import Navbar from "@/components/sections/navbars/navbar";
+import SubNavbar from "@/components/layouts/subNavbar";
 import Hero from "@/components/layouts/hero";
 import Improvement from "@/components/sections/learning/improvement";
 import Howitworks from "@/components/sections/learning/howitworks";
 import BookDemo from "@/components/layouts/bookDemo";
+import workstat from "@/public/icons/workstat-logo2.svg";
 
 const page = () => {
   return (
     <div>
-      <Navbar />
+      <SubNavbar logo={workstat} logoAlt="logo" />
       <Hero
         title="Learning and training"
         heading="Support employee growth with structured learning"
