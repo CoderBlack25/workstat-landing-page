@@ -1,13 +1,13 @@
-import Deployment from "@/components/sections/timestat/deployment";
-import Adaptability from "@/components/sections/timestat/adaptability";
-import QuickSetup from "@/components/sections/timestat/quickSetup";
-import TryTimestat from "@/components/sections/timestat/tryTimestat";
 import MainNavbar from "@/components/layouts/mainNavbar";
+import StatNavbar from "@/components/layouts/statNavbar";
 import Hero from "@/components/layouts/hero";
+import TryTimestat from "@/components/sections/timestat/tryTimestat";
+import QuickSetup from "@/components/sections/timestat/quickSetup";
+import Adaptability from "@/components/sections/timestat/adaptability";
+import Deployment from "@/components/sections/timestat/deployment";
 import BookDemo from "@/components/layouts/bookDemo";
 import workstat from "@/public/icons/workstat-logo2.svg";
 import timestat from "@/public/icons/timestat-logo3.svg";
-import StatNavbar from "@/components/layouts/statNavbar";
 
 const page = () => {
   return (

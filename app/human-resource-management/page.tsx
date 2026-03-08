@@ -1,11 +1,11 @@
 import SubNavbar from "@/components/layouts/subNavbar";
 import Hero from "@/components/layouts/hero";
 import ValueProp from "@/components/layouts/valueProp";
+import QuadLayout from "@/components/layouts/quadLayout";
 import FeatureGrid from "@/components/layouts/featureGrid";
 import OrganizeEmployee from "@/components/sections/human-resource/organizeEmployee";
 import BookDemo from "@/components/layouts/bookDemo";
 import workstat from "@/public/icons/workstat-logo2.svg";
-import QuadLayout from "@/components/layouts/quadLayout";
 
 const page = () => {
   return (

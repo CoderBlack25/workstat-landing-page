@@ -1,14 +1,14 @@
 import MainNavbar from "@/components/layouts/mainNavbar";
+import StatNavbar from "@/components/layouts/statNavbar";
 import Hero from "@/components/layouts/hero";
-import FeatureGrid from "@/components/layouts/featureGrid";
 import ValueProp from "@/components/layouts/valueProp";
+import FeatureGrid from "@/components/layouts/featureGrid";
 import PayrollFeatures from "@/components/sections/paystat/payrollFeatures";
 import Setup from "@/components/sections/paystat/setup";
 import SetupDetails from "@/components/sections/paystat/setupDetails";
 import BookDemo from "@/components/layouts/bookDemo";
 import workstat from "@/public/icons/workstat-logo2.svg";
 import paystat from "@/public/icons/paystat-logo2.svg";
-import StatNavbar from "@/components/layouts/statNavbar";
 
 const page = () => {
   return (

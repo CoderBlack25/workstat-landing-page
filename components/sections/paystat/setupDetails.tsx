@@ -1,105 +1,167 @@
+"use client";
+
+import { motion, Variants } from "framer-motion";
+
+const container: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.18,
+    },
+  },
+};
+
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 60 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
+const fadeLeft: Variants = {
+  hidden: { opacity: 0, x: -60 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.7,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
+const card: Variants = {
+  hidden: { opacity: 0, y: 70, scale: 0.96 },
+  show: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.65,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
 const setupDetails = () => {
   return (
-    <section className="w-full bg-white py-20 overflow-hidden">
+    <motion.section
+      className="w-full bg-white py-20 overflow-hidden"
+      variants={container}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, margin: "-120px" }}
+      style={{ willChange: "transform, opacity" }}
+    >
       <div className="flex flex-col gap-30 max-w-7xl mx-auto">
         <div className="grid grid-cols-2 gap-10">
-          <div className="flex flex-col gap-4">
+          <motion.div variants={fadeLeft} className="flex flex-col gap-4">
             <h1 className="text-[44px] text-(--dark-gray) leading-tight">
               Built for control, without complexity
             </h1>
+
             <p className="font-medium text-(--charcoal)">
               Manage payroll from a single dashboard. Designed to give you
               clarity when it matters most.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col">
-            <div className="flex flex-col gap-4">
-              <p className="font-medium text-(--charcoal)">
-                Review and Approve
-              </p>
-              <h2 className="text-[32px] text-(--charcoal)">
-                Catch errors before they happen. Review every detail and approve
-                payments with a single click before processing begins.
-              </h2>
-            </div>
+          <motion.div variants={container} className="flex flex-col">
+            {[
+              {
+                title: "Review and Approve",
+                text: "Catch errors before they happen. Review every detail and approve payments with a single click before processing begins.",
+              },
+              {
+                title: "History Access",
+                text: "Access detailed payroll history anytime. Deep dive into past cycles with comprehensive filtering and export tools.",
+              },
+              {
+                title: "Financial Accuracy",
+                text: "Maintain accurate financial records across cycles. Our system automatically reconciles data to keep your books balanced.",
+              },
+              {
+                title: "Compliance Sync",
+                text: "Stay ahead of regulations. Automated updates ensure your payroll adheres to the latest local and federal tax laws.",
+              },
+            ].map((item, i) => (
+              <motion.div key={i} variants={fadeUp}>
+                <div className="flex flex-col gap-4">
+                  <p className="font-medium text-(--charcoal)">{item.title}</p>
 
-            <div className="p-px bg-(--light-gray) my-20" />
+                  <h2 className="text-[32px] text-(--charcoal)">{item.text}</h2>
+                </div>
 
-            <div className="flex flex-col gap-4">
-              <p className="font-medium text-(--charcoal)">History Access</p>
-              <h2 className="text-[32px] text-(--charcoal)">
-                Access detailed payroll history anytime. Deep dive into past
-                cycles with comprehensive filtering and export tools.
-              </h2>
-            </div>
-
-            <div className="p-px bg-(--light-gray) my-20" />
-
-            <div className="flex flex-col gap-4">
-              <p className="font-medium text-(--charcoal)">
-                Financial Accuracy
-              </p>
-              <h2 className="text-[32px] text-(--charcoal)">
-                Maintain accurate financial records across cycles. Our system
-                automatically reconciles data to keep your books balanced.
-              </h2>
-            </div>
-
-            <div className="p-px bg-(--light-gray) my-20" />
-
-            <div className="flex flex-col gap-4">
-              <p className="font-medium text-(--charcoal)">Compliance Sync</p>
-              <h2 className="text-[32px] text-(--charcoal)">
-                Stay ahead of regulations. Automated updates ensure your payroll
-                adheres to the latest local and federal tax laws.
-              </h2>
-            </div>
-          </div>
+                {i !== 3 && <div className="p-px bg-(--light-gray) my-20" />}
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
 
-        <div className="grid grid-rows-2 gap-6">
+        <motion.div variants={container} className="grid grid-rows-2 gap-6">
           <div className="grid grid-cols-2 gap-6">
-            <div className="flex flex-col gap-4 bg-(--extra-light) px-10 pt-10 pb-55">
+            <motion.div
+              variants={card}
+              whileHover={{ y: -8 }}
+              className="flex flex-col gap-4 bg-(--extra-light) px-10 pt-10 pb-55 transition-transform"
+            >
               <p className="font-medium text-(--charcoal)">
                 Clear, transparent access to earnings
               </p>
+
               <h3 className="text-[32px] text-(--charcoal)">
                 Employees can easily view their payment history and understand
                 their compensation without needing to request information.
               </h3>
-            </div>
+            </motion.div>
 
-            <div className="flex flex-col gap-4 bg-(--extra-light) px-10 pt-10 pb-55">
+            <motion.div
+              variants={card}
+              whileHover={{ y: -8 }}
+              className="flex flex-col gap-4 bg-(--extra-light) px-10 pt-10 pb-55 transition-transform"
+            >
               <p className="font-medium text-(--charcoal)">
                 Designed for organizations that need reliable payroll operations
               </p>
+
               <h3 className="text-[32px] text-(--charcoal)">
                 Whether you&apos;re managing a growing team or a large
                 workforce, Paystat gives you the structure and consistency
                 needed to run payroll with confidence.
               </h3>
-            </div>
+            </motion.div>
           </div>
 
-          <div className="flex flex-col gap-4 bg-(--extra-light) px-10 pt-10 pb-55">
+          <motion.div
+            variants={card}
+            whileHover={{ y: -8 }}
+            className="flex flex-col gap-4 bg-(--extra-light) px-10 pt-10 pb-55 transition-transform"
+          >
             <p className="font-medium text-(--charcoal)">
               Stronger when connected to your full workforce system
             </p>
+
             <h2 className="text-[32px] text-(--charcoal)">
               When used with Workstat, Paystat becomes part of a fully connected
               system where employee data, attendance, and payroll work together
               seamlessly.
             </h2>
+
             <h3 className="text-[32px] text-(--charcoal)">
               Attendance data flows into payroll, employee records stay
               consistent, and approval processes follow your organizational
               structure automatically.
             </h3>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
