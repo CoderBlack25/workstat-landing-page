@@ -1,10 +1,9 @@
 import SubNavbar from "@/components/layouts/subNavbar";
 import Hero from "@/components/layouts/hero";
-import Centralize from "@/components/sections/human-resource/centralize";
+import ValueProp from "@/components/layouts/valueProp";
 import Clarity from "@/components/sections/human-resource/clarity";
-import EmployeeData from "@/components/sections/human-resource/emloyeeData";
+import FeatureGrid from "@/components/layouts/featureGrid";
 import OrganizeEmployee from "@/components/sections/human-resource/organizeEmployee";
-import Simple from "@/components/sections/human-resource/simple";
 import BookDemo from "@/components/layouts/bookDemo";
 import workstat from "@/public/icons/workstat-logo2.svg";
 
@@ -18,11 +17,39 @@ const page = () => {
         description="Workstat's HRMS gives you full control over employee data, structure, and lifecycle management—from onboarding to offboarding."
         secondbutton="Get Started"
       />
-      <Centralize />
+      <ValueProp
+        eyebrow="Centralize and organize your workforce data"
+        title="Keep all employee information structured, up to date, and easy to manage across departments, roles, and reporting lines."
+        bgColor="bg-(--deep-teal)"
+      />
       <Clarity />
-      <EmployeeData />
+      <FeatureGrid
+        heading="All employee data is centralized and connected across the system."
+        subheading="Workstat allows you to:"
+        items={[
+          {
+            label: "Onboard employees",
+            title: "Add employees individually or in bulk with structured data",
+          },
+          {
+            label: "Manage records",
+            title: "Keep all employee information up to date and accessible",
+          },
+          {
+            label: "Assign roles",
+            title: "Define positions, departments, and reporting relationships",
+          },
+          {
+            label: "Track relationships",
+            title: "Monitor reporting lines across your organization",
+          },
+        ]}
+      />
       <OrganizeEmployee />
-      <Simple />
+      <ValueProp
+        eyebrow="Simple for employees. Structured for organizations."
+        title="Employees interact with a clean and intuitive interface, while administrators maintain full control over access, permissions, and data visibility."
+      />
       <BookDemo
         title="Build a structured foundation for your workforce"
         description="Manage your employees with clarity, consistency, and control."

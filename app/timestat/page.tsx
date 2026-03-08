@@ -6,6 +6,8 @@ import MainNavbar from "@/components/layouts/mainNavbar";
 import Hero from "@/components/layouts/hero";
 import BookDemo from "@/components/layouts/bookDemo";
 import workstat from "@/public/icons/workstat-logo2.svg";
+import timestat from "@/public/icons/timestat-logo3.svg";
+import StatNavbar from "@/components/layouts/statNavbar";
 
 const page = () => {
   return (
@@ -18,6 +20,7 @@ const page = () => {
         buttonBgColor="bg-(--primary-blue)"
         buttonTextColor="text-white"
       />
+      <StatNavbar logo={timestat} logoAlt="logo" href="" />
       <Hero
         title="Timestat"
         heading="Accurate & Efficient Employee Attendance tracking & Management Solution"

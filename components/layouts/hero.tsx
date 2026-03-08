@@ -1,3 +1,6 @@
+"use client";
+
+import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 import { IoArrowForwardOutline } from "react-icons/io5";
 
@@ -8,23 +11,83 @@ type HeroProps = {
   secondbutton: string;
 };
 
+const container: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.18,
+    },
+  },
+};
+
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
+
+const buttons: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
 const Hero = ({ title, heading, description, secondbutton }: HeroProps) => {
   return (
-    <section className="bg-(--soft-cloud) py-40 overflow-hidden">
-      <div className="max-w-screen-2xl mx-auto px-20 grid grid-cols-2">
-        <div className="flex flex-col gap-6">
-          <h2 className="font-medium text-(--charcoal)">{title}</h2>
-          <h1 className="text-[52px] leading-tight text-(--midnight)">
+    <motion.section
+      className="bg-(--soft-cloud) py-40 overflow-hidden"
+      variants={container}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, margin: "-120px" }}
+      style={{ willChange: "transform, opacity" }}
+    >
+      <div className="max-w-screen-2xl mx-auto px-20 grid grid-cols-2 items-center">
+        <motion.div className="flex flex-col gap-6" variants={container}>
+          <motion.h2
+            variants={fadeUp}
+            className="font-medium text-(--charcoal)"
+          >
+            {title}
+          </motion.h2>
+
+          <motion.h1
+            variants={fadeUp}
+            className="text-[52px] leading-tight text-(--midnight)"
+          >
             {heading}
-          </h1>
-          <p className="font-medium text-(--slate-gray)">{description}</p>
-          <div className="flex flex-row items-center gap-4">
+          </motion.h1>
+
+          <motion.p
+            variants={fadeUp}
+            className="font-medium text-(--slate-gray)"
+          >
+            {description}
+          </motion.p>
+
+          <motion.div
+            variants={buttons}
+            style={{ willChange: "transform, opacity" }}
+            className="flex flex-row items-center gap-4"
+          >
             <Link
               href="#"
               className="flex items-center gap-2 bg-(--brand-red) px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-pink-700"
             >
               <p>Book a Demo</p>
-
               <IoArrowForwardOutline />
             </Link>
 
@@ -33,14 +96,19 @@ const Hero = ({ title, heading, description, secondbutton }: HeroProps) => {
               className="flex items-center gap-2 border border-(--light-gray) bg-white px-6 py-3 text-sm font-medium text-(--slate-gray) transition-colors hover:bg-white/10"
             >
               {secondbutton}
-
               <IoArrowForwardOutline />
             </Link>
-          </div>
-        </div>
-        <div></div>
+          </motion.div>
+        </motion.div>
+
+        <motion.div
+          variants={fadeUp}
+          className="flex justify-center items-center"
+        >
+          {/*Jude remember to put image here*/}
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -40,7 +40,7 @@ const buttons: Variants = {
 const Hero = () => {
   return (
     <motion.section
-      className="bg-(--midnight) text-white pt-30 pb-40 overflow-hidden"
+      className="bg-(--midnight) text-white pt-30 pb-40"
       variants={container}
       initial="hidden"
       animate="show"
@@ -98,8 +98,10 @@ const Hero = () => {
 
         <motion.div
           variants={fadeUp}
-          style={{ willChange: "transform, opacity" }}
-        />
+          className="flex justify-center items-center"
+        >
+          {/*Jude remember to put image here*/}
+        </motion.div>
       </div>
     </motion.section>
   );

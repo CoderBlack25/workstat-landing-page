@@ -94,7 +94,7 @@ const productDropdown = ({ isOpen }: ProductDropdownProps) => {
     <div
       className={`
         absolute 
-        z-100
+        z-200
         top-full 
         -right-225
         w-287.5
