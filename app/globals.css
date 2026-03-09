@@ -39,7 +39,7 @@
   --font-inter: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -63,8 +63,11 @@
     --lighter-gray: #f6f7f8;
     --tone-gray: #d8dade;
     --soft-cloud: #f5f8f9;
+    --soft-pink: #fdf7f9;
+    --light-white: rgba(255, 255, 255, 0.8);
+    --less-white: rgba(255, 255, 255, 0.6);
   }
-}
+} */
 
 body {
   background: var(--background);
