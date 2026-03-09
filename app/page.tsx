@@ -15,7 +15,11 @@ import workstat from "@/public/icons/workstat-logo.svg";
 const page = () => {
   return (
     <div>
-      <MainNavbar logo={workstat} logoAlt="logo" />
+      <MainNavbar
+        logo={workstat}
+        logoAlt="logo"
+        hoverTextColor="hover:text-white/70"
+      />
       <Hero />
       <SolutionSection />
       <PlatformOverview />

@@ -8,7 +8,7 @@ const header = () => {
           Introducing our new Employee Management System: Discover how it
           streamlines workflows and enhances team collaboration!
         </h1>
-        <Link href="#" className="underline">
+        <Link href="#" className="underline hover:text-white/70">
           Learn More
         </Link>
       </div>

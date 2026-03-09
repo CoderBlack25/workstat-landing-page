@@ -1,6 +1,5 @@
 "use client";
 
-// import { ChevronDown } from "lucide-react";
 import React, { useState } from "react";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
@@ -13,6 +12,7 @@ type MainNavbarProps = {
   bgColor?: string;
   buttonBgColor?: string;
   buttonTextColor?: string;
+  hoverTextColor?: string;
 };
 
 const MainNavbar = ({
@@ -22,6 +22,7 @@ const MainNavbar = ({
   bgColor = "bg-(--midnight)",
   buttonBgColor = "bg-white",
   buttonTextColor = "text-(--midnight)",
+  hoverTextColor = "hover:text-(--midnight)",
 }: MainNavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -36,27 +37,44 @@ const MainNavbar = ({
           </Link>
 
           <div className="flex gap-8 text-sm font-medium">
-            <Link href="#">Home</Link>
+            <Link
+              href="#"
+              className={`${hoverTextColor} transition-colors duration-200 cursor-pointer`}
+            >
+              Home
+            </Link>
 
             <div
               className="relative"
               onMouseEnter={() => setIsOpen(true)}
               onMouseLeave={() => setIsOpen(false)}
             >
-              <button className="hover:text-gray-300 transition cursor-pointer">
+              <button
+                className={`${hoverTextColor} transition-colors duration-200 cursor-pointer`}
+              >
                 Products
               </button>
 
               <ProductDropdown isOpen={isOpen} />
             </div>
 
-            <Link href="#">Features</Link>
-            <Link href="#">About</Link>
+            <Link
+              href="#"
+              className={`${hoverTextColor} transition-colors duration-200 cursor-pointer`}
+            >
+              Features
+            </Link>
+            <Link
+              href="#"
+              className={`${hoverTextColor} transition-colors duration-200 cursor-pointer`}
+            >
+              About
+            </Link>
           </div>
         </div>
 
         <div className="flex items-center gap-6">
-          <Link href="#" className="text-sm">
+          <Link href="#" className={`text-sm ${hoverTextColor}`}>
             Sign In
           </Link>
 
