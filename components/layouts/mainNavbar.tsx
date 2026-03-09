@@ -13,6 +13,7 @@ type MainNavbarProps = {
   buttonBgColor?: string;
   buttonTextColor?: string;
   hoverTextColor?: string;
+  hoverButtonColor?: string;
 };
 
 const MainNavbar = ({
@@ -22,7 +23,8 @@ const MainNavbar = ({
   bgColor = "bg-(--midnight)",
   buttonBgColor = "bg-white",
   buttonTextColor = "text-(--midnight)",
-  hoverTextColor = "hover:text-(--midnight)",
+  hoverTextColor = "hover:text-(--primary-blue)",
+  hoverButtonColor = "",
 }: MainNavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -80,7 +82,7 @@ const MainNavbar = ({
 
           <Link
             href="#"
-            className={`${buttonBgColor} ${buttonTextColor} px-6 py-2 text-sm font-medium`}
+            className={`${buttonBgColor} ${buttonTextColor} ${hoverButtonColor} hover:scale-[1.02] transition-all duration-200 px-6 py-2 text-sm font-medium`}
           >
             Contact Us
           </Link>

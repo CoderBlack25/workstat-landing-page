@@ -19,6 +19,7 @@ const page = () => {
         logo={workstat}
         logoAlt="logo"
         hoverTextColor="hover:text-white/70"
+        hoverButtonColor="hover:bg-gray-200"
       />
       <Hero />
       <SolutionSection />

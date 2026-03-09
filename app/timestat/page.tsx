@@ -19,6 +19,7 @@ const page = () => {
         bgColor="bg-white"
         buttonBgColor="bg-(--primary-blue)"
         buttonTextColor="text-white"
+        hoverButtonColor="hover:bg-[#15465c]"
       />
       <StatNavbar logo={timestat} logoAlt="logo" href="" />
       <Hero

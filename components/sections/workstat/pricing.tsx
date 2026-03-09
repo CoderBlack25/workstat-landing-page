@@ -130,7 +130,7 @@ const pricing = () => {
 
             <Link
               href="/start"
-              className="w-full py-4 mb-8 bg-(--primary-blue) text-white font-medium hover:bg-slate-700 transition-colors text-center"
+              className="w-full py-4 mb-8 bg-(--primary-blue) text-white font-medium hover:bg-[#15465c] transition-colors text-center"
             >
               Start
             </Link>
@@ -202,7 +202,7 @@ const pricing = () => {
 
             <Link
               href="/upgrade"
-              className="w-full py-4 mb-8 bg-white text-(--deep-teal) font-medium hover:bg-slate-100 transition-colors text-center"
+              className="w-full py-4 mb-8 bg-white text-(--deep-teal) font-medium hover:bg-gray-200 transition-colors text-center"
             >
               Upgrade to Pro
             </Link>

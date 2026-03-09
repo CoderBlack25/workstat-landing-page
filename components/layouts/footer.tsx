@@ -164,7 +164,7 @@ const footer = () => {
                       <li key={link.label}>
                         <Link
                           href={link.href}
-                          className="hover:text-white hover:underline transition-colors duration-200"
+                          className="hover:text-white hover:underline transition-all duration-200"
                         >
                           {link.label}
                         </Link>
