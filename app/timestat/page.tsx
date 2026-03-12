@@ -25,7 +25,6 @@ const page = () => {
       />
       <StatNavbar logo={timestat} logoAlt="logo" href="" />
       <Hero
-        title="Timestat"
         heading="Accurate & Efficient Employee Attendance tracking & Management Solution"
         description="Say goodbye to manual tracking, employee inefficiency, ghost employees, low productivity, and unaccountability in your workplace. Timestat simplifies how organizations track and manage employees’ attendance, leaves, shifts, and more."
         secondbutton="Talk to Sales"

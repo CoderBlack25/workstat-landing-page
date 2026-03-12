@@ -29,19 +29,19 @@ const StatNavbar = ({
 
         <div className="flex gap-8 text-sm font-medium">
           <Link
-            href="#"
+            href="#overview"
             className="hover:text-(--primary-blue) transition-colors duration-200"
           >
             Overview
           </Link>
           <Link
-            href="#"
+            href="#features"
             className="hover:text-(--primary-blue) transition-colors duration-200"
           >
             Features
           </Link>
           <Link
-            href="#"
+            href="#howitwork"
             className="hover:text-(--primary-blue) transition-colors duration-200"
           >
             How it works

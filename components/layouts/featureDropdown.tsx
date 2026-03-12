@@ -2,7 +2,7 @@ import Link from "next/link";
 
 type Feature = {
   title: string;
-  productPost?: string;
+
   description: string;
   href: string;
 };
@@ -10,44 +10,44 @@ type Feature = {
 const features: Feature[] = [
   {
     title: "Employee Self-Service",
-    productPost: "Workstat",
+
     description:
       "Empower your workforce with easy access to their data, boosting engagement and productivity.",
-    href: "/employee-self-service",
+    href: "#",
   },
   {
     title: "Human Resource Management",
-    productPost: "Workstat",
+
     description: "Content here",
-    href: "/human-resource-management",
+    href: "#",
   },
   {
     title: "Payroll Processing",
-    productPost: "Paystat",
+
     description:
       "Empower your workforce with easy access to their data, boosting engagement and productivity.",
-    href: "/payroll-processing",
+    href: "#",
   },
   {
     title: "Learning- Training & Orientation",
-    productPost: "Workstat",
+
     description:
       "Empower your workforce with easy access to their data, boosting engagement and productivity.",
-    href: "/learning",
+    href: "#",
   },
   {
     title: "Time and Attendance Management",
-    productPost: "Timestat",
+
     description:
       "Empower your workforce with easy access to their data, boosting engagement and productivity.",
-    href: "/time-management",
+    href: "#",
   },
   {
     title: "Leave and Holiday Management",
-    productPost: "Timestat",
+
     description:
       "Empower your workforce with easy access to their data, boosting engagement and productivity.",
-    href: "/holiday-management",
+    href: "#",
   },
 ];
 
@@ -93,10 +93,6 @@ const featureDropdown = ({ isOpen }: FeaturesDropdownProps) => {
               <h4 className="text-[17px] mb-2 font-sans tracking-tight">
                 <span className="text-(--dark-gray) font-semibold">
                   {feature.title}
-                </span>
-
-                <span className="text-(--slate-gray) ml-1.5">
-                  {feature.productPost}
                 </span>
               </h4>
               <p className="text-(--cool-gray) text-sm">

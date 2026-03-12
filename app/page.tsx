@@ -1,5 +1,5 @@
 import MainNavbar from "@/components/layouts/mainNavbar";
-import Hero from "@/components/sections/workstat/hero";
+import Hero from "@/components/layouts/hero";
 import SolutionSection from "@/components/sections/workstat/solutionSection";
 import PlatformOverview from "@/components/sections/workstat/platformOverview";
 import ModuleSelection from "@/components/sections/workstat/moduleSection";
@@ -22,7 +22,23 @@ const page = () => {
         hoverTextColor="hover:text-white/70"
         hoverButtonColor="hover:bg-gray-200"
       />
-      <Hero />
+      <Hero
+        heading="Manage your entire workforce from one unified platform"
+        description={`Workstat brings together employee management, attendance tracking,
+            payroll processing, recruitment, and performance tools into one
+            connected system—so your team can operate efficiently from hire to
+            retirement.`}
+        secondbutton="Get Started"
+        bgColor="bg-(--midnight)"
+        headingTextColor="text-white"
+        descriptionTextColor="text-(--light-white)"
+        buttonBgcolor="bg-(--midnight)"
+        buttonBorderColor="border-(--primary-blue)"
+        buttonHoverColor="hover:bg-white/10"
+        buttonTextColor="text-white"
+        extraText={`Built for organizations that want clarity, control, and scale in
+            workforce management.`}
+      />
       <SolutionSection />
       <PlatformOverview />
       <ModuleSelection />

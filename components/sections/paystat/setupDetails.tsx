@@ -52,7 +52,8 @@ const card: Variants = {
 const setupDetails = () => {
   return (
     <motion.section
-      className="w-full bg-white py-20 overflow-hidden"
+      id="howitwork"
+      className="w-full bg-white py-40 overflow-hidden"
       variants={container}
       initial="hidden"
       whileInView="show"

@@ -26,7 +26,6 @@ const page = () => {
       />
       <StatNavbar logo={paystat} logoAlt="logo" href="" />
       <Hero
-        title="Paystat"
         heading="Run payroll with accuracy and complete control"
         description="Paystat helps you process payroll faster, reduce errors, and maintain clear, reliable compensation records—so you can focus on running your organization, not fixing payroll issues."
         secondbutton="Get Started"

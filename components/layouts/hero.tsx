@@ -5,10 +5,18 @@ import Link from "next/link";
 import { IoArrowForwardOutline } from "react-icons/io5";
 
 type HeroProps = {
-  title: string;
+  title?: string;
   heading: string;
   description: string;
   secondbutton: string;
+  bgColor?: string;
+  headingTextColor?: string;
+  descriptionTextColor?: string;
+  extraText?: string;
+  buttonBgcolor?: string;
+  buttonTextColor?: string;
+  buttonBorderColor?: string;
+  buttonHoverColor?: string;
 };
 
 const container: Variants = {
@@ -45,10 +53,24 @@ const buttons: Variants = {
   },
 };
 
-const Hero = ({ title, heading, description, secondbutton }: HeroProps) => {
+const Hero = ({
+  title,
+  heading,
+  description,
+  secondbutton,
+  bgColor = "bg-(--soft-cloud)",
+  headingTextColor = "text-(--midnight)",
+  descriptionTextColor = "text-(--slate-gray)",
+  extraText,
+  buttonBgcolor = "bg-white",
+  buttonTextColor = "text-(--slate-gray)",
+  buttonBorderColor = "border-(--light-gray)",
+  buttonHoverColor = "hover:bg-white/10",
+}: HeroProps) => {
   return (
     <motion.section
-      className="bg-(--soft-cloud) py-40 overflow-hidden"
+      id="home"
+      className={`${bgColor} pt-40 pb-52 overflow-hidden`}
       variants={container}
       initial="hidden"
       whileInView="show"
@@ -57,23 +79,25 @@ const Hero = ({ title, heading, description, secondbutton }: HeroProps) => {
     >
       <div className="max-w-screen-2xl mx-auto px-20 grid grid-cols-2 items-center">
         <motion.div className="flex flex-col gap-6" variants={container}>
-          <motion.h2
-            variants={fadeUp}
-            className="font-medium text-(--charcoal)"
-          >
-            {title}
-          </motion.h2>
+          {title && (
+            <motion.h2
+              variants={fadeUp}
+              className="font-medium text-(--charcoal)"
+            >
+              {title}
+            </motion.h2>
+          )}
 
           <motion.h1
             variants={fadeUp}
-            className="text-[52px] leading-tight text-(--midnight)"
+            className={`text-[50px] leading-tight ${headingTextColor}`}
           >
             {heading}
           </motion.h1>
 
           <motion.p
             variants={fadeUp}
-            className="font-medium text-(--slate-gray)"
+            className={`font-medium ${descriptionTextColor}`}
           >
             {description}
           </motion.p>
@@ -93,12 +117,22 @@ const Hero = ({ title, heading, description, secondbutton }: HeroProps) => {
 
             <Link
               href="#"
-              className="flex items-center gap-2 border border-(--light-gray) bg-white px-6 py-3 text-sm font-medium text-(--slate-gray) transition-colors hover:bg-white/10"
+              className={`flex items-center gap-2 border ${buttonBorderColor} ${buttonBgcolor} px-6 py-3 text-sm font-medium ${buttonTextColor} transition-colors ${buttonHoverColor}`}
             >
               {secondbutton}
               <IoArrowForwardOutline />
             </Link>
           </motion.div>
+
+          {extraText && (
+            <motion.p
+              variants={fadeUp}
+              style={{ willChange: "transform, opacity" }}
+              className="mt-10 font-medium text-(--less-white)"
+            >
+              {extraText}
+            </motion.p>
+          )}
         </motion.div>
 
         <motion.div

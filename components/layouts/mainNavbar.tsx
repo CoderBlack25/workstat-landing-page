@@ -41,7 +41,7 @@ const MainNavbar = ({
 
           <div className="flex gap-8 text-sm font-medium">
             <Link
-              href="#"
+              href="/home"
               className={`${hoverTextColor} transition-colors duration-200 cursor-pointer`}
             >
               Home
@@ -76,7 +76,7 @@ const MainNavbar = ({
             </div>
 
             <Link
-              href="#"
+              href="#about"
               className={`${hoverTextColor} transition-colors duration-200 cursor-pointer`}
             >
               About
