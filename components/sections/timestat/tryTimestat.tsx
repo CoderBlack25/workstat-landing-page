@@ -64,8 +64,9 @@ const tryTimestat = () => {
       <div className="max-w-7xl mx-auto">
         <motion.div className="flex flex-col gap-4 mb-14" variants={fadeUp}>
           <p className="font-medium text-(--charcoal)">Solutions</p>
-          <h2 className="text-[44px] text-(--dark-gray) leading-tight">
-            Track Time Accurately. Improve Discipline. Increase Productivity.
+          <h2 className="text-[40px] text-(--dark-gray) leading-tight">
+            Track Time Accurately. Improve Discipline. Increase <br />{" "}
+            Productivity.
           </h2>
         </motion.div>
 
@@ -96,7 +97,7 @@ const tryTimestat = () => {
             Dump the the manual registers
           </p>
 
-          <h2 className="text-[36px] text-(--dark-gray) leading-tight">
+          <h2 className="text-[32px] text-(--dark-gray) leading-tight">
             Adopt the modern and efficient <br /> way of tracking attendance
           </h2>
 

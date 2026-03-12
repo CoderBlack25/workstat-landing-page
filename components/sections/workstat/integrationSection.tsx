@@ -1,6 +1,34 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
+import Image, { StaticImageData } from "next/image";
+import shop from "@/public/images/shop.png";
+import enterprise from "@/public/images/enterprise.png";
+import institution from "@/public/images/institution.png";
+
+type Card = {
+  title: string;
+  desc: string;
+  img: StaticImageData;
+};
+
+const cards: Card[] = [
+  {
+    title: "Growing businesses",
+    desc: "Building structure as you scale",
+    img: shop,
+  },
+  {
+    title: "Enterprises",
+    desc: "Managing complex teams at scale",
+    img: enterprise,
+  },
+  {
+    title: "Government & institutions",
+    desc: "Requiring compliance and accountability",
+    img: institution,
+  },
+];
 
 const IntegrationSection = () => {
   const items = [
@@ -53,7 +81,7 @@ const IntegrationSection = () => {
 
           <motion.h1
             variants={fadeUp}
-            className="text-[44px] leading-[1.1] text-(--dark-gray) mb-16"
+            className="text-[40px] leading-[1.1] text-(--dark-gray) mb-16"
           >
             Everything works better together
           </motion.h1>
@@ -91,42 +119,43 @@ const IntegrationSection = () => {
           </motion.p>
         </div>
 
-        <motion.div variants={container} className="flex flex-col gap-5">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="flex flex-col gap-5"
+        >
           <motion.p variants={fadeUp} className="text-(--charcoal) font-medium">
             Who it&apos;s for
           </motion.p>
 
           <motion.h1
             variants={fadeUp}
-            className="text-(--dark-gray) text-[44px]"
+            className="text-(--dark-gray) text-[40px]"
           >
             Designed for organizations of all sizes
           </motion.h1>
 
-          <div className="flex gap-10">
-            {[
-              {
-                title: "Growing businesses",
-                desc: "Building structure as you scale",
-              },
-              {
-                title: "Enterprises",
-                desc: "Managing complex teams at scale",
-              },
-              {
-                title: "Government & institutions",
-                desc: "Requiring compliance and accountability",
-              },
-            ].map((card, index) => (
+          <div className="grid grid-cols-3 gap-5">
+            {cards.map((card, index) => (
               <motion.div
                 key={index}
                 variants={fadeUp}
                 style={{ willChange: "transform, opacity" }}
-                className="bg-(--almost-white) px-10 pt-10 pb-50"
+                className="flex flex-col bg-(--almost-white) px-5 pt-5 pb-0 justify-between"
               >
                 <p className="font-medium text-(--dark-navy)">{card.title}</p>
 
-                <h1 className="text-[24px] text-(--dark-gray)">{card.desc}</h1>
+                <h1 className="text-[22px] text-(--dark-gray)">{card.desc}</h1>
+
+                <div className="flex justify-center items-center mt-20">
+                  <Image
+                    src={card.img}
+                    alt={card.title}
+                    className="w-35 h-35"
+                  />
+                </div>
               </motion.div>
             ))}
           </div>

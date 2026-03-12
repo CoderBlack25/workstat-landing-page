@@ -10,6 +10,7 @@ import IntegrationSection from "@/components/sections/workstat/integrationSectio
 import Pricing from "@/components/sections/workstat/pricing";
 import AboutUs from "@/components/sections/timestat/aboutUs";
 import BookDemo from "@/components/layouts/bookDemo";
+import Footer from "@/components/layouts/footer";
 import workstat from "@/public/icons/workstat-logo.svg";
 
 const page = () => {
@@ -37,6 +38,7 @@ const page = () => {
         getStartedHref=""
         bookDemoHref=""
       />
+      <Footer logo={workstat} />
     </div>
   );
 };

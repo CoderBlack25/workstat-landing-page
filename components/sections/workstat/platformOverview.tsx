@@ -70,7 +70,7 @@ const PlatformOverview = () => {
             Platform Overview
           </p>
 
-          <h2 className="text-[44px] leading-11 text-(--dark-gray) mb-6">
+          <h2 className="text-[40px] leading-11 text-(--dark-gray) mb-6">
             One platform. Multiple workforce solutions.
           </h2>
 
@@ -87,7 +87,7 @@ const PlatformOverview = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-[24px] font-medium text-(--midnight)">
+              <h3 className="text-[22px] font-medium text-(--midnight)">
                 Manage employees and organizational structure
               </h3>
 
@@ -106,19 +106,19 @@ const PlatformOverview = () => {
 
             <div className="space-y-6">
               <div className="pb-4 border-b-2 border-(--cool-light)">
-                <h3 className="text-[24px] text-(--midnight)">
+                <h3 className="text-[22px] text-(--midnight)">
                   Track attendance and working hours in real time
                 </h3>
               </div>
 
               <div className="pb-4 border-b-2 border-(--cool-light)">
-                <h3 className="text-[24px] text-(--midnight)">
+                <h3 className="text-[22px] text-(--midnight)">
                   Process payroll with accuracy and compliance
                 </h3>
               </div>
 
               <div className="pb-4 border-b-2 border-(--cool-light)">
-                <h3 className="text-[24px] text-(--midnight)">
+                <h3 className="text-[22px] text-(--midnight)">
                   Recruit, onboard, and develop talent
                 </h3>
               </div>

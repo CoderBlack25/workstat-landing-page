@@ -7,8 +7,10 @@ import PayrollFeatures from "@/components/sections/paystat/payrollFeatures";
 import Setup from "@/components/sections/paystat/setup";
 import SetupDetails from "@/components/sections/paystat/setupDetails";
 import BookDemo from "@/components/layouts/bookDemo";
+import Footer from "@/components/layouts/footer";
 import workstat from "@/public/icons/workstat-logo2.svg";
 import paystat from "@/public/icons/paystat-logo2.svg";
+import paystat2 from "@/public/icons/paystat-logo3.svg";
 
 const page = () => {
   return (
@@ -65,6 +67,7 @@ const page = () => {
         getStartedHref=""
         bookDemoHref=""
       />
+      <Footer logo={paystat2} />
     </div>
   );
 };

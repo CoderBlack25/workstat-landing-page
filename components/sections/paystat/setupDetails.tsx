@@ -62,7 +62,7 @@ const setupDetails = () => {
       <div className="flex flex-col gap-30 max-w-7xl mx-auto">
         <div className="grid grid-cols-2 gap-10">
           <motion.div variants={fadeLeft} className="flex flex-col gap-4">
-            <h1 className="text-[44px] text-(--dark-gray) leading-tight">
+            <h1 className="text-[40px] text-(--dark-gray) leading-tight">
               Built for control, without complexity
             </h1>
 
@@ -95,7 +95,7 @@ const setupDetails = () => {
                 <div className="flex flex-col gap-4">
                   <p className="font-medium text-(--charcoal)">{item.title}</p>
 
-                  <h2 className="text-[32px] text-(--charcoal)">{item.text}</h2>
+                  <h2 className="text-[28px] text-(--charcoal)">{item.text}</h2>
                 </div>
 
                 {i !== 3 && <div className="p-px bg-(--light-gray) my-20" />}
@@ -115,7 +115,7 @@ const setupDetails = () => {
                 Clear, transparent access to earnings
               </p>
 
-              <h3 className="text-[32px] text-(--charcoal)">
+              <h3 className="text-[28px] text-(--charcoal)">
                 Employees can easily view their payment history and understand
                 their compensation without needing to request information.
               </h3>
@@ -130,7 +130,7 @@ const setupDetails = () => {
                 Designed for organizations that need reliable payroll operations
               </p>
 
-              <h3 className="text-[32px] text-(--charcoal)">
+              <h3 className="text-[28px] text-(--charcoal)">
                 Whether you&apos;re managing a growing team or a large
                 workforce, Paystat gives you the structure and consistency
                 needed to run payroll with confidence.
@@ -147,13 +147,13 @@ const setupDetails = () => {
               Stronger when connected to your full workforce system
             </p>
 
-            <h2 className="text-[32px] text-(--charcoal)">
+            <h2 className="text-[28px] text-(--charcoal)">
               When used with Workstat, Paystat becomes part of a fully connected
               system where employee data, attendance, and payroll work together
               seamlessly.
             </h2>
 
-            <h3 className="text-[32px] text-(--charcoal)">
+            <h3 className="text-[28px] text-(--charcoal)">
               Attendance data flows into payroll, employee records stay
               consistent, and approval processes follow your organizational
               structure automatically.

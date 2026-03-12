@@ -71,7 +71,7 @@ const deployment = () => {
         >
           <p className="font-medium text-(--charcoal)">Deployment</p>
 
-          <h1 className="text-[44px] text-(--dark-gray)">
+          <h1 className="text-[40px] text-(--dark-gray)">
             Secure cloud-based or On-premise <br />
             deployment and training
           </h1>
@@ -90,7 +90,7 @@ const deployment = () => {
             <div className="flex flex-col gap-2">
               <p className="font-medium text-(--charcoal)">Cloud Deployment</p>
 
-              <h1 className="text-[32px] text-(--dark-gray)">
+              <h1 className="text-[28px] text-(--dark-gray)">
                 Faster setup, secure hosting and subscription model
               </h1>
             </div>
@@ -128,7 +128,7 @@ const deployment = () => {
                 On-Premise Deployment & Training
               </p>
 
-              <h1 className="text-[32px] text-(--dark-gray)">
+              <h1 className="text-[28px] text-(--dark-gray)">
                 Dedicated server with hardware installation. Offering staff
                 onboarding & SLA
               </h1>

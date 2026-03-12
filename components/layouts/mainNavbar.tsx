@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
-import ProductDropdown from "../sections/workstat/productDropdown";
+import ProductDropdown from "./productDropdown";
+import FeatureDropdown from "./featureDropdown";
 
 type MainNavbarProps = {
   logo: StaticImageData;
@@ -26,7 +27,7 @@ const MainNavbar = ({
   hoverTextColor = "hover:text-(--primary-blue)",
   hoverButtonColor = "",
 }: MainNavbarProps) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   return (
     <nav
@@ -48,8 +49,8 @@ const MainNavbar = ({
 
             <div
               className="relative"
-              onMouseEnter={() => setIsOpen(true)}
-              onMouseLeave={() => setIsOpen(false)}
+              onMouseEnter={() => setActiveDropdown("products")}
+              onMouseLeave={() => setActiveDropdown(null)}
             >
               <button
                 className={`${hoverTextColor} transition-colors duration-200 cursor-pointer`}
@@ -57,15 +58,23 @@ const MainNavbar = ({
                 Products
               </button>
 
-              <ProductDropdown isOpen={isOpen} />
+              <ProductDropdown isOpen={activeDropdown === "products"} />
             </div>
 
-            <Link
-              href="#"
-              className={`${hoverTextColor} transition-colors duration-200 cursor-pointer`}
+            <div
+              className="relative"
+              onMouseEnter={() => setActiveDropdown("features")}
+              onMouseLeave={() => setActiveDropdown(null)}
             >
-              Features
-            </Link>
+              <button
+                className={`${hoverTextColor} transition-colors duration-200 cursor-pointer`}
+              >
+                Features
+              </button>
+
+              <FeatureDropdown isOpen={activeDropdown === "features"} />
+            </div>
+
             <Link
               href="#"
               className={`${hoverTextColor} transition-colors duration-200 cursor-pointer`}

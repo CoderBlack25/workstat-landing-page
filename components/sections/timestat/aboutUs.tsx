@@ -47,7 +47,7 @@ const aboutUs = () => {
 
         <motion.h2
           variants={fadeUp}
-          className="text-(--dark-gray) text-[44px] max-w-5xl leading-tight"
+          className="text-(--dark-gray) text-[40px] max-w-5xl leading-tight"
         >
           Timestat is the time and attendance management module of Workstat — a
           complete workforce management platform designed to help organizations

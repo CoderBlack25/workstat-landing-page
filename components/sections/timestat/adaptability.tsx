@@ -54,7 +54,7 @@ const adaptability = () => {
       <div className="max-w-7xl mx-auto">
         <motion.h2
           variants={fadeUp}
-          className="text-[44px] text-(--dark-gray) mb-16 text-center"
+          className="text-[40px] text-(--dark-gray) mb-16 text-center"
         >
           Timestat works and adapts to organizations at all levels
         </motion.h2>
@@ -73,7 +73,7 @@ const adaptability = () => {
               SMEs (Small Medium Enterprises)
             </p>
 
-            <h3 className="text-[32px] text-(--dark-gray)">
+            <h3 className="text-[28px] text-(--dark-gray)">
               Timestat offers scalable attendance solutions with enterprise
               features for small and medium-sized businesses.
             </h3>
@@ -91,7 +91,7 @@ const adaptability = () => {
           >
             <p className="font-medium text-(--charcoal)">Large Enterprises</p>
 
-            <h3 className="text-[32px] text-(--dark-gray)">
+            <h3 className="text-[28px] text-(--dark-gray)">
               Timestat streamlines business management with bulk employee
               handling and advanced scheduling.
             </h3>
@@ -112,7 +112,7 @@ const adaptability = () => {
             Government Organisations
           </p>
 
-          <h3 className="text-[32px] text-(--dark-gray)">
+          <h3 className="text-[28px] text-(--dark-gray)">
             Government organizations need secure data handling and thorough
             documentation. Timestat offers on-premise deployment, access
             control, and efficient employee management.

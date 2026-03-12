@@ -54,7 +54,7 @@ const CoreDifferentiatorSection = () => {
         >
           <p className="font-medium text-(--charcoal)">Core Differentiator</p>
 
-          <h2 className="mt-6 text-[44px] leading-11 text-(--dark-gray)">
+          <h2 className="mt-6 text-[40px] leading-11 text-(--dark-gray)">
             A system that reflects how organizations
             <br />
             actually work
@@ -68,13 +68,13 @@ const CoreDifferentiatorSection = () => {
           <motion.div
             variants={cardAnimation}
             style={{ willChange: "transform, opacity" }}
-            className="bg-(--extra-light) px-10 pt-10 pb-60"
+            className="bg-(--extra-light) p-5"
           >
             <p className="font-medium text-(--charcoal)">
               Organizational model
             </p>
 
-            <h3 className="mt-6 text-[32px] leading-8 text-(--dark-gray)">
+            <h3 className="mt-6 text-[28px] leading-8 text-(--dark-gray)">
               Hierarchical organizational modeling
               <br />
               (Executive → Management → Department)
@@ -84,13 +84,13 @@ const CoreDifferentiatorSection = () => {
           <motion.div
             variants={cardAnimation}
             style={{ willChange: "transform, opacity" }}
-            className="bg-(--rose-light) px-10 pt-10 pb-60"
+            className="bg-(--extra-light) p-5"
           >
             <p className="font-medium text-(--charcoal)">
               Configurable workflow
             </p>
 
-            <h3 className="mt-6 text-[32px] leading-8 text-(--dark-gray)">
+            <h3 className="mt-6 text-[28px] leading-8 text-(--dark-gray)">
               Configurable approval workflows
               <br />
               across modules
@@ -100,11 +100,11 @@ const CoreDifferentiatorSection = () => {
           <motion.div
             variants={cardAnimation}
             style={{ willChange: "transform, opacity" }}
-            className="bg-(--rose-light) px-10 pt-10 pb-60"
+            className="bg-(--extra-light) p-5"
           >
             <p className="font-medium text-(--charcoal)">Cloud Deployment</p>
 
-            <h3 className="mt-6 text-[32px] leading-8 text-(--dark-gray)">
+            <h3 className="mt-6 text-[28px] leading-8 text-(--dark-gray)">
               Centralized employee data powering all features
             </h3>
           </motion.div>
@@ -112,13 +112,13 @@ const CoreDifferentiatorSection = () => {
           <motion.div
             variants={cardAnimation}
             style={{ willChange: "transform, opacity" }}
-            className="bg-(--extra-light) px-10 pt-10 pb-60"
+            className="bg-(--extra-light) p-5"
           >
             <p className="font-medium text-(--charcoal)">
               On-Premise Deployment & Training
             </p>
 
-            <h3 className="mt-6 text-[32px] leading-8 text-(--dark-gray)">
+            <h3 className="mt-6 text-[28px] leading-8 text-(--dark-gray)">
               Audit trails and system integrity controls
             </h3>
           </motion.div>

@@ -88,7 +88,7 @@ const featureGrid = ({
 
           <motion.h2
             variants={fadeUp}
-            className="mt-6 text-[42px] leading-11 text-(--dark-gray)"
+            className="mt-6 text-[40px] leading-11 text-(--dark-gray)"
           >
             {heading}
           </motion.h2>
@@ -118,7 +118,7 @@ const featureGrid = ({
             >
               <p className="font-medium text-(--charcoal)">{item.label}</p>
 
-              <h3 className="mt-6 text-[32px] leading-8 text-(--dark-gray)">
+              <h3 className="mt-6 text-[28px] leading-8 text-(--dark-gray)">
                 {item.title}
               </h3>
             </motion.div>

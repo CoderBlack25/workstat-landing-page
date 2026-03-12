@@ -68,7 +68,7 @@ const HowItWorks = () => {
         >
           <p className="font-medium text-white">How It Works</p>
 
-          <h1 className="text-[44px] text-white">
+          <h1 className="text-[40px] text-white">
             Deploy and Go Live in a Few Simple Steps
           </h1>
         </motion.div>

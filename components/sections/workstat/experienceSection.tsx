@@ -58,7 +58,7 @@ const ExperienceSection = () => {
                 Built for control and flexibility
               </p>
 
-              <h2 className="text-white text-4xl leading-tight">
+              <h2 className="text-white text-[32px] leading-tight">
                 Administrators have complete control over workflows, structure,
                 and system configuration.
               </h2>
@@ -78,7 +78,7 @@ const ExperienceSection = () => {
             >
               <p className="text-white font-medium mb-4">Admin Dashboard</p>
 
-              <h2 className="text-white text-4xl leading-tight mb-10">
+              <h2 className="text-white text-[32px] leading-tight mb-10">
                 Complete visibility and control over your entire workforce
                 system
               </h2>
@@ -93,7 +93,7 @@ const ExperienceSection = () => {
             >
               <p className="text-white font-medium mb-4">Employee Portal</p>
 
-              <h2 className="text-white text-4xl leading-tight mb-10">
+              <h2 className="text-white text-[32px] leading-tight mb-10">
                 Simple, structured, and accessible for every team member
               </h2>
             </motion.div>
@@ -107,7 +107,7 @@ const ExperienceSection = () => {
                 Simple, structured, and accessible
               </p>
 
-              <h2 className="text-white text-4xl leading-tight">
+              <h2 className="text-white text-[32px] leading-tight">
                 Employees can access everything they need without relying on HR
                 for every request.
               </h2>

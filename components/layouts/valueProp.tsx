@@ -51,7 +51,7 @@ const ValueProp = ({
           {eyebrow}
         </motion.p>
 
-        <motion.h1 variants={item} className="text-[44px]">
+        <motion.h1 variants={item} className="text-[40px]">
           {title}
         </motion.h1>
       </motion.div>

@@ -55,7 +55,7 @@ const quickSetup = () => {
             Features for Quick Setup
           </p>
 
-          <h2 className="text-[44px] text-(--dark-gray) leading-tight">
+          <h2 className="text-[40px] text-(--dark-gray) leading-tight">
             Hit the ground running fast powerful yet intuitive admin features
           </h2>
 

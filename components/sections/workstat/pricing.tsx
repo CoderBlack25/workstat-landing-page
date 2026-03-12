@@ -66,7 +66,7 @@ const pricing = () => {
         >
           <p className="font-medium text-(--charcoal)">Pricing</p>
 
-          <h1 className="text-[44px] text-(--dark-gray)">
+          <h1 className="text-[40px] text-(--dark-gray)">
             Choose the right plan that works for you
           </h1>
         </motion.div>
@@ -80,7 +80,7 @@ const pricing = () => {
             <div className="flex flex-col gap-2">
               <p className="font-medium text-(--charcoal)">Basic Plan</p>
 
-              <h3 className="text-[32px] text-(--dark-gray)">
+              <h3 className="text-[28px] text-(--dark-gray)">
                 Experience the power of timestat
               </h3>
             </div>
@@ -91,12 +91,12 @@ const pricing = () => {
               </div>
 
               <div>
-                <h1 className="text-[32px] text-white">30 Days free</h1>
+                <h1 className="text-[28px] text-white">30 Days free</h1>
                 <p className="font-medium text-white">Full feature access</p>
               </div>
             </div>
 
-            <ul className="space-y-4 mb-12 grow text-[20px] text-(--slate-gray)">
+            <ul className="space-y-4 mb-12 grow text-[18px] text-(--slate-gray)">
               <li className="flex items-center gap-3">
                 <div className="bg-(--primary-blue) p-0.5 text-white">
                   <Check size={14} />
@@ -150,7 +150,7 @@ const pricing = () => {
             <div className="flex flex-col gap-2">
               <p className="font-medium">Pro Plan</p>
 
-              <h3 className="text-[32px]">
+              <h3 className="text-[28px]">
                 Scale your business with confidence
               </h3>
             </div>
@@ -161,14 +161,14 @@ const pricing = () => {
               </div>
 
               <div>
-                <h1 className="text-[32px] font-medium">
+                <h1 className="text-[28px] font-medium">
                   Enterprise-grade features
                 </h1>
                 <p>Optimise for growth</p>
               </div>
             </div>
 
-            <ul className="space-y-4 mb-12 grow text-[20px]">
+            <ul className="space-y-4 mb-12 grow text-[18px]">
               <li className="flex items-center gap-3">
                 <div className="bg-(--brand-red) p-0.5 text-white">
                   <Plus size={14} />

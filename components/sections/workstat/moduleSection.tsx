@@ -39,7 +39,7 @@ const moduleSelection = () => {
           Module selection
         </p>
 
-        <h2 className="mt-6 text-center text-[44px] text-(--dark-gray)">
+        <h2 className="mt-6 text-center text-[40px] text-(--dark-gray)">
           Start with what you need. Expand when you’re ready.
         </h2>
       </div>
@@ -49,11 +49,11 @@ const moduleSelection = () => {
           {[...modules, ...modules].map((module, index) => (
             <div
               key={index}
-              className="min-w-105 max-w-155 bg-(--extra-light) px-10 pt-10 pb-50"
+              className="min-w-105 max-w-155 bg-(--extra-light) px-5 pt-5 pb-50"
             >
               <p className="font-medium text-(--charcoal)">{module.title}</p>
 
-              <p className="mt-6 text-[32px] text-(--dark-gray)">
+              <p className="mt-6 text-[28px] text-(--dark-gray)">
                 {module.subtitle}
               </p>
             </div>

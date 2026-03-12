@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
+import Image from "next/image";
+import anima from "@/public/images/anima.png";
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -45,7 +47,7 @@ const Hero = () => {
       initial="hidden"
       animate="show"
     >
-      <div className="max-w-screen-2xl mx-auto px-20 grid grid-cols-2">
+      <div className="max-w-screen-2xl mx-auto px-20 grid grid-cols-2 gap-30">
         <div className="flex flex-col gap-6">
           <motion.h1
             variants={fadeUp}
@@ -100,7 +102,7 @@ const Hero = () => {
           variants={fadeUp}
           className="flex justify-center items-center"
         >
-          {/*Jude remember to put image here*/}
+          <Image src={anima} alt="" className="w-350 h-120" />
         </motion.div>
       </div>
     </motion.section>

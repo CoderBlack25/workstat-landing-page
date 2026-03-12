@@ -63,7 +63,7 @@ const SolutionSection = () => {
             Solutions
           </span>
 
-          <h2 className="text-[44px] leading-11 text-(--dark-gray) max-w-2xl">
+          <h2 className="text-[40px] leading-11 text-(--dark-gray) max-w-2xl">
             Manage people through a single connected platform
           </h2>
         </motion.div>
@@ -79,7 +79,7 @@ const SolutionSection = () => {
           >
             <span className="text-sm">Complex staff/people management</span>
 
-            <h3 className="text-2xl text-(--midnight)">
+            <h3 className="text-[22px] text-(--midnight)">
               Managing people shouldn’t require multiple <br /> disconnected
               tools
             </h3>
@@ -90,9 +90,11 @@ const SolutionSection = () => {
               processes, and costly errors.
             </p>
 
-            <p>Disconnected systems and data silos</p>
-            <p>Manual processes and duplication</p>
-            <p>Costly errors and inconsistencies</p>
+            <ul>
+              <li>Disconnected systems and data silos</li>
+              <li>Manual processes and duplication</li>
+              <li>Costly errors and inconsistencies</li>
+            </ul>
           </motion.div>
 
           <motion.div
@@ -102,7 +104,7 @@ const SolutionSection = () => {
           >
             <span className="text-sm">Multiple Tools</span>
 
-            <h3 className="text-2xl text-(--midnight)">
+            <h3 className="text-[22px] text-(--midnight)">
               Workstat replaces fragmented systems with a single, connected
               platform
             </h3>
@@ -113,9 +115,11 @@ const SolutionSection = () => {
               centralized.
             </p>
 
-            <p>Single, connected platform</p>
-            <p>Structured and automated workflows</p>
-            <p>Centralized data and processes</p>
+            <ul className="flex flex-col space-x-4">
+              <li>Single, connected platform</li>
+              <li>Structured and automated workflows</li>
+              <li>Centralized data and processes</li>
+            </ul>
           </motion.div>
         </motion.div>
       </div>
