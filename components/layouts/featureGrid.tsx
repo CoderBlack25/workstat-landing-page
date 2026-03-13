@@ -1,11 +1,14 @@
 "use client";
 
+import Image, { StaticImageData } from "next/image";
 import { motion, Variants } from "framer-motion";
+//import { image } from "framer-motion/client";
 
 type GridItem = {
-  label: string;
+  label?: string;
   title: string;
   bgColor?: string;
+  image: StaticImageData;
 };
 
 type FeatureGridProps = {
@@ -112,15 +115,21 @@ const featureGrid = ({
               key={index}
               variants={card}
               whileHover={{ y: -8 }}
-              className={`px-5 pt-5 pb-80 transition-transform ${
+              className={`px-7 pt-7 pb-0 transition-transform ${
                 item.bgColor ?? "bg-(--extra-light)"
               }`}
             >
-              <p className="font-medium text-(--charcoal)">{item.label}</p>
+              {item.label && (
+                <p className="font-medium text-(--charcoal)">{item.label}</p>
+              )}
 
-              <h3 className="mt-6 text-[28px] leading-8 text-(--dark-gray)">
+              <h3 className="text-[28px] leading-8 text-(--dark-gray)">
                 {item.title}
               </h3>
+
+              <div className="mt-20 mx-10">
+                <Image src={item.image} alt="" />
+              </div>
             </motion.div>
           ))}
         </motion.div>

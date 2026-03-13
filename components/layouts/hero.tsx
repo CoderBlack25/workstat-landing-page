@@ -2,6 +2,7 @@
 
 import { motion, Variants } from "framer-motion";
 import Link from "next/link";
+import Image, { StaticImageData } from "next/image";
 import { IoArrowForwardOutline } from "react-icons/io5";
 
 type HeroProps = {
@@ -17,6 +18,7 @@ type HeroProps = {
   buttonTextColor?: string;
   buttonBorderColor?: string;
   buttonHoverColor?: string;
+  heroImage: StaticImageData;
 };
 
 const container: Variants = {
@@ -66,6 +68,7 @@ const Hero = ({
   buttonTextColor = "text-(--slate-gray)",
   buttonBorderColor = "border-(--light-gray)",
   buttonHoverColor = "hover:bg-white/10",
+  heroImage,
 }: HeroProps) => {
   return (
     <motion.section
@@ -77,7 +80,7 @@ const Hero = ({
       viewport={{ once: true, margin: "-120px" }}
       style={{ willChange: "transform, opacity" }}
     >
-      <div className="max-w-screen-2xl mx-auto px-20 grid grid-cols-2 items-center">
+      <div className="max-w-screen-2xl mx-auto px-20 grid grid-cols-2 gap-30 items-center">
         <motion.div className="flex flex-col gap-6" variants={container}>
           {title && (
             <motion.h2
@@ -139,7 +142,7 @@ const Hero = ({
           variants={fadeUp}
           className="flex justify-center items-center"
         >
-          {/*Jude remember to put image here*/}
+          <Image src={heroImage} alt="hero-image" />
         </motion.div>
       </div>
     </motion.section>
