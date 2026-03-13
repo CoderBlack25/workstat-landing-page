@@ -1,5 +1,9 @@
 "use client";
 
+import Image from "next/image";
+import frame5 from "@/public/images/frame5.png";
+import frame6 from "@/public/images/frame6.png";
+import frame7 from "@/public/images/frame7.png";
 import { motion, Variants } from "framer-motion";
 
 const container: Variants = {
@@ -68,7 +72,7 @@ const payrollFeatures = () => {
           <motion.div
             variants={fadeRight}
             whileHover={{ y: -8 }}
-            className="col-span-7 bg-(--extra-light) px-10 pt-10 pb-80 min-h-65 transition-transform"
+            className="col-span-7 bg-(--extra-light) px-7 pt-7 pb-0 min-h-65 transition-transform"
           >
             <p className="font-medium text-(--charcoal) mb-4">
               Automated Calculations
@@ -76,17 +80,23 @@ const payrollFeatures = () => {
             <h3 className="text-[32px] text-(--dark-gray)">
               Reliable payroll processing every cycle
             </h3>
+            <div className="mt-20 mx-10">
+              <Image src={frame5} alt="" />
+            </div>
           </motion.div>
 
           <motion.div
             variants={fadeRight}
             whileHover={{ y: -8 }}
-            className="col-span-7 bg-(--extra-light) px-10 pt-10 pb-80 min-h-65 transition-transform"
+            className="col-span-7 bg-(--extra-light) px-7 pt-7 pb-0 min-h-65 transition-transform"
           >
             <p className="font-medium text-(--charcoal) mb-4">Organized Data</p>
             <h3 className="text-[32px] text-(--dark-gray)">
               All compensation in one place
             </h3>
+            <div className="mt-20 mx-10">
+              <Image src={frame6} alt="" />
+            </div>
           </motion.div>
 
           <motion.div variants={fadeLeft} className="col-span-5">
@@ -126,7 +136,7 @@ const payrollFeatures = () => {
           <motion.div
             variants={fadeRight}
             whileHover={{ y: -8 }}
-            className="col-span-7 bg-(--extra-light) px-10 pt-10 pb-80 min-h-65 transition-transform"
+            className="col-span-7 bg-(--extra-light) px-7 pt-7 pb-0 min-h-65 transition-transform"
           >
             <p className="font-medium text-(--charcoal) mb-4">
               Full Visibility
@@ -134,6 +144,9 @@ const payrollFeatures = () => {
             <h3 className="text-[32px] text-(--dark-gray)">
               Transparent for everyone
             </h3>
+            <div className="mt-20 mx-10">
+              <Image src={frame7} alt="" />
+            </div>
           </motion.div>
 
           <motion.div variants={fadeLeft} className="col-span-5">
