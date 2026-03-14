@@ -55,7 +55,7 @@ const imageReveal: Variants = {
   },
 };
 
-const deployment = () => {
+const Deployment = () => {
   return (
     <motion.section
       className="py-16 bg-white overflow-hidden"
@@ -140,4 +140,4 @@ const deployment = () => {
   );
 };
 
-export default deployment;
+export default Deployment;

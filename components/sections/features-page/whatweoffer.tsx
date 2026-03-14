@@ -23,7 +23,7 @@ const offers: WhatWeOffer[] = [
   },
 ];
 
-const whatweoffer = () => {
+const Whatweoffer = () => {
   return (
     <section className="w-full bg-(--deep-teal) py-20 text-white overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col justify-center items-center gap-14">
@@ -44,4 +44,4 @@ const whatweoffer = () => {
   );
 };
 
-export default whatweoffer;
+export default Whatweoffer;

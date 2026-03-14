@@ -2,7 +2,7 @@ import Image from "next/image";
 import dashboard from "@/public/images/dashboard3.png";
 import { Check } from "lucide-react";
 
-const attendanceManagement = () => {
+const AttendanceManagement = () => {
   return (
     <section
       id="attendance"
@@ -84,4 +84,4 @@ const attendanceManagement = () => {
   );
 };
 
-export default attendanceManagement;
+export default AttendanceManagement;

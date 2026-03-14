@@ -1,22 +1,15 @@
 "use client";
 
 import Link from "next/link";
-//import Image, { StaticImageData } from "next/image";
 
 type FeaturesNavbarProps = {
-  //logo: StaticImageData;
-  //logoAlt: string;
   textColor?: string;
   bgColor?: string;
-  //href: string;
 };
 
 const FeaturesNavbar = ({
-  //logo,
-  //logoAlt,
   textColor = "text-(--slate-gray)",
   bgColor = "bg-(--soft-cloud)",
-  //href,
 }: FeaturesNavbarProps) => {
   return (
     <nav
@@ -27,7 +20,6 @@ const FeaturesNavbar = ({
           href="/features-page"
           className="text-lg text-(--primary-blue) font-semibold"
         >
-          {/* <Image src={logo} alt={logoAlt} /> */}
           Features
         </Link>
 

@@ -2,7 +2,7 @@ import Image from "next/image";
 import dashboard from "@/public/images/leave-dashboard.png";
 import { Check } from "lucide-react";
 
-const holiday = () => {
+const Holiday = () => {
   return (
     <section
       id="holiday"
@@ -84,4 +84,4 @@ const holiday = () => {
   );
 };
 
-export default holiday;
+export default Holiday;

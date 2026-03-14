@@ -2,7 +2,7 @@ import Image from "next/image";
 import dashboard from "@/public/images/dashboard2.png";
 import { Check } from "lucide-react";
 
-const payrollProcessing = () => {
+const PayrollProcessing = () => {
   return (
     <section
       id="payroll"
@@ -83,4 +83,4 @@ const payrollProcessing = () => {
   );
 };
 
-export default payrollProcessing;
+export default PayrollProcessing;

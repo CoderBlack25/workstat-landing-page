@@ -2,7 +2,7 @@ import Image from "next/image";
 import dashboard from "@/public/images/dashboard.png";
 import { Check } from "lucide-react";
 
-const employeeSelfService = () => {
+const EmployeeSelfService = () => {
   return (
     <section
       id="employee"
@@ -85,4 +85,4 @@ const employeeSelfService = () => {
   );
 };
 
-export default employeeSelfService;
+export default EmployeeSelfService;

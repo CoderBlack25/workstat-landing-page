@@ -2,7 +2,7 @@ import Image from "next/image";
 import emptystate from "@/public/images/empty-state.png";
 import { Check } from "lucide-react";
 
-const humanResource = () => {
+const HumanResource = () => {
   return (
     <section
       id="HRM"
@@ -85,4 +85,4 @@ const humanResource = () => {
   );
 };
 
-export default humanResource;
+export default HumanResource;

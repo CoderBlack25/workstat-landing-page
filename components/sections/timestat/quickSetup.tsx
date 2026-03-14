@@ -40,7 +40,7 @@ const imageReveal: Variants = {
   },
 };
 
-const quickSetup = () => {
+const QuickSetup = () => {
   return (
     <motion.section
       className="w-full bg-white py-20 overflow-hidden"
@@ -89,4 +89,4 @@ const quickSetup = () => {
   );
 };
 
-export default quickSetup;
+export default QuickSetup;

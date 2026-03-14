@@ -49,7 +49,7 @@ const card: Variants = {
   },
 };
 
-const setupDetails = () => {
+const SetupDetails = () => {
   return (
     <motion.section
       id="howitwork"
@@ -166,4 +166,4 @@ const setupDetails = () => {
   );
 };
 
-export default setupDetails;
+export default SetupDetails;

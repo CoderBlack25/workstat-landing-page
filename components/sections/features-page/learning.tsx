@@ -2,7 +2,7 @@ import Image from "next/image";
 import dashboard from "@/public/images/learning-dashboard.png";
 import { Check } from "lucide-react";
 
-const learning = () => {
+const Learning = () => {
   return (
     <section
       id="learning"
@@ -85,4 +85,4 @@ const learning = () => {
   );
 };
 
-export default learning;
+export default Learning;

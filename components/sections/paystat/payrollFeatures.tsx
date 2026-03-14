@@ -46,7 +46,7 @@ const fadeRight: Variants = {
   },
 };
 
-const payrollFeatures = () => {
+const PayrollFeatures = () => {
   return (
     <motion.section
       className="w-full bg-white py-24 overflow-hidden"
@@ -164,4 +164,4 @@ const payrollFeatures = () => {
   );
 };
 
-export default payrollFeatures;
+export default PayrollFeatures;

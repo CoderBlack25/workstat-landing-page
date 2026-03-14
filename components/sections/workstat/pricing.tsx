@@ -49,7 +49,7 @@ const card: Variants = {
   },
 };
 
-const pricing = () => {
+const Pricing = () => {
   return (
     <motion.section
       className="bg-white py-20 overflow-hidden"
@@ -213,4 +213,4 @@ const pricing = () => {
   );
 };
 
-export default pricing;
+export default Pricing;

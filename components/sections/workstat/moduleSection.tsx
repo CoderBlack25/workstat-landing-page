@@ -31,7 +31,7 @@ const modules: Module[] = [
   },
 ];
 
-const moduleSelection = () => {
+const ModuleSelection = () => {
   return (
     <section className="w-full bg-white py-24 overflow-hidden">
       <div className="mx-auto max-w-7xl">
@@ -64,4 +64,4 @@ const moduleSelection = () => {
   );
 };
 
-export default moduleSelection;
+export default ModuleSelection;

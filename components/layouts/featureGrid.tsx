@@ -60,7 +60,7 @@ const card: Variants = {
   },
 };
 
-const featureGrid = ({
+const FeatureGrid = ({
   heading,
   preheading,
   subheading,
@@ -138,4 +138,4 @@ const featureGrid = ({
   );
 };
 
-export default featureGrid;
+export default FeatureGrid;

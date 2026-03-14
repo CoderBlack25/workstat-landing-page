@@ -52,7 +52,7 @@ const imageReveal: Variants = {
   },
 };
 
-const tryTimestat = () => {
+const TryTimestat = () => {
   return (
     <motion.section
       className="w-full bg-white py-20 overflow-hidden"
@@ -113,4 +113,4 @@ const tryTimestat = () => {
   );
 };
 
-export default tryTimestat;
+export default TryTimestat;

@@ -49,7 +49,7 @@ interface FeaturesDropdownProps {
   isOpen: boolean;
 }
 
-const featureDropdown = ({ isOpen }: FeaturesDropdownProps) => {
+const FeatureDropdown = ({ isOpen }: FeaturesDropdownProps) => {
   return (
     <div
       className={`
@@ -100,4 +100,4 @@ const featureDropdown = ({ isOpen }: FeaturesDropdownProps) => {
   );
 };
 
-export default featureDropdown;
+export default FeatureDropdown;

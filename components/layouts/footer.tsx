@@ -147,7 +147,7 @@ const footerColumns: FooterColumn[] = [
 
 const date = new Date();
 
-const footer = ({ logo }: FooterProps) => {
+const Footer = ({ logo }: FooterProps) => {
   return (
     <footer className="bg-(--midnight) text-(--light-overlay) overflow-hidden">
       <div className="max-w-7xl mx-auto pt-20 pb-16 text-sm">
@@ -214,4 +214,4 @@ const footer = ({ logo }: FooterProps) => {
   );
 };
 
-export default footer;
+export default Footer;

@@ -27,7 +27,7 @@ const fadeUp: Variants = {
   },
 };
 
-const aboutUs = () => {
+const AboutUs = () => {
   return (
     <motion.section
       id="about"
@@ -59,4 +59,4 @@ const aboutUs = () => {
   );
 };
 
-export default aboutUs;
+export default AboutUs;

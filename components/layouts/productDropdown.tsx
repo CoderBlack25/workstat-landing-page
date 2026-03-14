@@ -37,7 +37,7 @@ interface ProductDropdownProps {
   isOpen: boolean;
 }
 
-const productDropdown = ({ isOpen }: ProductDropdownProps) => {
+const ProductDropdown = ({ isOpen }: ProductDropdownProps) => {
   return (
     <div
       className={`
@@ -91,4 +91,4 @@ const productDropdown = ({ isOpen }: ProductDropdownProps) => {
   );
 };
 
-export default productDropdown;
+export default ProductDropdown;

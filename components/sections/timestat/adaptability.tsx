@@ -42,7 +42,7 @@ const cardReveal: Variants = {
   },
 };
 
-const adaptability = () => {
+const Adaptability = () => {
   return (
     <motion.section
       className="w-full bg-white py-20 overflow-hidden"
@@ -127,4 +127,4 @@ const adaptability = () => {
   );
 };
 
-export default adaptability;
+export default Adaptability;

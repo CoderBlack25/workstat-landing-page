@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const header = () => {
+const Header = () => {
   return (
     <div className="bg-(--primary-blue) text-white flex items-center justify-center py-4 font-inter text-sm overflow-hidden">
       <div className="flex gap-1.5 text-nowrap">
@@ -16,4 +16,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;
