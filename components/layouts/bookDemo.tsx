@@ -17,7 +17,7 @@ const BookDemo = ({
   return (
     <section className="w-full bg-(--deep-teal) text-white overflow-hidden">
       <div className="mx-auto max-w-7xl py-8">
-        <div className="flex items-start justify-between gap-6 md:flex-row md:items-center">
+        <div className="flex justify-between gap-6 items-center">
           <div className="flex flex-col gap-2">
             <h1 className="text-[28px] font-medium leading-snug">{title}</h1>
 
@@ -27,14 +27,14 @@ const BookDemo = ({
           <div className="flex flex-row items-center gap-4">
             <Link
               href={getStartedHref}
-              className="border border-(--primary-blue) px-6 py-3 text-sm font-medium transition-colors hover:bg-white/10"
+              className="border border-(--primary-blue) px-6 py-3 text-sm font-medium transition-colors hover:bg-white/10 text-nowrap"
             >
               Get Started
             </Link>
 
             <Link
               href={bookDemoHref}
-              className="flex items-center gap-2 bg-(--brand-red) px-6 py-3 text-sm font-medium transition-colors hover:bg-pink-700"
+              className="flex items-center gap-2 bg-(--brand-red) px-6 py-3 text-sm font-medium transition-colors hover:bg-pink-700 text-nowrap"
             >
               <p>Book a Demo</p>
 

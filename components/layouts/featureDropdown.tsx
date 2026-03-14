@@ -10,44 +10,38 @@ type Feature = {
 const features: Feature[] = [
   {
     title: "Employee Self-Service",
-
     description:
       "Empower your workforce with easy access to their data, boosting engagement and productivity.",
-    href: "#",
+    href: "/features-page#employee",
   },
   {
     title: "Human Resource Management",
-
     description: "Content here",
-    href: "#",
+    href: "/features-page#HRM",
   },
   {
     title: "Payroll Processing",
-
     description:
       "Empower your workforce with easy access to their data, boosting engagement and productivity.",
-    href: "#",
+    href: "/features-page#payroll",
   },
   {
     title: "Learning- Training & Orientation",
-
     description:
       "Empower your workforce with easy access to their data, boosting engagement and productivity.",
-    href: "#",
+    href: "/features-page#learning",
   },
   {
     title: "Time and Attendance Management",
-
     description:
       "Empower your workforce with easy access to their data, boosting engagement and productivity.",
-    href: "#",
+    href: "/features-page#attendance",
   },
   {
     title: "Leave and Holiday Management",
-
     description:
       "Empower your workforce with easy access to their data, boosting engagement and productivity.",
-    href: "#",
+    href: "/features-page#holiday",
   },
 ];
 

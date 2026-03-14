@@ -18,7 +18,7 @@ type HeroProps = {
   buttonTextColor?: string;
   buttonBorderColor?: string;
   buttonHoverColor?: string;
-  heroImage: StaticImageData;
+  heroImage?: StaticImageData;
 };
 
 const container: Variants = {
@@ -73,7 +73,7 @@ const Hero = ({
   return (
     <motion.section
       id="home"
-      className={`${bgColor} pt-40 pb-52 overflow-hidden`}
+      className={`${bgColor} pt-25 pb-37 overflow-hidden`}
       variants={container}
       initial="hidden"
       whileInView="show"
@@ -142,7 +142,7 @@ const Hero = ({
           variants={fadeUp}
           className="flex justify-center items-center"
         >
-          <Image src={heroImage} alt="hero-image" />
+          {heroImage && <Image src={heroImage} alt="hero-image" />}
         </motion.div>
       </div>
     </motion.section>
