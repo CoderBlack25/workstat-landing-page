@@ -45,7 +45,8 @@ const cardReveal: Variants = {
 const Adaptability = () => {
   return (
     <motion.section
-      className="w-full bg-white py-20 overflow-hidden"
+      id="howitworks"
+      className="w-full bg-white py-20 scroll-mt-20 overflow-hidden"
       variants={container}
       initial="hidden"
       whileInView="show"

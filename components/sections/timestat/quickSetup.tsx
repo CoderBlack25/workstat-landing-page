@@ -43,7 +43,8 @@ const imageReveal: Variants = {
 const QuickSetup = () => {
   return (
     <motion.section
-      className="w-full bg-white py-20 overflow-hidden"
+      id="features"
+      className="w-full bg-white py-20 scroll-mt-20 overflow-hidden"
       variants={container}
       initial="hidden"
       whileInView="show"

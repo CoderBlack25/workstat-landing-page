@@ -55,7 +55,8 @@ const imageReveal: Variants = {
 const TryTimestat = () => {
   return (
     <motion.section
-      className="w-full bg-white py-20 overflow-hidden"
+      id="overview"
+      className="w-full bg-white py-20 scroll-mt-20 overflow-hidden"
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, margin: "-100px" }}

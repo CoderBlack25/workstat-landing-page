@@ -39,7 +39,10 @@ const ValueProp = ({
   bgColor = "bg-(--primary-blue)",
 }: ValuePropProps) => {
   return (
-    <section className={`w-full ${bgColor} text-white py-28 overflow-hidden`}>
+    <section
+      id="overview"
+      className={`w-full ${bgColor} text-white py-28 scroll-mt-28 overflow-hidden`}
+    >
       <motion.div
         className="max-w-7xl mx-auto px-30 flex flex-col justify-center items-center text-center gap-6"
         variants={container}

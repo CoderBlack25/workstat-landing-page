@@ -41,7 +41,7 @@ const MainNavbar = ({
 
           <div className="flex gap-8 text-sm font-medium">
             <Link
-              href="/home"
+              href="/"
               className={`${hoverTextColor} transition-colors duration-200 cursor-pointer`}
             >
               Home

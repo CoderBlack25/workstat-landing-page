@@ -41,7 +41,7 @@ const StatNavbar = ({
             Features
           </Link>
           <Link
-            href="#howitwork"
+            href="#howitworks"
             className="hover:text-(--primary-blue) transition-colors duration-200"
           >
             How it works
