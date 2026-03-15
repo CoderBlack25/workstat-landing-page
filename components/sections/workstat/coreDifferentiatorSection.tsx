@@ -1,5 +1,10 @@
 "use client";
 
+import Image from "next/image";
+import image1 from "@/public/images/organizational-model.png";
+import image2 from "@/public/images/configurable-workflow.png";
+import image3 from "@/public/images/cloud-deployment.png";
+import image4 from "@/public/images/hybrid-deployment.png";
 import { motion, Variants } from "framer-motion";
 
 const container: Variants = {
@@ -79,6 +84,8 @@ const CoreDifferentiatorSection = () => {
               <br />
               (Executive → Management → Department)
             </h3>
+
+            <Image src={image1} alt="" />
           </motion.div>
 
           <motion.div
@@ -95,6 +102,8 @@ const CoreDifferentiatorSection = () => {
               <br />
               across modules
             </h3>
+
+            <Image src={image2} alt="" />
           </motion.div>
 
           <motion.div
@@ -107,6 +116,8 @@ const CoreDifferentiatorSection = () => {
             <h3 className="mt-6 text-[28px] leading-8 text-(--dark-gray)">
               Centralized employee data powering all features
             </h3>
+
+            <Image src={image3} alt="" />
           </motion.div>
 
           <motion.div
@@ -115,12 +126,14 @@ const CoreDifferentiatorSection = () => {
             className="bg-(--extra-light) p-5"
           >
             <p className="font-medium text-(--charcoal)">
-              On-Premise Deployment & Training
+              Hybrid On-Premise Deployment & Training
             </p>
 
             <h3 className="mt-6 text-[28px] leading-8 text-(--dark-gray)">
               Audit trails and system integrity controls
             </h3>
+
+            <Image src={image4} alt="" />
           </motion.div>
         </motion.div>
       </div>

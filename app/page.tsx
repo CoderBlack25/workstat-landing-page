@@ -3,7 +3,7 @@ import Hero from "@/components/layouts/hero";
 import SolutionSection from "@/components/sections/workstat/solutionSection";
 import PlatformOverview from "@/components/sections/workstat/platformOverview";
 import ModuleSelection from "@/components/sections/workstat/moduleSection";
-import HowItworks from "@/components/sections/workstat/howItworks";
+import WorkflowAccordion from "@/components/sections/workstat/workflowAccordion";
 import CoreDifferentiatorSection from "@/components/sections/workstat/coreDifferentiatorSection";
 import ExperienceSection from "@/components/sections/workstat/experienceSection";
 import IntegrationSection from "@/components/sections/workstat/integrationSection";
@@ -44,7 +44,7 @@ const page = () => {
       <SolutionSection />
       <PlatformOverview />
       <ModuleSelection />
-      <HowItworks />
+      <WorkflowAccordion />
       <CoreDifferentiatorSection />
       <ExperienceSection />
       <IntegrationSection />
