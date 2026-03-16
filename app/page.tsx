@@ -1,7 +1,7 @@
 import MainNavbar from "@/components/layouts/mainNavbar";
 import Hero from "@/components/layouts/hero";
 import SolutionSection from "@/components/sections/workstat/solutionSection";
-import PlatformOverview from "@/components/sections/workstat/platformOverview";
+import FeatureScroll from "@/components/sections/workstat/featureScroll";
 import ModuleSelection from "@/components/sections/workstat/moduleSection";
 import WorkflowAccordion from "@/components/sections/workstat/workflowAccordion";
 import CoreDifferentiatorSection from "@/components/sections/workstat/coreDifferentiatorSection";
@@ -42,7 +42,7 @@ const page = () => {
         //heroImage={anima}
       />
       <SolutionSection />
-      <PlatformOverview />
+      <FeatureScroll />
       <ModuleSelection />
       <WorkflowAccordion />
       <CoreDifferentiatorSection />
