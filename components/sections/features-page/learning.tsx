@@ -1,87 +1,142 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 import dashboard from "@/public/images/learning-dashboard.png";
 import { Check } from "lucide-react";
+import {
+  container,
+  fadeUp,
+  imageRevealLeft,
+  list,
+  listItem,
+} from "@/lib/featuresPageAnimation";
 
 const Learning = () => {
   return (
-    <section
+    <motion.section
       id="learning"
       className="w-full bg-white py-30 scroll-mt-30 overflow-hidden"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={container}
     >
       <div className="max-w-7xl mx-auto grid grid-cols-[2fr_1.5fr] items-start gap-10">
-        <div className="bg-(--extra-light)  flex justify-center items-center pt-20">
-          <Image src={dashboard} alt="" className="w-150" />
-        </div>
+        <motion.div
+          variants={imageRevealLeft}
+          whileHover={{ y: -6 }}
+          transition={{ duration: 0.25, ease: "easeOut" }}
+          className="bg-(--extra-light) flex justify-center items-center pt-20"
+        >
+          <Image src={dashboard} alt="Learning dashboard" className="w-150" />
+        </motion.div>
 
-        <div className="flex flex-col space-y-4">
-          <p className="font-medium text-(--slate-gray)">
+        <motion.div variants={container} className="flex flex-col space-y-4">
+          <motion.p
+            variants={fadeUp}
+            className="font-medium text-(--slate-gray)"
+          >
             Learning &ndash; Training & Orientation
-          </p>
+          </motion.p>
 
-          <h1 className="text-[32px] text-(--dark-gray) leading-snug">
+          <motion.h1
+            variants={fadeUp}
+            className="text-[32px] text-(--dark-gray) leading-snug"
+          >
             Support employee growth through structured learning
-          </h1>
+          </motion.h1>
 
-          <h2 className="text-(--slate-gray)">
+          <motion.h2 variants={fadeUp} className="text-(--slate-gray)">
             Workstat enables organizations to create and manage training
             programs that support onboarding, skill development, and
             professional growth.
-          </h2>
+          </motion.h2>
 
-          <h3 className="text-lg font-medium text-(--charcoal)">
+          <motion.h3
+            variants={fadeUp}
+            className="text-lg font-medium text-(--charcoal)"
+          >
             Encourage continuous learning across your workforce
-          </h3>
+          </motion.h3>
 
-          <div className="flex space-x-10 items-center justify-center">
-            <ul className="space-y-4 mb-12 grow text-sm text-(--dark-gray)">
-              <li className="flex items-center gap-3">
+          <motion.div
+            variants={fadeUp}
+            className="flex space-x-10 items-center justify-center"
+          >
+            <motion.ul
+              variants={list}
+              className="space-y-4 mb-12 grow text-sm text-(--dark-gray)"
+            >
+              <motion.li
+                variants={listItem}
+                className="flex items-center gap-3"
+              >
                 <div className="bg-(--primary-blue) p-0.5 text-white">
                   <Check size={14} />
                 </div>
                 <span>Create and assign training programs</span>
-              </li>
+              </motion.li>
 
-              <li className="flex items-center gap-3">
+              <motion.li
+                variants={listItem}
+                className="flex items-center gap-3"
+              >
                 <div className="bg-(--primary-blue) p-0.5 text-white">
                   <Check size={14} />
                 </div>
                 <span>Support effective onboarding processes</span>
-              </li>
+              </motion.li>
 
-              <li className="flex items-center gap-3">
+              <motion.li
+                variants={listItem}
+                className="flex items-center gap-3"
+              >
                 <div className="bg-(--primary-blue) p-0.5 text-white">
                   <Check size={14} />
                 </div>
                 <span>Develop skills needed for success</span>
-              </li>
-            </ul>
+              </motion.li>
+            </motion.ul>
 
-            <ul className="space-y-4 mb-12 grow text-sm text-(--dark-gray)">
-              <li className="flex items-center gap-3">
+            <motion.ul
+              variants={list}
+              className="space-y-4 mb-12 grow text-sm text-(--dark-gray)"
+            >
+              <motion.li
+                variants={listItem}
+                className="flex items-center gap-3"
+              >
                 <div className="bg-(--primary-blue) p-0.5 text-white">
                   <Check size={14} />
                 </div>
                 <span>Track employee progress and completion</span>
-              </li>
+              </motion.li>
 
-              <li className="flex items-center gap-3">
+              <motion.li
+                variants={listItem}
+                className="flex items-center gap-3"
+              >
                 <div className="bg-(--primary-blue) p-0.5 text-white">
                   <Check size={14} />
                 </div>
                 <span>Provide access to learning resources</span>
-              </li>
+              </motion.li>
 
-              <li className="flex items-center gap-3">
+              <motion.li
+                variants={listItem}
+                className="flex items-center gap-3"
+              >
                 <div className="bg-(--primary-blue) p-0.5 text-white">
                   <Check size={14} />
                 </div>
                 <span>Monitor professional development</span>
-              </li>
-            </ul>
-          </div>
-        </div>
+              </motion.li>
+            </motion.ul>
+          </motion.div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
