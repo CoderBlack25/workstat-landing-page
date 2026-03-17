@@ -101,3 +101,29 @@ body {
     transform: translateX(-50%);
   }
 }
+
+/* @keyframes progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.animate-progress {
+  animation: progress 7s linear forwards;
+} */
+
+@theme {
+  --animate-load-progress: load-progress 7s linear forwards;
+
+  @keyframes load-progress {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+}
