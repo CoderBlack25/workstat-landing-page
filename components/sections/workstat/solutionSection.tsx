@@ -70,7 +70,7 @@ const SolutionSection = () => {
 
         <motion.div
           variants={container}
-          className="grid grid-cols-[2fr_1fr] gap-6"
+          className="grid grid-cols-[2fr_1.5fr] gap-6"
         >
           <motion.div
             variants={slideLeft}
@@ -90,7 +90,7 @@ const SolutionSection = () => {
               processes, and costly errors.
             </p>
 
-            <ul>
+            <ul className="flex flex-col space-y-4 list-disc ml-6">
               <li>Disconnected systems and data silos</li>
               <li>Manual processes and duplication</li>
               <li>Costly errors and inconsistencies</li>
@@ -115,7 +115,7 @@ const SolutionSection = () => {
               centralized.
             </p>
 
-            <ul className="flex flex-col space-x-4">
+            <ul className="flex flex-col space-y-4 list-disc ml-6">
               <li>Single, connected platform</li>
               <li>Structured and automated workflows</li>
               <li>Centralized data and processes</li>

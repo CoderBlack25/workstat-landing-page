@@ -1,6 +1,9 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
+import Image from "next/image";
+import image1 from "@/public/images/controlled.png";
+import image2 from "@/public/images/structured.png";
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -74,7 +77,7 @@ const ExperienceSection = () => {
             <motion.div
               variants={card}
               style={{ willChange: "transform, opacity" }}
-              className="bg-(--primary-blue) flex flex-col p-10"
+              className="bg-(--primary-blue) flex flex-col p-5"
             >
               <p className="text-white font-medium mb-4">Admin Dashboard</p>
 
@@ -82,6 +85,9 @@ const ExperienceSection = () => {
                 Complete visibility and control over your entire workforce
                 system
               </h2>
+              <div className="flex justify-center items-center">
+                <Image src={image1} alt="" className="w-45" />
+              </div>
             </motion.div>
           </div>
 
@@ -96,6 +102,9 @@ const ExperienceSection = () => {
               <h2 className="text-white text-[32px] leading-tight mb-10">
                 Simple, structured, and accessible for every team member
               </h2>
+              <div className="flex justify-center items-center">
+                <Image src={image2} alt="" className="w-65" />
+              </div>
             </motion.div>
 
             <motion.div

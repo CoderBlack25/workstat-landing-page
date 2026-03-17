@@ -75,7 +75,7 @@ const Pricing = () => {
           <motion.div
             variants={card}
             whileHover={{ y: -8 }}
-            className="flex flex-col bg-(--soft-blue) p-6 transition-transform"
+            className="flex flex-col bg-(--extra-light) p-6 transition-transform"
           >
             <div className="flex flex-col gap-2">
               <p className="font-medium text-(--charcoal)">Basic Plan</p>
@@ -85,14 +85,14 @@ const Pricing = () => {
               </h3>
             </div>
 
-            <div className="flex gap-4 bg-(--primary-blue) my-12 p-4">
-              <div className="bg-(--medium-blue) flex items-center justify-center p-6">
+            <div className="flex gap-4 bg-white my-12 p-4">
+              <div className="bg-(--soft-cloud) flex items-center justify-center p-6">
                 <Image src={basic} alt="" />
               </div>
 
-              <div>
-                <h1 className="text-[28px] text-white">30 Days free</h1>
-                <p className="font-medium text-white">Full feature access</p>
+              <div className="text-(--dark-gray)">
+                <h1 className="text-[28px]">30 Days free</h1>
+                <p className="font-medium">Full feature access</p>
               </div>
             </div>
 
@@ -130,7 +130,7 @@ const Pricing = () => {
 
             <Link
               href="/start"
-              className="w-full py-4 mb-8 bg-(--primary-blue) text-white font-medium hover:bg-[#15465c] transition-colors text-center"
+              className="w-full py-4 mb-8 bg-white border border-gray-200 text-(--dark-gray) font-medium hover:bg-gray-200 transition-colors text-center"
             >
               Start
             </Link>
@@ -139,10 +139,10 @@ const Pricing = () => {
           <motion.div
             variants={card}
             whileHover={{ y: -8 }}
-            className="relative flex flex-col text-white bg-(--primary-blue) p-6 overflow-hidden transition-transform"
+            className="relative flex flex-col text-white bg-(--deep-teal) p-6 transition-transform"
           >
-            <div className="absolute top-0 right-0">
-              <div className="bg-(--brand-red) font-medium py-1 px-8 transform rotate-45 translate-x-10 translate-y-7">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              <div className="bg-(--brand-red) font-medium py-1 px-4">
                 Recommended
               </div>
             </div>
@@ -155,7 +155,7 @@ const Pricing = () => {
               </h3>
             </div>
 
-            <div className="flex gap-4 bg-(--medium-blue) my-12 p-4">
+            <div className="flex gap-4 bg-(--secondary-blue) my-12 p-4">
               <div className="bg-(--primary-blue) flex items-center justify-center p-6">
                 <Image src={pro} alt="" />
               </div>
@@ -202,7 +202,7 @@ const Pricing = () => {
 
             <Link
               href="/upgrade"
-              className="w-full py-4 mb-8 bg-white text-(--deep-teal) font-medium hover:bg-gray-200 transition-colors text-center"
+              className="w-full py-4 mb-8 bg-(--brand-red) text-white font-medium hover:bg-pink-700 transition-colors text-center"
             >
               Upgrade to Pro
             </Link>
