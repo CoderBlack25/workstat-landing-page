@@ -1,6 +1,10 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
+import Image from "next/image";
+import image1 from "@/public/images/piggy-bank.png";
+import image2 from "@/public/images/institution.png";
+import image3 from "@/public/images/system.png";
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -109,8 +113,7 @@ const SetupDetails = () => {
           <div className="grid grid-cols-2 gap-6">
             <motion.div
               variants={card}
-              whileHover={{ y: -8 }}
-              className="flex flex-col gap-4 bg-(--extra-light) px-10 pt-10 pb-55 transition-transform"
+              className="flex flex-col gap-4 bg-(--extra-light) px-7 pt-7 transition-transform"
             >
               <p className="font-medium text-(--charcoal)">
                 Clear, transparent access to earnings
@@ -120,12 +123,15 @@ const SetupDetails = () => {
                 Employees can easily view their payment history and understand
                 their compensation without needing to request information.
               </h3>
+
+              <div className="ml-100 mt-20">
+                <Image src={image1} alt="" className="w-40" />
+              </div>
             </motion.div>
 
             <motion.div
               variants={card}
-              whileHover={{ y: -8 }}
-              className="flex flex-col gap-4 bg-(--extra-light) px-10 pt-10 pb-55 transition-transform"
+              className="flex flex-col gap-4 bg-(--extra-light) px-7 pt-7  transition-transform"
             >
               <p className="font-medium text-(--charcoal)">
                 Designed for organizations that need reliable payroll operations
@@ -136,13 +142,16 @@ const SetupDetails = () => {
                 workforce, Paystat gives you the structure and consistency
                 needed to run payroll with confidence.
               </h3>
+
+              <div className="ml-100 mt-20">
+                <Image src={image2} alt="" className="w-40" />
+              </div>
             </motion.div>
           </div>
 
           <motion.div
             variants={card}
-            whileHover={{ y: -8 }}
-            className="flex flex-col gap-4 bg-(--extra-light) px-10 pt-10 pb-55 transition-transform"
+            className="flex flex-col gap-4 bg-(--extra-light) px-7 pt-7 transition-transform"
           >
             <p className="font-medium text-(--charcoal)">
               Stronger when connected to your full workforce system
@@ -159,6 +168,10 @@ const SetupDetails = () => {
               consistent, and approval processes follow your organizational
               structure automatically.
             </h3>
+
+            <div className="ml-255 mt-20">
+              <Image src={image3} alt="" className="w-45" />
+            </div>
           </motion.div>
         </motion.div>
       </div>

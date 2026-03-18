@@ -6,6 +6,7 @@ import Structure from "@/components/sections/about/structure";
 import BookDemo from "@/components/layouts/bookDemo";
 import Footer from "@/components/layouts/footer";
 import workstat from "@/public/icons/workstat-logo.svg";
+import heroImage from "@/public/images/about-hero-image.png";
 
 const page = () => {
   return (
@@ -27,7 +28,7 @@ const page = () => {
         buttonBorderColor="border-(--primary-blue)"
         buttonHoverColor="hover:bg-white/10"
         buttonTextColor="text-white"
-        //heroImage={anima}
+        heroImage={heroImage}
       />
 
       <PowerPoint

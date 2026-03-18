@@ -115,7 +115,6 @@ const FeatureGrid = ({
             <motion.div
               key={index}
               variants={card}
-              whileHover={{ y: -8 }}
               className={`px-7 pt-7 pb-0 transition-transform ${
                 item.bgColor ?? "bg-(--extra-light)"
               }`}

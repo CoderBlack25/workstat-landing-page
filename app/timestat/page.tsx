@@ -7,8 +7,8 @@ import Adaptability from "@/components/sections/timestat/adaptability";
 import Deployment from "@/components/sections/timestat/deployment";
 import BookDemo from "@/components/layouts/bookDemo";
 import Footer from "@/components/layouts/footer";
-import workstat from "@/public/icons/workstat-logo2.svg";
-import timestat from "@/public/icons/timestat-logo3.svg";
+import workstat from "@/public/icons/workstat-logo.svg";
+import timestat from "@/public/icons/timestat-logo4.svg";
 import timestat2 from "@/public/icons/timestat-logo.svg";
 
 const page = () => {
@@ -17,17 +17,28 @@ const page = () => {
       <MainNavbar
         logo={workstat}
         logoAlt="logo"
-        textColor="text-(--slate-gray)"
-        bgColor="bg-white"
-        buttonBgColor="bg-(--primary-blue)"
-        buttonTextColor="text-white"
-        hoverButtonColor="hover:bg-[#15465c]"
+        hoverTextColor="hover:text-white/70"
+        hoverButtonColor="hover:bg-gray-200"
       />
-      <StatNavbar logo={timestat} logoAlt="logo" href="/timestat" />
+      <StatNavbar
+        logo={timestat}
+        logoAlt="logo"
+        href="/timestat"
+        bgColor="bg-(--midnight)"
+        textColor="text-white"
+        hoverTextColor="hover:text-white/70"
+      />
       <Hero
         heading="Accurate & Efficient Employee Attendance tracking & Management Solution"
         description="Say goodbye to manual tracking, employee inefficiency, ghost employees, low productivity, and unaccountability in your workplace. Timestat simplifies how organizations track and manage employees' attendance, leaves, shifts, and more."
-        secondbutton="Talk to Sales"
+        secondbutton="Get Started"
+        bgColor="bg-(--midnight)"
+        headingTextColor="text-white"
+        descriptionTextColor="text-(--light-white)"
+        buttonBgcolor="bg-(--midnight)"
+        buttonBorderColor="border-(--primary-blue)"
+        buttonHoverColor="hover:bg-white/10"
+        buttonTextColor="text-white"
       />
       <TryTimestat />
       <QuickSetup />

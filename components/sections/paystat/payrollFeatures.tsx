@@ -4,6 +4,7 @@ import Image from "next/image";
 import frame5 from "@/public/images/frame5.png";
 import frame6 from "@/public/images/frame6.png";
 import frame7 from "@/public/images/frame7.png";
+import frame8 from "@/public/images/frame8.png";
 import { motion, Variants } from "framer-motion";
 
 const container: Variants = {
@@ -71,8 +72,7 @@ const PayrollFeatures = () => {
 
           <motion.div
             variants={fadeRight}
-            whileHover={{ y: -8 }}
-            className="col-span-7 bg-(--extra-light) px-7 pt-7 pb-0 min-h-65 transition-transform"
+            className="col-span-7 bg-(--extra-light) px-7 pt-7 min-h-65 transition-transform"
           >
             <p className="font-medium text-(--charcoal) mb-4">
               Automated Calculations
@@ -87,8 +87,7 @@ const PayrollFeatures = () => {
 
           <motion.div
             variants={fadeRight}
-            whileHover={{ y: -8 }}
-            className="col-span-7 bg-(--extra-light) px-7 pt-7 pb-0 min-h-65 transition-transform"
+            className="col-span-7 bg-(--extra-light) px-7 pt-7 min-h-65 transition-transform"
           >
             <p className="font-medium text-(--charcoal) mb-4">Organized Data</p>
             <h3 className="text-[32px] text-(--dark-gray)">
@@ -122,8 +121,7 @@ const PayrollFeatures = () => {
 
           <motion.div
             variants={fadeRight}
-            whileHover={{ y: -8 }}
-            className="col-span-7 bg-(--extra-light) px-10 pt-10 pb-80 min-h-65 transition-transform"
+            className="col-span-7 bg-(--extra-light) px-7 pt-7 min-h-65 transition-transform"
           >
             <p className="font-medium text-(--charcoal) mb-4">
               Complete History
@@ -131,12 +129,14 @@ const PayrollFeatures = () => {
             <h3 className="text-[32px] text-(--dark-gray)">
               Full audit trails and reporting
             </h3>
+            <div className="mt-20 mx-10">
+              <Image src={frame8} alt="" />
+            </div>
           </motion.div>
 
           <motion.div
             variants={fadeRight}
-            whileHover={{ y: -8 }}
-            className="col-span-7 bg-(--extra-light) px-7 pt-7 pb-0 min-h-65 transition-transform"
+            className="col-span-7 bg-(--extra-light) px-7 pt-7 min-h-65 transition-transform"
           >
             <p className="font-medium text-(--charcoal) mb-4">
               Full Visibility

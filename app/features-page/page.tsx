@@ -13,6 +13,7 @@ import BookDemo from "@/components/layouts/bookDemo";
 import Footer from "@/components/layouts/footer";
 import workstat from "@/public/icons/workstat-logo.svg";
 import workstat2 from "@/public/icons/workstat-logo2.svg";
+import heroImage from "@/public/images/feature-hero-image.png";
 
 const page = () => {
   return (
@@ -32,6 +33,7 @@ const page = () => {
         heading="Choose the Features You Actually Need"
         description="Subscribe to individual features or get the complete suite. Workstat gives you the flexibility to build the perfect HR solution for your organization."
         secondbutton="Get Started"
+        heroImage={heroImage}
       />
       <Whatweoffer />
       <EmployeeSelfService />

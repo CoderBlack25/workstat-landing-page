@@ -9,6 +9,7 @@ type StatNavbarProps = {
   textColor?: string;
   bgColor?: string;
   href: string;
+  hoverTextColor?: string;
 };
 
 const StatNavbar = ({
@@ -17,6 +18,7 @@ const StatNavbar = ({
   textColor = "text-(--slate-gray)",
   bgColor = "bg-(--soft-cloud)",
   href,
+  hoverTextColor = "hover:text-(--primary-blue)",
 }: StatNavbarProps) => {
   return (
     <nav
@@ -30,19 +32,19 @@ const StatNavbar = ({
         <div className="flex gap-8 text-sm font-medium">
           <Link
             href="#overview"
-            className="hover:text-(--primary-blue) transition-colors duration-200"
+            className={`${hoverTextColor} transition-colors duration-200`}
           >
             Overview
           </Link>
           <Link
             href="#features"
-            className="hover:text-(--primary-blue) transition-colors duration-200"
+            className={`${hoverTextColor} transition-colors duration-200`}
           >
             Features
           </Link>
           <Link
             href="#howitworks"
-            className="hover:text-(--primary-blue) transition-colors duration-200"
+            className={`${hoverTextColor} transition-colors duration-200`}
           >
             How it works
           </Link>

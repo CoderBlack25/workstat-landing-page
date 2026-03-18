@@ -36,7 +36,7 @@ const item: Variants = {
 const ValueProp = ({
   eyebrow,
   title,
-  bgColor = "bg-(--primary-blue)",
+  bgColor = "bg-(--deep-teal)",
 }: ValuePropProps) => {
   return (
     <section

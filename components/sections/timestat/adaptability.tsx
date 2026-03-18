@@ -66,7 +66,6 @@ const Adaptability = () => {
         >
           <motion.div
             variants={cardReveal}
-            whileHover={{ y: -8 }}
             transition={{ duration: 0.3 }}
             className="flex flex-col gap-6 bg-(--extra-light) px-10 pt-10 rounded-xl"
           >
@@ -86,7 +85,6 @@ const Adaptability = () => {
 
           <motion.div
             variants={cardReveal}
-            whileHover={{ y: -8 }}
             transition={{ duration: 0.3 }}
             className="flex flex-col gap-6 bg-(--extra-light) px-10 pt-10 rounded-xl"
           >
@@ -105,7 +103,6 @@ const Adaptability = () => {
 
         <motion.div
           variants={cardReveal}
-          whileHover={{ y: -8 }}
           transition={{ duration: 0.3 }}
           className="flex flex-col gap-6 bg-(--extra-light) px-10 pt-10 rounded-xl"
         >

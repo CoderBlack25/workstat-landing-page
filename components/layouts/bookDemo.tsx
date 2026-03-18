@@ -18,7 +18,7 @@ const BookDemo = ({
     <section className="w-full bg-(--deep-teal) text-white overflow-hidden">
       <div className="mx-auto max-w-7xl py-8">
         <div className="flex justify-between gap-6 items-center">
-          <div className="flex flex-col gap-2">
+          <div className="max-w-4xl flex flex-col gap-2">
             <h1 className="text-[28px] font-medium leading-snug">{title}</h1>
 
             <p className="font-medium">{description}</p>

@@ -61,7 +61,7 @@ const Whatweoffer = () => {
     >
       <div className="max-w-7xl mx-auto flex flex-col justify-center items-center gap-14">
         <motion.h1 variants={fadeUp} className="text-[40px] text-center">
-          What we offer
+          Everything You Need, Nothing You Don&apos;t
         </motion.h1>
 
         <motion.div variants={container} className="grid grid-cols-3 gap-6">
@@ -71,7 +71,7 @@ const Whatweoffer = () => {
               variants={fadeUp}
               whileHover={{ y: -6, scale: 1.01 }}
               transition={{ duration: 0.25, ease: "easeOut" }}
-              className="flex items-center space-x-5 bg-(--secondary-blue) pl-5 py-5 pr-25 border border-white/10 shadow-lg shadow-black/10"
+              className="flex items-center space-x-5 bg-(--secondary-blue) pl-5 py-5 pr-25"
             >
               <div className="shrink-0">
                 <Image src={offer.icon} alt={offer.description} />
