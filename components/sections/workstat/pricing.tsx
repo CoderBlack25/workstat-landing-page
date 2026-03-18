@@ -74,7 +74,6 @@ const Pricing = () => {
         <div className="grid grid-cols-2 gap-6">
           <motion.div
             variants={card}
-            whileHover={{ y: -8 }}
             className="flex flex-col bg-(--extra-light) p-6 transition-transform"
           >
             <div className="flex flex-col gap-2">
@@ -138,7 +137,6 @@ const Pricing = () => {
 
           <motion.div
             variants={card}
-            whileHover={{ y: -8 }}
             className="relative flex flex-col text-white bg-(--deep-teal) p-6 transition-transform"
           >
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">

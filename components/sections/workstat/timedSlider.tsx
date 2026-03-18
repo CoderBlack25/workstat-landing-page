@@ -116,7 +116,7 @@ export default function TimedSlider() {
             return (
               <div
                 key={slide.id}
-                className="py-4 cursor-pointer"
+                className="py-2 cursor-pointer"
                 onClick={() => setActiveIndex(index)}
               >
                 {/* Accordion Trigger */}
@@ -147,7 +147,7 @@ export default function TimedSlider() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="text-(--slate-gray) mt-2 mb-4 leading-relaxed">
+                    <p className="text-(--slate-gray) mt-2 mb-10 leading-relaxed">
                       {slide.description}
                     </p>
                   </div>
