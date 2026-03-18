@@ -76,7 +76,7 @@ const MainNavbar = ({
             </div>
 
             <Link
-              href="#about"
+              href="/about"
               className={`${hoverTextColor} transition-colors duration-200 cursor-pointer`}
             >
               About

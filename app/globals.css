@@ -31,6 +31,7 @@
   --soft-pink: #fdf7f9;
   --light-white: rgba(255, 255, 255, 0.8);
   --less-white: rgba(255, 255, 255, 0.6);
+  --ash: rgba(255, 255, 255, 0.1);
 }
 
 @theme inline {
