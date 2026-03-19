@@ -112,7 +112,7 @@ const Hero = ({
           >
             <Link
               href="#"
-              className="flex items-center gap-2 bg-(--brand-red) px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-pink-700"
+              className="flex items-center gap-2 bg-(--brand-red) px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-rose-800"
             >
               <p>Book a Demo</p>
               <IoArrowForwardOutline />
@@ -142,7 +142,7 @@ const Hero = ({
           variants={fadeUp}
           className="flex justify-center items-center"
         >
-          {heroImage && <Image src={heroImage} alt="hero-image" />}
+          {heroImage && <Image src={heroImage} alt="hero-image" priority />}
         </motion.div>
       </div>
     </motion.section>

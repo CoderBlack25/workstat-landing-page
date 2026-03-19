@@ -3,7 +3,7 @@
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import image1 from "@/public/images/piggy-bank.png";
-import image2 from "@/public/images/institution.png";
+import image2 from "@/public/images/institution2.png";
 import image3 from "@/public/images/system.png";
 
 const container: Variants = {
@@ -111,67 +111,17 @@ const SetupDetails = () => {
 
         <motion.div variants={container} className="grid grid-rows-2 gap-6">
           <div className="grid grid-cols-2 gap-6">
-            <motion.div
-              variants={card}
-              className="flex flex-col gap-4 bg-(--extra-light) px-7 pt-7 transition-transform"
-            >
-              <p className="font-medium text-(--charcoal)">
-                Clear, transparent access to earnings
-              </p>
-
-              <h3 className="text-[28px] text-(--charcoal)">
-                Employees can easily view their payment history and understand
-                their compensation without needing to request information.
-              </h3>
-
-              <div className="ml-100 mt-20">
-                <Image src={image1} alt="" className="w-40" />
-              </div>
+            <motion.div variants={card} className="">
+              <Image src={image1} alt="" className="w-full" />
             </motion.div>
 
-            <motion.div
-              variants={card}
-              className="flex flex-col gap-4 bg-(--extra-light) px-7 pt-7  transition-transform"
-            >
-              <p className="font-medium text-(--charcoal)">
-                Designed for organizations that need reliable payroll operations
-              </p>
-
-              <h3 className="text-[28px] text-(--charcoal)">
-                Whether you&apos;re managing a growing team or a large
-                workforce, Paystat gives you the structure and consistency
-                needed to run payroll with confidence.
-              </h3>
-
-              <div className="ml-100 mt-20">
-                <Image src={image2} alt="" className="w-40" />
-              </div>
+            <motion.div variants={card} className="">
+              <Image src={image2} alt="" className="w-full" />
             </motion.div>
           </div>
 
-          <motion.div
-            variants={card}
-            className="flex flex-col gap-4 bg-(--extra-light) px-7 pt-7 transition-transform"
-          >
-            <p className="font-medium text-(--charcoal)">
-              Stronger when connected to your full workforce system
-            </p>
-
-            <h2 className="text-[28px] text-(--charcoal)">
-              When used with Workstat, Paystat becomes part of a fully connected
-              system where employee data, attendance, and payroll work together
-              seamlessly.
-            </h2>
-
-            <h3 className="text-[28px] text-(--charcoal)">
-              Attendance data flows into payroll, employee records stay
-              consistent, and approval processes follow your organizational
-              structure automatically.
-            </h3>
-
-            <div className="ml-255 mt-20">
-              <Image src={image3} alt="" className="w-45" />
-            </div>
+          <motion.div variants={card} className="">
+            <Image src={image3} alt="" className="w-full" />
           </motion.div>
         </motion.div>
       </div>

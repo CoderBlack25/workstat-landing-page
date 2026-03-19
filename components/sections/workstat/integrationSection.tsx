@@ -32,9 +32,18 @@ const cards: Card[] = [
 
 const IntegrationSection = () => {
   const items = [
-    "Attendance feeds into payroll",
-    "Organizational structure drives approvals",
-    "Performance and training connect to employee growth",
+    {
+      left: "Attendance feeds into payroll",
+      right: "Accurate payroll calculations",
+    },
+    {
+      left: "Organizational structure drives approvals",
+      right: "Automated approval routing",
+    },
+    {
+      left: "Performance and training connect to employee growth",
+      right: "Continuous employee development tracking",
+    },
   ];
 
   const container: Variants = {
@@ -104,11 +113,13 @@ const IntegrationSection = () => {
                 <div className="flex items-center gap-4">
                   <span className="w-2 h-2 bg-[#A2BAC6] block" />
 
-                  <span className="text-2xl text-(--dark-gray)">{text}</span>
+                  <span className="text-2xl text-(--dark-gray)">
+                    {text.left}
+                  </span>
                 </div>
 
-                <span className="text-(--dark-navy) font-medium whitespace-nowrap">
-                  Employee data flows across all modules:
+                <span className="text-(--dark-navy) whitespace-nowrap">
+                  {text.right}
                 </span>
               </motion.div>
             ))}

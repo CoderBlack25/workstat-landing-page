@@ -68,23 +68,13 @@ const CoreDifferentiatorSection = () => {
 
         <motion.div
           variants={container}
-          className="mt-20 grid gap-8 grid-cols-2"
+          className="mt-20 grid gap-6 grid-cols-2"
         >
           <motion.div
             variants={cardAnimation}
             style={{ willChange: "transform, opacity" }}
             className="bg-(--extra-light) p-5"
           >
-            <p className="font-medium text-(--charcoal)">
-              Organizational model
-            </p>
-
-            <h3 className="mt-6 text-[28px] leading-8 text-(--dark-gray)">
-              Hierarchical organizational modeling
-              <br />
-              (Executive → Management → Department)
-            </h3>
-
             <Image src={image1} alt="" />
           </motion.div>
 
@@ -93,16 +83,6 @@ const CoreDifferentiatorSection = () => {
             style={{ willChange: "transform, opacity" }}
             className="bg-(--extra-light) p-5"
           >
-            <p className="font-medium text-(--charcoal)">
-              Configurable workflow
-            </p>
-
-            <h3 className="mt-6 text-[28px] leading-8 text-(--dark-gray)">
-              Configurable approval workflows
-              <br />
-              across modules
-            </h3>
-
             <Image src={image2} alt="" />
           </motion.div>
 
@@ -111,12 +91,6 @@ const CoreDifferentiatorSection = () => {
             style={{ willChange: "transform, opacity" }}
             className="bg-(--extra-light) p-5"
           >
-            <p className="font-medium text-(--charcoal)">Cloud Deployment</p>
-
-            <h3 className="mt-6 text-[28px] leading-8 text-(--dark-gray)">
-              Centralized employee data powering all features
-            </h3>
-
             <Image src={image3} alt="" />
           </motion.div>
 
@@ -125,14 +99,6 @@ const CoreDifferentiatorSection = () => {
             style={{ willChange: "transform, opacity" }}
             className="bg-(--extra-light) p-5"
           >
-            <p className="font-medium text-(--charcoal)">
-              Hybrid On-Premise Deployment & Training
-            </p>
-
-            <h3 className="mt-6 text-[28px] leading-8 text-(--dark-gray)">
-              Audit trails and system integrity controls
-            </h3>
-
             <Image src={image4} alt="" />
           </motion.div>
         </motion.div>

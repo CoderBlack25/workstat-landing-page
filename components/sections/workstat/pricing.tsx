@@ -200,7 +200,7 @@ const Pricing = () => {
 
             <Link
               href="/upgrade"
-              className="w-full py-4 mb-8 bg-(--brand-red) text-white font-medium hover:bg-pink-700 transition-colors text-center"
+              className="w-full py-4 mb-8 bg-(--brand-red) text-white font-medium hover:bg-rose-800 transition-colors text-center"
             >
               Upgrade to Pro
             </Link>

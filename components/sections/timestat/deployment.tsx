@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import image1 from "@/public/images/cloud.png";
+import image2 from "@/public/images/server.png";
 import { motion, Variants } from "framer-motion";
 
 const sectionContainer: Variants = {
@@ -67,36 +68,17 @@ const Deployment = () => {
           <motion.div
             variants={cardReveal}
             transition={{ duration: 0.3 }}
-            className="bg-(--extra-light) p-7 rounded-xl"
+            className=""
           >
-            <div className="flex flex-col gap-2">
-              <p className="font-medium text-(--charcoal)">Cloud Deployment</p>
-
-              <h1 className="text-[28px] text-(--dark-gray)">
-                Faster setup, secure hosting and subscription model
-              </h1>
-
-              <div className="flex items-center justify-center my-16">
-                <Image src={image1} alt="" className="w-40" />
-              </div>
-            </div>
+            <Image src={image1} alt="" className="w-full" />
           </motion.div>
 
           <motion.div
             variants={cardReveal}
             transition={{ duration: 0.3 }}
-            className="bg-(--extra-light) p-6 rounded-xl"
+            className=""
           >
-            <div className="flex flex-col gap-2">
-              <p className="font-medium text-(--charcoal)">
-                On-Premise Deployment & Training
-              </p>
-
-              <h1 className="text-[28px] text-(--dark-gray)">
-                Dedicated server with hardware installation. Offering staff
-                onboarding & SLA
-              </h1>
-            </div>
+            <Image src={image2} alt="" className="w-full" />
           </motion.div>
         </motion.div>
       </div>

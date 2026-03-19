@@ -34,7 +34,7 @@ const BookDemo = ({
 
             <Link
               href={bookDemoHref}
-              className="flex items-center gap-2 bg-(--brand-red) px-6 py-3 text-sm font-medium transition-colors hover:bg-pink-700 text-nowrap"
+              className="flex items-center gap-2 bg-(--brand-red) px-6 py-3 text-sm font-medium transition-colors hover:bg-rose-800 text-nowrap"
             >
               <p>Book a Demo</p>
 
