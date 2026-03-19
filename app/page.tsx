@@ -10,7 +10,7 @@ import IntegrationSection from "@/components/sections/workstat/integrationSectio
 import Pricing from "@/components/sections/workstat/pricing";
 import BookDemo from "@/components/layouts/bookDemo";
 import workstat from "@/public/icons/workstat-logo.svg";
-//import anima from "@/public/images/anima.png";
+import anima from "@/public/images/anima.png";
 
 const page = () => {
   return (
@@ -37,7 +37,7 @@ const page = () => {
         buttonTextColor="text-white"
         extraText={`Built for organizations that want clarity, control, and scale in
             workforce management.`}
-        //heroImage={anima}
+        heroImage={anima}
       />
       <SolutionSection />
 

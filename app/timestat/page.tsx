@@ -8,6 +8,7 @@ import Deployment from "@/components/sections/timestat/deployment";
 import BookDemo from "@/components/layouts/bookDemo";
 import workstat from "@/public/icons/workstat-logo.svg";
 import timestat from "@/public/icons/timestat-logo4.svg";
+import heroImage from "@/public/images/timestat-hero-image.png";
 
 const page = () => {
   return (
@@ -37,6 +38,7 @@ const page = () => {
         buttonBorderColor="border-(--primary-blue)"
         buttonHoverColor="hover:bg-white/10"
         buttonTextColor="text-white"
+        heroImage={heroImage}
       />
       <TryTimestat />
       <QuickSetup />

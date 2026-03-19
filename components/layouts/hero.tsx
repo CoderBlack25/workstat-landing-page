@@ -73,7 +73,7 @@ const Hero = ({
   return (
     <motion.section
       id="home"
-      className={`${bgColor} pt-25 pb-37 overflow-hidden`}
+      className={`${bgColor} pt-14 pb-26 overflow-hidden`}
       variants={container}
       initial="hidden"
       whileInView="show"
@@ -93,14 +93,14 @@ const Hero = ({
 
           <motion.h1
             variants={fadeUp}
-            className={`text-[50px] leading-tight ${headingTextColor}`}
+            className={`text-[50px] leading-none ${headingTextColor}`}
           >
             {heading}
           </motion.h1>
 
           <motion.p
             variants={fadeUp}
-            className={`font-medium ${descriptionTextColor}`}
+            className={`font-medium max-w-2xl ${descriptionTextColor}`}
           >
             {description}
           </motion.p>
@@ -142,7 +142,14 @@ const Hero = ({
           variants={fadeUp}
           className="flex justify-center items-center"
         >
-          {heroImage && <Image src={heroImage} alt="hero-image" priority />}
+          {heroImage && (
+            <Image
+              src={heroImage}
+              alt="hero-image"
+              className="w-full h-auto"
+              priority
+            />
+          )}
         </motion.div>
       </div>
     </motion.section>
