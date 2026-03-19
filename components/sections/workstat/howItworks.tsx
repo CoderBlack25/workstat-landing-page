@@ -33,7 +33,7 @@ const HowItWorks = () => {
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-6">
         <motion.div
           variants={fadeUp}
           style={{ willChange: "transform, opacity" }}

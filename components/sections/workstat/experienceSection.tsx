@@ -49,7 +49,7 @@ const ExperienceSection = () => {
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-6">
         <motion.div className="grid grid-rows-2 gap-20" variants={container}>
           <div className="grid grid-cols-[1.5fr_2fr] gap-6">
             <motion.div

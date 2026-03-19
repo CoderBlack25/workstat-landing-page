@@ -51,7 +51,7 @@ const CoreDifferentiatorSection = () => {
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl px-6">
         <motion.div
           variants={fadeUp}
           style={{ willChange: "transform, opacity" }}

@@ -62,7 +62,7 @@ const TryTimestat = () => {
       viewport={{ once: true, margin: "-100px" }}
       variants={container}
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-6">
         <motion.div className="flex flex-col gap-4 mb-14" variants={fadeUp}>
           <p className="font-medium text-(--charcoal)">Solutions</p>
           <h2 className="text-[40px] text-(--dark-gray) leading-tight">

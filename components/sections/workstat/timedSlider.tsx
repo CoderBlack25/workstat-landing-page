@@ -88,7 +88,7 @@ export default function TimedSlider() {
   return (
     <section
       ref={containerRef}
-      className={`max-w-7xl mx-auto py-20 bg-white transition-opacity duration-700 ease-in-out ${
+      className={`max-w-7xl mx-auto px-6 py-20 bg-white transition-opacity duration-700 ease-in-out ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >

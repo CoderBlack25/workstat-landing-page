@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layouts/header";
-
+import Footer from "@/components/layouts/footer";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -35,6 +35,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -6,10 +6,8 @@ import QuickSetup from "@/components/sections/timestat/quickSetup";
 import Adaptability from "@/components/sections/timestat/adaptability";
 import Deployment from "@/components/sections/timestat/deployment";
 import BookDemo from "@/components/layouts/bookDemo";
-import Footer from "@/components/layouts/footer";
 import workstat from "@/public/icons/workstat-logo.svg";
 import timestat from "@/public/icons/timestat-logo4.svg";
-import timestat2 from "@/public/icons/timestat-logo.svg";
 
 const page = () => {
   return (
@@ -50,7 +48,6 @@ const page = () => {
         getStartedHref=""
         bookDemoHref=""
       />
-      <Footer logo={timestat2} />
     </div>
   );
 };

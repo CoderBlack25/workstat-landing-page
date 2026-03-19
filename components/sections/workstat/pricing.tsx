@@ -59,7 +59,7 @@ const Pricing = () => {
       viewport={{ once: true, margin: "-100px" }}
       style={{ willChange: "transform, opacity" }}
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-6">
         <motion.div
           variants={fadeUp}
           className="flex flex-col gap-4 items-center justify-center mb-14 text-center"

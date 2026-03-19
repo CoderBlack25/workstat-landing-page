@@ -22,7 +22,7 @@ const HumanResource = () => {
       viewport={{ once: true, amount: 0.2 }}
       variants={container}
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-[2fr_1.5fr] items-start gap-10">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-[2fr_1.5fr] items-start gap-10">
         <motion.div
           variants={imageRevealLeft}
           whileHover={{ y: -6 }}

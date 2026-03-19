@@ -59,7 +59,7 @@ const Whatweoffer = () => {
       viewport={{ once: true, amount: 0.25 }}
       variants={container}
     >
-      <div className="max-w-7xl mx-auto flex flex-col justify-center items-center gap-14">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col justify-center items-center gap-14">
         <motion.h1 variants={fadeUp} className="text-[40px] text-center">
           Everything You Need, Nothing You Don&apos;t
         </motion.h1>

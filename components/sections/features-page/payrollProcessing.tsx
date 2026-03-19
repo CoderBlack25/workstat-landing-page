@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import dashboard from "@/public/images/dashboard2.png";
+import dashboard from "@/public/images/dashboard4.png";
 import { Check } from "lucide-react";
 import {
   container,
@@ -22,7 +22,7 @@ const PayrollProcessing = () => {
       viewport={{ once: true, amount: 0.2 }}
       variants={container}
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-[1.5fr_2fr] items-start gap-10 text-white">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-[1.5fr_2fr] items-start gap-10 text-white">
         <motion.div variants={container} className="flex flex-col space-y-4">
           <motion.p variants={fadeUp} className="font-medium">
             Payroll Processing

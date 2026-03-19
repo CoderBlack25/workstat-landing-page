@@ -52,7 +52,7 @@ const WorkflowAccordion = () => {
   return (
     <section className="w-full bg-(--deep-teal) py-30">
       <HowItWorks />
-      <div className="mx-auto flex max-w-7xl gap-4">
+      <div className="mx-auto flex max-w-7xl px-6 gap-4">
         {slides.map((slide, index) => {
           const isActive = activeIndex === index;
 

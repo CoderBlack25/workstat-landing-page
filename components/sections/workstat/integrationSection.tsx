@@ -70,7 +70,7 @@ const IntegrationSection = () => {
       viewport={{ once: true, margin: "-100px" }}
       variants={container}
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl px-6">
         <div className="mb-40">
           <motion.p
             variants={fadeUp}

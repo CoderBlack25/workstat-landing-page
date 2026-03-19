@@ -1,10 +1,9 @@
 import MainNavbar from "@/components/layouts/mainNavbar";
-import Hero from "@/components/layouts/hero";
+import SecondHero from "@/components/layouts/secondHero";
 import PowerPoint from "@/components/layouts/powerPoint";
 import Lifecycle from "@/components/sections/about/lifecycle";
 import Structure from "@/components/sections/about/structure";
 import BookDemo from "@/components/layouts/bookDemo";
-import Footer from "@/components/layouts/footer";
 import workstat from "@/public/icons/workstat-logo.svg";
 import heroImage from "@/public/images/about-hero-image.png";
 
@@ -17,7 +16,7 @@ const page = () => {
         hoverTextColor="hover:text-white/70"
         hoverButtonColor="hover:bg-gray-200"
       />
-      <Hero
+      <SecondHero
         heading="Building structured systems for managing people at scale"
         description="Workstat exists to help organizations move from fragmented processes to a clear, structured way of managing their workforce."
         secondbutton="Get Started"
@@ -29,8 +28,8 @@ const page = () => {
         buttonHoverColor="hover:bg-white/10"
         buttonTextColor="text-white"
         heroImage={heroImage}
+        marginLeft="ml-5"
       />
-
       <PowerPoint
         title="A better way to manage people"
         description="Managing people is one of the most important parts of any
@@ -60,7 +59,6 @@ const page = () => {
         getStartedHref=""
         bookDemoHref=""
       />
-      <Footer logo={workstat} />
     </div>
   );
 };

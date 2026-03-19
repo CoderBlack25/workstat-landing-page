@@ -16,7 +16,7 @@ const BookDemo = ({
 }: BookDemoProps) => {
   return (
     <section className="w-full bg-(--deep-teal) text-white overflow-hidden">
-      <div className="mx-auto max-w-7xl py-8">
+      <div className="mx-auto max-w-7xl p-6">
         <div className="flex justify-between gap-6 items-center">
           <div className="max-w-4xl flex flex-col gap-2">
             <h1 className="text-[28px] font-medium leading-snug">{title}</h1>

@@ -57,7 +57,7 @@ const PayrollFeatures = () => {
       viewport={{ once: true, margin: "-120px" }}
       style={{ willChange: "transform, opacity" }}
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-12 gap-20">
           <motion.div variants={fadeLeft} className="col-span-5">
             <p className="font-medium text-(--charcoal) mb-4">

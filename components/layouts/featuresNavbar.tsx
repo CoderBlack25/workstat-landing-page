@@ -15,7 +15,7 @@ const FeaturesNavbar = ({
     <nav
       className={`sticky top-18 left-0 w-full z-50 ${bgColor} ${textColor} py-4`}
     >
-      <div className="max-w-screen-2xl px-25 mx-auto flex items-center justify-between">
+      <div className="max-w-screen-2xl px-32 mx-auto flex items-center justify-between">
         <Link
           href="/features-page"
           className="text-lg text-(--primary-blue) font-semibold"

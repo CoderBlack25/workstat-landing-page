@@ -76,7 +76,7 @@ const FeatureGrid = ({
       viewport={{ once: true, margin: "-120px" }}
       style={{ willChange: "transform, opacity" }}
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl px-6">
         <motion.div
           variants={container}
           className="flex flex-col gap-4 justify-center items-center text-center"

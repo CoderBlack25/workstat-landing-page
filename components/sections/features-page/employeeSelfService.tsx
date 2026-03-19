@@ -22,7 +22,7 @@ const EmployeeSelfService = () => {
       viewport={{ once: true, amount: 0.2 }}
       variants={container}
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-[1.5fr_2fr] items-start gap-10">
+      <div className="max-w-7xl px-6 mx-auto grid grid-cols-[1.5fr_2fr] items-start gap-10">
         <motion.div variants={container} className="flex flex-col space-y-4">
           <motion.p
             variants={fadeUp}

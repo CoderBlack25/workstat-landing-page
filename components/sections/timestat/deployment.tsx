@@ -48,7 +48,7 @@ const Deployment = () => {
       whileInView="show"
       viewport={{ once: true, margin: "-100px" }}
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-6">
         <motion.div
           variants={fadeUp}
           className="flex flex-col gap-4 items-center justify-center my-14 text-center"

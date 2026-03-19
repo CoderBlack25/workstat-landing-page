@@ -50,7 +50,7 @@ const QuickSetup = () => {
       whileInView="show"
       viewport={{ once: true, margin: "-100px" }}
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-6">
         <motion.div className="flex flex-col gap-4 mb-10" variants={fadeUp}>
           <p className="font-medium text-(--charcoal)">
             Features for Quick Setup

@@ -1,16 +1,14 @@
 import MainNavbar from "@/components/layouts/mainNavbar";
 import StatNavbar from "@/components/layouts/statNavbar";
-import Hero from "@/components/layouts/hero";
+import SecondHero from "@/components/layouts/secondHero";
 import ValueProp from "@/components/layouts/valueProp";
 import FeatureGrid from "@/components/layouts/featureGrid";
 import PayrollFeatures from "@/components/sections/paystat/payrollFeatures";
 import Setup from "@/components/sections/paystat/setup";
 import SetupDetails from "@/components/sections/paystat/setupDetails";
 import BookDemo from "@/components/layouts/bookDemo";
-import Footer from "@/components/layouts/footer";
 import workstat from "@/public/icons/workstat-logo2.svg";
 import paystat from "@/public/icons/paystat-logo2.svg";
-import paystat2 from "@/public/icons/paystat-logo3.svg";
 import heroimage from "@/public/images/paystat-hero.png";
 import frame1 from "@/public/images/frame1.png";
 import frame2 from "@/public/images/frame2.png";
@@ -30,11 +28,12 @@ const page = () => {
         hoverButtonColor="hover:bg-[#15465c]"
       />
       <StatNavbar logo={paystat} logoAlt="logo" href="/paystat" />
-      <Hero
+      <SecondHero
         heading="Run payroll with accuracy and complete control"
         description="Paystat helps you process payroll faster, reduce errors, and maintain clear, reliable compensation records—so you can focus on running your organization, not fixing payroll issues."
         secondbutton="Get Started"
         heroImage={heroimage}
+        marginLeft="ml-22"
       />
       <ValueProp
         eyebrow="A simpler way to manage payroll"
@@ -70,7 +69,6 @@ const page = () => {
         getStartedHref=""
         bookDemoHref=""
       />
-      <Footer logo={paystat2} />
     </div>
   );
 };

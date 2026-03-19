@@ -9,7 +9,6 @@ import ExperienceSection from "@/components/sections/workstat/experienceSection"
 import IntegrationSection from "@/components/sections/workstat/integrationSection";
 import Pricing from "@/components/sections/workstat/pricing";
 import BookDemo from "@/components/layouts/bookDemo";
-import Footer from "@/components/layouts/footer";
 import workstat from "@/public/icons/workstat-logo.svg";
 //import anima from "@/public/images/anima.png";
 
@@ -55,7 +54,6 @@ const page = () => {
         getStartedHref=""
         bookDemoHref=""
       />
-      <Footer logo={workstat} />
     </div>
   );
 };

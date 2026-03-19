@@ -9,7 +9,7 @@ import hris from "@/public/images/hris.png";
 const Lifecycle = () => {
   return (
     <section className="bg-white py-20 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col space-y-2 text-(--charcoal) font-medium">
           <p>A complete workforce management system</p>
           <h1 className="text-(--dark-gray) text-[40px]">

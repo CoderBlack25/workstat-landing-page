@@ -33,7 +33,7 @@ const MainNavbar = ({
     <nav
       className={`sticky top-0 left-0 w-full z-100 ${bgColor} ${textColor} py-4`}
     >
-      <div className="max-w-screen-2xl px-25 mx-auto flex items-center justify-between">
+      <div className="max-w-screen-2xl px-30 mx-auto flex items-center justify-between">
         <div className="hidden md:flex items-center gap-10">
           <Link href="/">
             <Image src={logo} alt={logoAlt} />

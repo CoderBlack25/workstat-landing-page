@@ -64,7 +64,7 @@ const SetupDetails = () => {
       viewport={{ once: true, margin: "-120px" }}
       style={{ willChange: "transform, opacity" }}
     >
-      <div className="flex flex-col gap-30 max-w-7xl mx-auto">
+      <div className="flex flex-col gap-30 max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-2 gap-10">
           <motion.div variants={fadeLeft} className="flex flex-col gap-4">
             <h1 className="text-[40px] text-(--dark-gray) leading-tight">

@@ -52,7 +52,7 @@ const Adaptability = () => {
       whileInView="show"
       viewport={{ once: true, margin: "-100px" }}
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-6">
         <motion.h2
           variants={fadeUp}
           className="text-[40px] text-(--dark-gray) mb-16 text-center"

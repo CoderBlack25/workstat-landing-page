@@ -19,6 +19,7 @@ type HeroProps = {
   buttonBorderColor?: string;
   buttonHoverColor?: string;
   heroImage?: StaticImageData;
+  marginLeft: string;
 };
 
 const container: Variants = {
@@ -55,7 +56,7 @@ const buttons: Variants = {
   },
 };
 
-const Hero = ({
+const SecondHero = ({
   title,
   heading,
   description,
@@ -67,21 +68,25 @@ const Hero = ({
   buttonBgcolor = "bg-white",
   buttonTextColor = "text-(--slate-gray)",
   buttonBorderColor = "border-(--light-gray)",
-  buttonHoverColor = "hover:bg-white/10",
+  buttonHoverColor = "hover:bg-slate-50",
   heroImage,
+  marginLeft,
 }: HeroProps) => {
   return (
     <motion.section
       id="home"
-      className={`${bgColor} pt-25 pb-37 overflow-hidden`}
+      className={`${bgColor} pt-24 pb-32 overflow-hidden`}
       variants={container}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, margin: "-120px" }}
       style={{ willChange: "transform, opacity" }}
     >
-      <div className="max-w-screen-2xl mx-auto px-25 grid grid-cols-2 gap-30 items-center">
-        <motion.div className="flex flex-col gap-6" variants={container}>
+      <div className="max-w-screen-2xl mx-auto px-25 grid grid-cols-12 gap-8 items-center">
+        <motion.div
+          className="flex flex-col gap-6 lg:col-span-5"
+          variants={container}
+        >
           {title && (
             <motion.h2
               variants={fadeUp}
@@ -108,13 +113,13 @@ const Hero = ({
           <motion.div
             variants={buttons}
             style={{ willChange: "transform, opacity" }}
-            className="flex flex-row items-center gap-4"
+            className="flex flex-row items-center gap-4 pt-2"
           >
             <Link
               href="#"
-              className="flex items-center gap-2 bg-(--brand-red) px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-pink-700"
+              className="flex items-center gap-2 bg-(--brand-red) px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-rose-800"
             >
-              <p>Book a Demo</p>
+              <p>Book a demo</p>
               <IoArrowForwardOutline />
             </Link>
 
@@ -131,7 +136,7 @@ const Hero = ({
             <motion.p
               variants={fadeUp}
               style={{ willChange: "transform, opacity" }}
-              className="mt-10 font-medium text-(--less-white)"
+              className="mt-6 font-medium text-(--less-white)"
             >
               {extraText}
             </motion.p>
@@ -140,13 +145,22 @@ const Hero = ({
 
         <motion.div
           variants={fadeUp}
-          className="flex justify-center items-center"
+          className={`col-span-7 flex justify-end w-full ${marginLeft}`}
         >
-          {heroImage && <Image src={heroImage} alt="hero-image" />}
+          <div className="w-[115%] max-w-none transform translate-x-12">
+            {heroImage && (
+              <Image
+                src={heroImage}
+                alt="Paystat dashboard preview"
+                priority
+                className="w-full h-auto"
+              />
+            )}
+          </div>
         </motion.div>
       </div>
     </motion.section>
   );
 };
 
-export default Hero;
+export default SecondHero;

@@ -1,6 +1,6 @@
 import MainNavbar from "@/components/layouts/mainNavbar";
 import FeaturesNavbar from "@/components/layouts/featuresNavbar";
-import Hero from "@/components/layouts/hero";
+import SecondHero from "@/components/layouts/secondHero";
 import Whatweoffer from "@/components/sections/features-page/whatweoffer";
 import EmployeeSelfService from "@/components/sections/features-page/employeeSelfService";
 import HumanResource from "@/components/sections/features-page/humanResource";
@@ -10,16 +10,14 @@ import AttendanceManagement from "@/components/sections/features-page/attendance
 import Holiday from "@/components/sections/features-page/holiday";
 import PerformanceManagement from "@/components/sections/features-page/performanceManagement";
 import BookDemo from "@/components/layouts/bookDemo";
-import Footer from "@/components/layouts/footer";
-import workstat from "@/public/icons/workstat-logo.svg";
-import workstat2 from "@/public/icons/workstat-logo2.svg";
+import workstat from "@/public/icons/workstat-logo2.svg";
 import heroImage from "@/public/images/feature-hero-image.png";
 
 const page = () => {
   return (
     <div>
       <MainNavbar
-        logo={workstat2}
+        logo={workstat}
         logoAlt="logo"
         textColor="text-(--slate-gray)"
         bgColor="bg-white"
@@ -28,12 +26,13 @@ const page = () => {
         hoverButtonColor="hover:bg-[#15465c]"
       />
       <FeaturesNavbar />
-      <Hero
+      <SecondHero
         title="Flexible HR Solutions"
         heading="Choose the Features You Actually Need"
         description="Subscribe to individual features or get the complete suite. Workstat gives you the flexibility to build the perfect HR solution for your organization."
         secondbutton="Get Started"
         heroImage={heroImage}
+        marginLeft="ml-22"
       />
       <Whatweoffer />
       <EmployeeSelfService />
@@ -49,7 +48,6 @@ const page = () => {
         getStartedHref=""
         bookDemoHref=""
       />
-      <Footer logo={workstat} />
     </div>
   );
 };
