@@ -112,7 +112,8 @@ export default function TimedSlider() {
         <div className="flex flex-col justify-center">
           {slides.map((slide, index) => {
             const isActive = index === activeIndex;
-
+            // Add a new variable that ensures the component is also visible
+            const isAnimating = isActive && isVisible;
             return (
               <div
                 key={slide.id}
@@ -129,12 +130,13 @@ export default function TimedSlider() {
                 {/* Progress Bar Container */}
                 <div className="w-full h-1 bg-(--cool-light) mt-3 mb-4 rounded-full overflow-hidden">
                   <div
-                    // We use `key` here to force React to remount the div,
-                    // which seamlessly restarts the CSS animation from 0%
+                    // Use the new `isAnimating` variable for the key and class
                     key={
-                      isActive ? `active-${slide.id}` : `inactive-${slide.id}`
+                      isAnimating
+                        ? `active-${slide.id}`
+                        : `inactive-${slide.id}`
                     }
-                    className={`h-full bg-(--brand-red) rounded-full ${isActive ? "animate-load-progress" : "w-0"}`}
+                    className={`h-full bg-(--brand-red) rounded-full ${isAnimating ? "animate-load-progress" : "w-0"}`}
                   ></div>
                 </div>
 
