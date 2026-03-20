@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
-
 import adapt1 from "@/public/images/adapt1.png";
 import adapt2 from "@/public/images/adapt2.png";
 import adapt3 from "@/public/images/adapt3.png";
@@ -64,61 +63,17 @@ const Adaptability = () => {
           className="grid grid-cols-2 gap-6 mb-6"
           variants={container}
         >
-          <motion.div
-            variants={cardReveal}
-            transition={{ duration: 0.3 }}
-            className="flex flex-col gap-6 bg-(--extra-light) px-10 pt-10 rounded-xl"
-          >
-            <p className="font-medium text-(--charcoal)">
-              SMEs (Small Medium Enterprises)
-            </p>
-
-            <h3 className="text-[28px] text-(--dark-gray)">
-              Timestat offers scalable attendance solutions with enterprise
-              features for small and medium-sized businesses.
-            </h3>
-
-            <div className="flex items-center justify-center">
-              <Image src={adapt1} alt="" className="w-100" />
-            </div>
+          <motion.div variants={cardReveal} transition={{ duration: 0.3 }}>
+            <Image src={adapt1} alt="" className="w-full" />
           </motion.div>
 
-          <motion.div
-            variants={cardReveal}
-            transition={{ duration: 0.3 }}
-            className="flex flex-col gap-6 bg-(--extra-light) px-10 pt-10 rounded-xl"
-          >
-            <p className="font-medium text-(--charcoal)">Large Enterprises</p>
-
-            <h3 className="text-[28px] text-(--dark-gray)">
-              Timestat streamlines business management with bulk employee
-              handling and advanced scheduling.
-            </h3>
-
-            <div className="flex items-center justify-center">
-              <Image src={adapt2} alt="" />
-            </div>
+          <motion.div variants={cardReveal} transition={{ duration: 0.3 }}>
+            <Image src={adapt2} alt="" className="w-full" />
           </motion.div>
         </motion.div>
 
-        <motion.div
-          variants={cardReveal}
-          transition={{ duration: 0.3 }}
-          className="flex flex-col gap-6 bg-(--extra-light) px-10 pt-10 rounded-xl"
-        >
-          <p className="font-medium text-(--charcoal)">
-            Government Organisations
-          </p>
-
-          <h3 className="text-[28px] text-(--dark-gray)">
-            Government organizations need secure data handling and thorough
-            documentation. Timestat offers on-premise deployment, access
-            control, and efficient employee management.
-          </h3>
-
-          <div className="flex items-center justify-center">
-            <Image src={adapt3} alt="" className="w-150" />
-          </div>
+        <motion.div variants={cardReveal} transition={{ duration: 0.3 }}>
+          <Image src={adapt3} alt="" className="w-full" />
         </motion.div>
       </div>
     </motion.section>

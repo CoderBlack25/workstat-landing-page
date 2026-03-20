@@ -3,7 +3,7 @@ import SecondHero from "@/components/layouts/secondHero";
 import PowerPoint from "@/components/layouts/powerPoint";
 import Lifecycle from "@/components/sections/about/lifecycle";
 import Structure from "@/components/sections/about/structure";
-import BookDemo from "@/components/layouts/bookDemo";
+import CallToAction from "@/components/sections/about/callToAction";
 import workstat from "@/public/icons/workstat-logo.svg";
 import heroImage from "@/public/images/about-hero-image.png";
 
@@ -46,19 +46,7 @@ const page = () => {
         description="Organizations can start with a single solution like attendance or payroll and expand into a complete system over time."
         secondaryDescription="This flexibility ensures that Workstat remains useful at every stage—from early growth to large-scale operations."
       />
-      <PowerPoint
-        title="To provide structured systems for modern organizations"
-        description="Workstat is designed to support organizations that want to operate with clarity, efficiency, and control—whether they are growing teams, established companies, or large institutions."
-        bgColor="bg-(--primary-blue)"
-        titleTextColor="text-white"
-        desTextColor="text-white"
-      />
-      <BookDemo
-        title="Build a more structured way to manage your team"
-        description="Start using Workstat to bring clarity, consistency, and control to your organization."
-        getStartedHref=""
-        bookDemoHref=""
-      />
+      <CallToAction />
     </div>
   );
 };

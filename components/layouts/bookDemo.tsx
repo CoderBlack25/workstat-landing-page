@@ -24,7 +24,7 @@ const BookDemo = ({
             <p className="font-medium">{description}</p>
           </div>
 
-          <div className="flex flex-row items-center gap-4">
+          <div className="flex items-center gap-4">
             <Link
               href={getStartedHref}
               className="border border-(--primary-blue) px-6 py-3 text-sm font-medium transition-colors hover:bg-white/10 text-nowrap"
@@ -37,7 +37,6 @@ const BookDemo = ({
               className="flex items-center gap-2 bg-(--brand-red) px-6 py-3 text-sm font-medium transition-colors hover:bg-rose-800 text-nowrap"
             >
               <p>Book a Demo</p>
-
               <IoArrowForwardOutline />
             </Link>
           </div>

@@ -57,7 +57,7 @@ const SetupDetails = () => {
   return (
     <motion.section
       id="howitworks"
-      className="w-full bg-white py-40 scroll-mt-30 overflow-hidden"
+      className="w-full bg-white py-40 scroll-mt-30"
       variants={container}
       initial="hidden"
       whileInView="show"
@@ -65,8 +65,11 @@ const SetupDetails = () => {
       style={{ willChange: "transform, opacity" }}
     >
       <div className="flex flex-col gap-30 max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-2 gap-10">
-          <motion.div variants={fadeLeft} className="flex flex-col gap-4">
+        <div className="grid grid-cols-[1fr_1.5fr] gap-30">
+          <motion.div
+            variants={fadeLeft}
+            className="flex flex-col gap-4 h-fit sticky top-35"
+          >
             <h1 className="text-[40px] text-(--dark-gray) leading-tight">
               Built for control, without complexity
             </h1>

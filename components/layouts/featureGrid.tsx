@@ -9,6 +9,7 @@ type GridItem = {
   title: string;
   bgColor?: string;
   image: StaticImageData;
+  imagePaddingTop: string;
 };
 
 type FeatureGridProps = {
@@ -109,7 +110,7 @@ const FeatureGrid = ({
 
         <motion.div
           variants={container}
-          className="mt-20 grid gap-6 grid-cols-2"
+          className="mt-20 grid gap-6 grid-cols-2 items-start"
         >
           {items.map((item, index) => (
             <motion.div
@@ -127,8 +128,10 @@ const FeatureGrid = ({
                 {item.title}
               </h3>
 
-              <div className="mt-20 mx-10">
-                <Image src={item.image} alt="" />
+              <div
+                className={`flex justify-center items-center px-7 ${item.imagePaddingTop}`}
+              >
+                <Image src={item.image} alt="" className="w-full" />
               </div>
             </motion.div>
           ))}
