@@ -19,6 +19,7 @@ type HeroProps = {
   buttonBorderColor?: string;
   buttonHoverColor?: string;
   heroImage?: StaticImageData;
+  logoCarousel?: React.ComponentType;
 };
 
 const container: Variants = {
@@ -69,6 +70,7 @@ const Hero = ({
   buttonBorderColor = "border-(--light-gray)",
   buttonHoverColor = "hover:bg-white/10",
   heroImage,
+  logoCarousel: LogoCarousel,
 }: HeroProps) => {
   return (
     <motion.section
@@ -80,8 +82,11 @@ const Hero = ({
       viewport={{ once: true, margin: "-120px" }}
       style={{ willChange: "transform, opacity" }}
     >
-      <div className="max-w-screen-2xl mx-auto px-25 grid grid-cols-2 gap-30 items-center">
-        <motion.div className="flex flex-col gap-6" variants={container}>
+      <div className="max-w-screen-2xl mx-auto px-25 grid grid-cols-12 gap-8 items-center">
+        <motion.div
+          className="flex flex-col gap-6 col-span-7"
+          variants={container}
+        >
           {title && (
             <motion.h2
               variants={fadeUp}
@@ -136,11 +141,17 @@ const Hero = ({
               {extraText}
             </motion.p>
           )}
+
+          {LogoCarousel && (
+            <motion.div variants={fadeUp}>
+              <LogoCarousel />
+            </motion.div>
+          )}
         </motion.div>
 
         <motion.div
           variants={fadeUp}
-          className="flex justify-center items-center"
+          className="flex col-span-5 justify-center items-center"
         >
           {heroImage && (
             <Image

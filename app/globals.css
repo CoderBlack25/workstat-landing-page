@@ -103,18 +103,20 @@ body {
   }
 }
 
-/* @keyframes progress {
-  from {
-    width: 0%;
+@layer utilities {
+  .animate-scroll {
+    animation: scroll 70s linear infinite;
   }
-  to {
-    width: 100%;
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
   }
 }
-
-.animate-progress {
-  animation: progress 7s linear forwards;
-} */
 
 @theme {
   --animate-load-progress: load-progress 7s linear forwards;

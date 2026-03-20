@@ -1,5 +1,6 @@
 import MainNavbar from "@/components/layouts/mainNavbar";
 import Hero from "@/components/layouts/hero";
+import LogoCarousel from "@/components/sections/workstat/logoCarousel";
 import SolutionSection from "@/components/sections/workstat/solutionSection";
 import TimedSlider from "@/components/sections/workstat/timedSlider";
 import ModuleSelection from "@/components/sections/workstat/moduleSection";
@@ -38,6 +39,7 @@ const page = () => {
         extraText={`Built for organizations that want clarity, control, and scale in
             workforce management.`}
         heroImage={anima}
+        logoCarousel={LogoCarousel}
       />
       <SolutionSection />
 

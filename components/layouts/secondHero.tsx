@@ -84,7 +84,7 @@ const SecondHero = ({
     >
       <div className="max-w-screen-2xl mx-auto px-25 grid grid-cols-12 gap-8 items-center">
         <motion.div
-          className="flex flex-col gap-6 lg:col-span-5"
+          className="flex flex-col gap-6 col-span-5"
           variants={container}
         >
           {title && (
