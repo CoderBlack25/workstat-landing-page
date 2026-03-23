@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import dashboard from "@/public/images/dashboard3.png";
+import dashboard from "@/public/images/time-management.png";
 import { Check } from "lucide-react";
 import {
   container,

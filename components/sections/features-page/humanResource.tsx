@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import emptystate from "@/public/images/empty-state.png";
+import dashboard from "@/public/images/human-resource.png";
 import { Check } from "lucide-react";
 import {
   container,
@@ -30,7 +30,7 @@ const HumanResource = () => {
           className="bg-(--extra-light) flex justify-center items-center pt-20"
         >
           <Image
-            src={emptystate}
+            src={dashboard}
             alt="Human resource management dashboard"
             className="w-150"
           />

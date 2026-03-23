@@ -33,7 +33,7 @@ const PerformanceManagement = () => {
           </motion.h1>
 
           <motion.h2 variants={fadeUp} className="">
-            Workstat helps organisations evaluate employee performance and
+            Workstat helps organizations evaluate employee performance and
             monitor development across teams.
           </motion.h2>
 
