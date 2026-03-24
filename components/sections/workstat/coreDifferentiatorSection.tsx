@@ -73,32 +73,67 @@ const CoreDifferentiatorSection = () => {
           <motion.div
             variants={cardAnimation}
             style={{ willChange: "transform, opacity" }}
-            className="bg-(--extra-light) p-5"
+            className="bg-(--extra-light) p-7 flex flex-col justify-between"
           >
+            <div className="flex flex-col space-y-4">
+              <p className="font-medium text-(--charcoal)">
+                Organizational model
+              </p>
+              <h2 className="text-(--dark-gray) text-[28px]">
+                Hierarchical organizational modeling (Executive → Management →
+                Department)
+              </h2>
+            </div>
+
             <Image src={image1} alt="" />
           </motion.div>
 
           <motion.div
             variants={cardAnimation}
             style={{ willChange: "transform, opacity" }}
-            className="bg-(--extra-light) p-5"
+            className="bg-(--extra-light) p-7 flex flex-col justify-between"
           >
+            <div className="flex flex-col space-y-4">
+              <p className="font-medium text-(--charcoal)">
+                Configurable workflow
+              </p>
+              <h2 className="text-(--dark-gray) text-[28px]">
+                Configurable approval workflows across modules
+              </h2>
+            </div>
+
             <Image src={image2} alt="" />
           </motion.div>
 
           <motion.div
             variants={cardAnimation}
             style={{ willChange: "transform, opacity" }}
-            className="bg-(--extra-light) p-5"
+            className="bg-(--extra-light) p-7 flex flex-col justify-between"
           >
+            <div className="flex flex-col space-y-4">
+              <p className="font-medium text-(--charcoal)">Cloud Deployment</p>
+              <h2 className="text-(--dark-gray) text-[28px]">
+                Centralized employee data powering all features
+              </h2>
+            </div>
+
             <Image src={image3} alt="" />
           </motion.div>
 
           <motion.div
             variants={cardAnimation}
             style={{ willChange: "transform, opacity" }}
-            className="bg-(--extra-light) p-5"
+            className="bg-(--extra-light) p-7 flex flex-col justify-between"
           >
+            <div className="flex flex-col space-y-4">
+              <p className="font-medium text-(--charcoal)">
+                Hybrid On-Premise Deployment & Training
+              </p>
+              <h2 className="text-(--dark-gray) text-[28px]">
+                Audit trails and system integrity controls
+              </h2>
+            </div>
+
             <Image src={image4} alt="" />
           </motion.div>
         </motion.div>
