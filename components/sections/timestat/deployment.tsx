@@ -68,17 +68,37 @@ const Deployment = () => {
           <motion.div
             variants={cardReveal}
             transition={{ duration: 0.3 }}
-            className=""
+            className="flex flex-col justify-between bg-(--extra-light) p-7"
           >
-            <Image src={image1} alt="" className="w-full" />
+            <div className="flex flex-col space-y-4">
+              <p className="font-medium text-(--charcoal)">Cloud Deployment</p>
+              <h2 className="text-[28px] text-(--dark-gray)">
+                Faster setup, secure hosting and Subscription model
+              </h2>
+            </div>
+
+            <div className="flex justify-center items-center mb-10">
+              <Image src={image1} alt="" className="w-2/4" />
+            </div>
           </motion.div>
 
           <motion.div
             variants={cardReveal}
             transition={{ duration: 0.3 }}
-            className=""
+            className="flex flex-col justify-between bg-(--extra-light) p-7"
           >
-            <Image src={image2} alt="" className="w-full" />
+            <div className="flex flex-col space-y-4">
+              <p className="font-medium text-(--charcoal)">
+                Hybrid Deployment & Training
+              </p>
+              <h2 className="text-[28px] text-(--dark-gray)">
+                Dedicated server with hardware installation. Offering staff
+                onboarding & SLA
+              </h2>
+            </div>
+            <div className="flex justify-center items-center my-10">
+              <Image src={image2} alt="" className="w-3/4" />
+            </div>
           </motion.div>
         </motion.div>
       </div>

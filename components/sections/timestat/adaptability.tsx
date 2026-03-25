@@ -63,16 +63,54 @@ const Adaptability = () => {
           className="grid grid-cols-2 gap-6 mb-6"
           variants={container}
         >
-          <motion.div variants={cardReveal} transition={{ duration: 0.3 }}>
+          <motion.div
+            variants={cardReveal}
+            transition={{ duration: 0.3 }}
+            className="flex flex-col justify-between bg-(--extra-light) px-7 pt-7"
+          >
+            <div className="flex flex-col space-y-4">
+              <p className="font-medium text-(--charcoal)">
+                SMEs (Small Medium Enterprises)
+              </p>
+              <h2 className="text-[28px] text-(--dark-gray)">
+                Timestat offers scalable attendance solutions with enterprise
+                features for small and medium-sized businesses.
+              </h2>
+            </div>
             <Image src={adapt1} alt="" className="w-full" />
           </motion.div>
 
-          <motion.div variants={cardReveal} transition={{ duration: 0.3 }}>
+          <motion.div
+            variants={cardReveal}
+            transition={{ duration: 0.3 }}
+            className="flex flex-col justify-between bg-(--soft-pink) px-7 pt-7"
+          >
+            <div className="flex flex-col space-y-4">
+              <p className="font-medium text-(--charcoal)">Large Enterprises</p>
+              <h2 className="text-[28px] text-(--dark-gray)">
+                Timestat streamlines business management with bulk employee
+                handling and advanced scheduling.
+              </h2>
+            </div>
             <Image src={adapt2} alt="" className="w-full" />
           </motion.div>
         </motion.div>
 
-        <motion.div variants={cardReveal} transition={{ duration: 0.3 }}>
+        <motion.div
+          variants={cardReveal}
+          transition={{ duration: 0.3 }}
+          className="flex flex-col justify-between bg-(--extra-light) px-7 pt-7"
+        >
+          <div className="flex flex-col space-y-4">
+            <p className="font-medium text-(--charcoal)">
+              Government Organizations
+            </p>
+            <h2 className="text-[28px] text-(--dark-gray) max-w-4xl">
+              Government organizations need secure data handling and thorough
+              documentation. Timestat offers on-premise deployment, access
+              control, and efficient employee management.
+            </h2>
+          </div>
           <Image src={adapt3} alt="" className="w-full" />
         </motion.div>
       </div>

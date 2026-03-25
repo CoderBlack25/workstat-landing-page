@@ -98,7 +98,7 @@ const SecondHero = ({
 
           <motion.h1
             variants={fadeUp}
-            className={`text-[50px] leading-tight ${headingTextColor}`}
+            className={`text-[50px] leading-snug ${headingTextColor}`}
           >
             {heading}
           </motion.h1>

@@ -1,116 +1,174 @@
 "use client";
 
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import Image from "next/image";
 import { motion, Variants } from "framer-motion";
-import timestat1 from "@/public/images/timestat1.png";
-import timestat2 from "@/public/images/timestat2.png";
-import timestat3 from "@/public/images/timestat3.png";
-import timestat4 from "@/public/images/timestat4.png";
-import timestat5 from "@/public/images/timestat5.png";
-import timestat6 from "@/public/images/timestat6.png";
+import icon1 from "@/public/icons/clock.svg";
+import icon2 from "@/public/icons/verification.svg";
+import icon3 from "@/public/icons/location.svg";
+import icon4 from "@/public/icons/leave.svg";
+import icon5 from "@/public/icons/proration.svg";
+import icon6 from "@/public/icons/insights.svg";
+
+type Feature = {
+  title: string;
+  heading: string;
+  description: string;
+  image: StaticImageData;
+  width: number;
+  height: number;
+};
+
+const features: Feature[] = [
+  {
+    title: "Attendance & Time Tracking",
+    heading: "Clock In and Out with Web or Mobile Access",
+    description:
+      "Employees can securely clock in and out from approved devices and locations. Facial recognition and GPS validation ensure identity and location accuracy.",
+    image: icon1,
+    width: 100,
+    height: 100,
+  },
+  {
+    title: "Facial Recognition & Biometric Control",
+    heading: "Eliminate Proxy Attendance with Face Verification",
+    description:
+      "Timestat uses facial recognition for secure clock-ins and clock-outs. Admins can manage and enroll biometric data, helping prevent buddy clocking and attendance fraud.",
+    image: icon2,
+    width: 100,
+    height: 100,
+  },
+  {
+    title: "Shift & Location Management",
+    heading: "Create, Assign, and Monitor Shifts Across Locations",
+    description:
+      "Set up shifts by department, location, or working hours, and ensure employees can only clock in at their assigned locations.",
+    image: icon3,
+    width: 80,
+    height: 80,
+  },
+  {
+    title: "Structured Leave Administration",
+    heading: "Centralize Leave Requests with Approval Workflow",
+    description:
+      "Employees submit leave requests directly within the platform. Administrators can review, approve, or deny requests while tracking leave balances and holiday schedules.",
+    image: icon4,
+    width: 80,
+    height: 80,
+  },
+  {
+    title: "Smart Proration System",
+    heading: "Encourage Punctuality & Discourages Indiscipline",
+    description:
+      "Automatically deduct lateness or absence fees based on preset company rules. Ensures fairness, accountability, and seamless payroll integration.",
+    image: icon5,
+    width: 80,
+    height: 80,
+  },
+  {
+    title: "Reporting & Insights",
+    heading: "Get Simple Attendance Insights and Reports",
+    description: `Timestat provides simplified yet comprehensive reporting, including attendance summaries,
+      absentee trends, late arrival frequency, shift compliance reports and leave statistics.`,
+    image: icon6,
+    width: 100,
+    height: 100,
+  },
+];
 
 const container: Variants = {
   hidden: { opacity: 0 },
-  show: {
+  visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.12,
+      staggerChildren: 0.1,
+      delayChildren: 0.1,
     },
   },
 };
 
-const fadeUp: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 40,
-  },
-  show: {
+const card: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.7,
-      ease: "easeOut",
-    },
-  },
-};
-
-const imageReveal: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 60,
-    scale: 0.95,
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      duration: 0.7,
-      ease: "easeOut",
+      type: "spring",
+      stiffness: 80,
+      damping: 15,
     },
   },
 };
 
 const TryTimestat = () => {
   return (
-    <motion.section
-      id="overview"
-      className="w-full bg-white py-20 scroll-mt-20 overflow-hidden"
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, margin: "-100px" }}
-      variants={container}
-    >
+    <section className="w-full bg-white py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div className="flex flex-col gap-4 mb-14" variants={fadeUp}>
-          <p className="font-medium text-(--charcoal)">Solutions</p>
-          <h2 className="text-[40px] text-(--dark-gray) leading-tight">
-            Track Time Accurately. Improve Discipline. Increase <br />{" "}
-            Productivity.
-          </h2>
-        </motion.div>
-
         <motion.div
-          className="grid grid-cols-3 grid-row-2 gap-6 mb-35"
           variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          className="grid grid-cols-3 gap-6"
         >
-          {[
-            timestat1,
-            timestat2,
-            timestat3,
-            timestat4,
-            timestat5,
-            timestat6,
-          ].map((img, i) => (
+          {features.map((item, index) => (
             <motion.div
-              key={i}
-              variants={imageReveal}
-              className="overflow-hidden"
+              key={index}
+              variants={card}
+              whileHover={{
+                y: -6,
+                boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.05)",
+                transition: { duration: 0.2 },
+              }}
+              className="relative flex flex-col justify-between bg-(--extra-light) p-7 overflow-hidden group cursor-pointer"
             >
-              <Image src={img} alt="" className="w-full h-auto" />
+              <div className="flex flex-col space-y-4 max-w-md mb-25 relative z-10">
+                <p className="text-sm text-(--slate-gray)">{item.title}</p>
+
+                <h2 className="text-2xl text-(--midnight) leading-snug">
+                  {item.heading}
+                </h2>
+
+                <p className="text-(--slate-gray) leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+
+              <motion.div className="absolute -bottom-2.5 -right-2.5 opacity-90 transition-transform duration-300 group-hover:scale-105 group-hover:-translate-x-2 group-hover:-translate-y-2">
+                <Image
+                  src={item.image}
+                  alt={item.heading}
+                  width={item.width}
+                  height={item.height}
+                  className="object-contain"
+                />
+              </motion.div>
             </motion.div>
           ))}
         </motion.div>
 
-        <motion.div className="flex flex-col gap-6" variants={fadeUp}>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.8 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex flex-col space-y-6 mt-50 max-w-lg"
+        >
           <p className="font-medium text-(--charcoal)">
-            Dump the the manual registers
+            Dump the manual registers
           </p>
-
-          <h2 className="text-[32px] text-(--dark-gray) leading-tight">
-            Adopt the modern and efficient <br /> way of tracking attendance
-          </h2>
-
+          <h1 className="text-[32px] text-(--dark-gray)">
+            Adopt the modern and efficient way of tracking attendance
+          </h1>
           <Link
             href=""
-            className="font-medium text-(--charcoal) underline hover:opacity-70 transition"
+            className="font-medium text-(--charcoal) underline underline-offset-3 hover:text-(--midnight) transition-colors"
           >
             Try Timestat
           </Link>
         </motion.div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

@@ -98,7 +98,7 @@ const Hero = ({
 
           <motion.h1
             variants={fadeUp}
-            className={`text-[50px] leading-none ${headingTextColor}`}
+            className={`text-[50px] leading-snug ${headingTextColor}`}
           >
             {heading}
           </motion.h1>
