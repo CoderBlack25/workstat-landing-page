@@ -2,9 +2,9 @@
 
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
-import image1 from "@/public/images/piggy-bank.png";
-import image2 from "@/public/images/institution2.png";
-import image3 from "@/public/images/system.png";
+import image1 from "@/public/icons/piggy-bank.svg";
+import image2 from "@/public/icons/institution.svg";
+import image3 from "@/public/icons/system.svg";
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -114,17 +114,70 @@ const SetupDetails = () => {
 
         <motion.div variants={container} className="grid grid-rows-2 gap-6">
           <div className="grid grid-cols-2 gap-6">
-            <motion.div variants={card} className="">
-              <Image src={image1} alt="" className="w-full" />
+            <motion.div
+              variants={card}
+              className="relative flex flex-col space-y-4 justify-between bg-(--extra-light) px-7 pt-7"
+            >
+              <div className="flex flex-col space-y-4 mb-50">
+                <p className="font-medium text-(--charcoal)">
+                  Clear, transparent access to earnings
+                </p>
+                <h3 className="text-[28px] text-(--dark-gray)">
+                  Employees can easily view their payment history and understand
+                  their compensation without needing to request information.
+                </h3>
+              </div>
+
+              <div className="absolute bottom-0 right-0">
+                <Image src={image1} alt="" className="w-50" />
+              </div>
             </motion.div>
 
-            <motion.div variants={card} className="">
-              <Image src={image2} alt="" className="w-full" />
+            <motion.div
+              variants={card}
+              className="relative flex flex-col space-y-4 justify-between bg-(--extra-light) px-7 pt-7"
+            >
+              <div className="flex flex-col space-y-4 mb-50">
+                <p className="font-medium text-(--charcoal)">
+                  Designed for organizations that need reliable payroll
+                  operations
+                </p>
+                <h3 className="text-[28px] text-(--dark-gray)">
+                  Whether you&apos;re managing a growing team or a large
+                  workforce, Paystat gives you the structure and consistency
+                  needed to run payroll with confidence.
+                </h3>
+              </div>
+
+              <div className="absolute bottom-0 right-0">
+                <Image src={image2} alt="" className="w-50" />
+              </div>
             </motion.div>
           </div>
 
-          <motion.div variants={card} className="">
-            <Image src={image3} alt="" className="w-full" />
+          <motion.div
+            variants={card}
+            className="relative flex flex-col space-y-4 justify-between bg-(--extra-light) px-7 pt-7"
+          >
+            <div className="flex flex-col space-y-4 mb-50">
+              <p className="font-medium text-(--charcoal)">
+                Stronger when connected to your full workforce system
+              </p>
+              <h3 className="text-[28px] text-(--dark-gray) max-w-5xl">
+                When used with Workstat, Paystat becomes part of a fully
+                connected system where employee data, attendance, and payroll
+                work together seamlessly.
+              </h3>
+              <h3 className="text-[28px] text-(--dark-gray) max-w-5xl">
+                Attendance data flows into payroll, employee records stay
+                consistent, and approval processes follow your organizational
+                structure automatically.
+              </h3>
+            </div>
+
+            <div className="absolute bottom-0 right-0">
+              <Image src={image3} alt="" className="w-50" />
+            </div>
           </motion.div>
         </motion.div>
       </div>
