@@ -90,7 +90,7 @@ const MainNavbar = ({
           </Link>
 
           <Link
-            href="#"
+            href="/contact-us"
             className={`${buttonBgColor} ${buttonTextColor} ${hoverButtonColor} hover:scale-[1.02] transition-all duration-200 px-6 py-2 text-sm font-medium`}
           >
             Contact Us
