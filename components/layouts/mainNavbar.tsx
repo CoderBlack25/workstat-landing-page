@@ -87,10 +87,10 @@ const MainNavbar = ({
           </div>
         </div>
 
-        <div className="group flex items-center gap-6">
+        <div className="flex items-center gap-6">
           <Link
             href="#"
-            className={`text-sm ${hoverTextColor} flex space-x-2 items-center`}
+            className={`group text-sm ${hoverTextColor} flex space-x-2 items-center`}
           >
             <p>Sign In</p>
             <IoChevronDown className="transition-transform duration-300 group-hover:rotate-180" />
