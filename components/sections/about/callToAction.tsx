@@ -32,7 +32,7 @@ const fadeScaleUp: Variants = {
 
 const CallToAction = () => {
   return (
-    <section className="bg-(--primary-blue) text-white py-30 w-full overflow-hidden relative">
+    <section className="bg-(--deep-teal) text-white py-30 w-full overflow-hidden relative">
       <motion.div
         variants={containerVariants}
         initial="hidden"

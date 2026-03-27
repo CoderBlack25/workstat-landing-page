@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 import ProductDropdown from "./productDropdown";
 import FeatureDropdown from "./featureDropdown";
+import { IoChevronDown } from "react-icons/io5";
 
 type MainNavbarProps = {
   logo: StaticImageData;
@@ -48,28 +49,30 @@ const MainNavbar = ({
             </Link>
 
             <div
-              className="relative"
+              className="relative group"
               onMouseEnter={() => setActiveDropdown("products")}
               onMouseLeave={() => setActiveDropdown(null)}
             >
               <button
-                className={`${hoverTextColor} transition-colors duration-200 cursor-pointer`}
+                className={`${hoverTextColor} transition-colors duration-200 cursor-pointer flex space-x-2 items-center`}
               >
-                Products
+                <p>Products</p>
+                <IoChevronDown className="transition-transform duration-300 group-hover:rotate-180" />
               </button>
 
               <ProductDropdown isOpen={activeDropdown === "products"} />
             </div>
 
             <div
-              className="relative"
+              className="relative group"
               onMouseEnter={() => setActiveDropdown("features")}
               onMouseLeave={() => setActiveDropdown(null)}
             >
               <button
-                className={`${hoverTextColor} transition-colors duration-200 cursor-pointer`}
+                className={`${hoverTextColor} transition-colors duration-200 cursor-pointer flex space-x-2 items-center`}
               >
-                Features
+                <p>Features</p>
+                <IoChevronDown className="transition-transform duration-300 group-hover:rotate-180" />
               </button>
 
               <FeatureDropdown isOpen={activeDropdown === "features"} />
@@ -84,9 +87,13 @@ const MainNavbar = ({
           </div>
         </div>
 
-        <div className="flex items-center gap-6">
-          <Link href="#" className={`text-sm ${hoverTextColor}`}>
-            Sign In
+        <div className="group flex items-center gap-6">
+          <Link
+            href="#"
+            className={`text-sm ${hoverTextColor} flex space-x-2 items-center`}
+          >
+            <p>Sign In</p>
+            <IoChevronDown className="transition-transform duration-300 group-hover:rotate-180" />
           </Link>
 
           <Link

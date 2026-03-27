@@ -1,26 +1,32 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import Image from "next/image";
-import icon3 from "@/public/icons/lifecycle3.svg";
+import Image, { StaticImageData } from "next/image";
+import icon1 from "@/public/icons/support1.svg";
+import icon2 from "@/public/icons/support2.svg";
+import icon3 from "@/public/icons/support3.svg";
 
 type Items = {
   title: string;
   description: string;
+  image: StaticImageData;
 };
 
 const items: Items[] = [
   {
     title: "Book a demo",
     description: "Book a demo with our team",
+    image: icon1,
   },
   {
     title: "Send a message",
     description: "Send us a message and we'll respond promptly",
+    image: icon2,
   },
   {
     title: "Get support",
     description: "Get support with onboarding and setup",
+    image: icon3,
   },
 ];
 
@@ -91,7 +97,7 @@ const TalkToUs = () => {
               whileHover={{ scale: 1.04, y: -5 }}
               className="flex flex-col space-y-3 border border-[#E5E7EB] p-7 transition-shadow hover:shadow-xl"
             >
-              <Image src={icon3} alt="" />
+              <Image src={item.image} alt="" />
               <h3 className="text-lg font-medium text-[#0A0A0A]">
                 {item.title}
               </h3>

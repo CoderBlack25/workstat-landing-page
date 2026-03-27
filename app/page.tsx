@@ -42,7 +42,6 @@ const page = () => {
         logoCarousel={LogoCarousel}
       />
       <SolutionSection />
-
       <TimedSlider />
       <ModuleSelection />
       <WorkflowAccordion />

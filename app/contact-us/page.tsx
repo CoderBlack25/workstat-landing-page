@@ -3,6 +3,7 @@ import FeaturesNavbar from "@/components/layouts/featuresNavbar";
 import ContactUs from "@/components/sections/contact-us/contactUs";
 import ValueProp from "@/components/layouts/valueProp";
 import TalkToUs from "@/components/sections/contact-us/talkToUs";
+import FormSection from "@/components/sections/contact-us/formSection";
 import CallToAction from "@/components/sections/contact-us/callToAction";
 import workstat from "@/public/icons/workstat-logo2.svg";
 
@@ -25,6 +26,7 @@ const page = () => {
         title="Tell us about your organization and what you're looking to achieve. Our team will guide you through the best way to get started with Workstat."
       />
       <TalkToUs />
+      <FormSection />
       <CallToAction />
     </div>
   );
