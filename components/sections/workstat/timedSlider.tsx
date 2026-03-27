@@ -15,7 +15,6 @@ type Slide = {
   alt: string;
 };
 
-// Centralized data makes it easier to update content later
 const slides: Slide[] = [
   {
     id: 1,
@@ -92,7 +91,6 @@ export default function TimedSlider() {
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      {/* Header Section */}
       <div className="flex flex-col space-y-4 mb-14">
         <h2 className="font-medium tracking-wide text-(--charcoal)">
           Platform Overview
