@@ -61,7 +61,7 @@ const Hero = ({
   return (
     <motion.section
       id="home"
-      className={`${bgColor} py-26 overflow-hidden`}
+      className={`${bgColor} py-32 overflow-hidden`}
       variants={container}
       initial="hidden"
       whileInView="show"
