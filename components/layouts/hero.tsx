@@ -84,7 +84,7 @@ const Hero = ({
     >
       <div className="max-w-screen-2xl mx-auto px-25 grid grid-cols-12 gap-8 items-center">
         <motion.div
-          className="flex flex-col gap-6 col-span-7"
+          className="flex flex-col gap-6 col-span-6"
           variants={container}
         >
           {title && (
@@ -105,7 +105,7 @@ const Hero = ({
 
           <motion.p
             variants={fadeUp}
-            className={`font-medium max-w-2xl ${descriptionTextColor}`}
+            className={`font-medium max-w-xl ${descriptionTextColor}`}
           >
             {description}
           </motion.p>
@@ -151,7 +151,7 @@ const Hero = ({
 
         <motion.div
           variants={fadeUp}
-          className="flex col-span-5 justify-center items-center"
+          className="flex col-span-6 justify-center items-center"
         >
           {heroImage && (
             <Image

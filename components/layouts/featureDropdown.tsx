@@ -16,7 +16,8 @@ const features: Feature[] = [
   },
   {
     title: "Human Resource Management",
-    description: "Content here",
+    description:
+      "Centralize employee data, organize your team, and manage every stage of the employee lifecycle.",
     href: "/features-page#HRM",
   },
   {

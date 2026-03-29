@@ -4,25 +4,34 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "email:dev": "email dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
+    "@react-email/components": "^1.0.10",
     "framer-motion": "^12.35.0",
     "lucide-react": "^0.576.0",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "react-icons": "^5.5.0"
+    "react-hook-form": "^7.72.0",
+    "react-hook-form-resolvers": "^0.0.1",
+    "react-icons": "^5.5.0",
+    "resend": "^6.9.4",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
+    "@react-email/preview-server": "5.2.10",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "react-email": "5.2.10",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

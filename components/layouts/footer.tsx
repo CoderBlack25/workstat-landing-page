@@ -7,28 +7,29 @@ import workstat from "@/public/icons/workstat-logo.svg";
 const date = new Date();
 
 const productLinks = [
-  { label: "Features", href: "#" },
-  { label: "Integrations", href: "#" },
-  { label: "Pricing", href: "#" },
-  { label: "API", href: "#" },
-  { label: "Changelog", href: "#" },
+  { label: "Workstat", href: "/" },
+  { label: "Paystat", href: "/paystat" },
+  { label: "Timestat", href: "/timestat" },
 ];
 
-const companyLinks = [
-  { label: "About Us", href: "#" },
-  { label: "Careers", href: "#" },
-  { label: "Blog", href: "#" },
-  { label: "Press", href: "#" },
-  { label: "Partners", href: "#" },
+const featuresLinks = [
+  { label: "Employee Self-Service", href: "/features-page#employee" },
+  { label: "Human Resource Management ", href: "/features-page#HRM" },
+  { label: "Payroll Processing", href: "/features-page#payroll" },
+  {
+    label: "Learning- Training & Orientation",
+    href: "/features-page#learning",
+  },
+  {
+    label: "Time and Attendance Management",
+    href: "/features-page#attendance",
+  },
+  { label: "Leave and Holiday Management", href: "/features-page#holiday" },
 ];
 
-const supportLinks = [
-  { label: "Help Center", href: "#" },
-  { label: "Documentation", href: "#" },
-  { label: "Contact Us", href: "#" },
-  { label: "System Status", href: "#" },
-  { label: "Community", href: "#" },
-];
+const companyLinks = [{ label: "About Us", href: "/about" }];
+
+const supportLinks = [{ label: "Contact Us", href: "/contact-us" }];
 
 const socialLinks = [
   { icon: LuLinkedin, href: "#" },
@@ -40,7 +41,7 @@ const Footer = () => {
   return (
     <footer className="bg-(--midnight) text-(--light-overlay)">
       <div className="max-w-7xl mx-auto pt-20 pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[3fr_1fr_1fr_1fr_1fr] gap-10">
           <div className="space-y-6 max-w-sm">
             <Image src={workstat} alt="Logo" className="w-32" />
 
@@ -68,6 +69,22 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-6">Product</h3>
             <ul className="space-y-4 text-sm">
               {productLinks.map(({ label, href }) => (
+                <li key={label}>
+                  <Link
+                    href={href}
+                    className="text-(--white-semi) hover:text-white transition"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-white font-semibold mb-6">Features</h3>
+            <ul className="space-y-4 text-sm text-nowrap">
+              {featuresLinks.map(({ label, href }) => (
                 <li key={label}>
                   <Link
                     href={href}

@@ -1,32 +1,46 @@
 "use client";
 
-import { useState } from "react";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { contactFormSchema, type FormFields } from "@/lib/schemas/contact";
 import { motion } from "framer-motion";
 import { IoChevronDown } from "react-icons/io5";
 import { LuSend } from "react-icons/lu";
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    companyName: "",
-    email: "",
-    phone: "",
-    helpTopic: "",
-    message: "",
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<FormFields>({
+    resolver: zodResolver(contactFormSchema),
   });
 
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-    >,
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  const onSubmit: SubmitHandler<FormFields> = async (data) => {
+    try {
+      console.log("Submitting form:", data);
+      const res = await fetch("/api/email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Insert the form submission logic here
-    console.log("Form submitted:", formData);
+      if (!res.ok) {
+        const errorData = await res.json();
+        console.error("Server error:", errorData);
+        throw new Error(errorData.error || "Failed to send message");
+      }
+
+      const result = await res.json();
+
+      console.log("Success:", result);
+      reset();
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 
   return (
@@ -36,7 +50,11 @@ export default function ContactForm() {
       transition={{ duration: 0.4, ease: "easeOut" }}
       className="w-full max-w-200 p-10 bg-(--secondary-blue)"
     >
-      <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+      <form
+        className="flex flex-col gap-6"
+        noValidate
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
           <div className="flex flex-col gap-2">
             <label
@@ -45,16 +63,19 @@ export default function ContactForm() {
             >
               Full Name
             </label>
+
             <input
+              {...register("fullName")}
               type="text"
               id="fullName"
-              name="fullName"
               placeholder="John Doe"
-              value={formData.fullName}
-              onChange={handleChange}
               className="w-full bg-(--primary-blue) text-white placeholder-white placeholder:text-sm px-4 py-3 outline-none border border-transparent focus:border-white/20 transition-colors"
-              required
             />
+            {errors.fullName && (
+              <div className="text-[#FF6B6B] text-sm">
+                {errors.fullName.message}
+              </div>
+            )}
           </div>
 
           <div className="flex flex-col gap-2">
@@ -65,14 +86,17 @@ export default function ContactForm() {
               Company Name
             </label>
             <input
+              {...register("companyName")}
               type="text"
               id="companyName"
-              name="companyName"
               placeholder="Acme Inc."
-              value={formData.companyName}
-              onChange={handleChange}
               className="w-full bg-(--primary-blue) text-white placeholder-white placeholder:text-sm px-4 py-3 outline-none border border-transparent focus:border-white/20 transition-colors"
             />
+            {errors.companyName && (
+              <div className="text-[#FF6B6B] text-sm">
+                {errors.companyName.message}
+              </div>
+            )}
           </div>
 
           <div className="flex flex-col gap-2">
@@ -83,15 +107,17 @@ export default function ContactForm() {
               Email Address
             </label>
             <input
+              {...register("email")}
               type="email"
               id="email"
-              name="email"
               placeholder="john@example.com"
-              value={formData.email}
-              onChange={handleChange}
               className="w-full bg-(--primary-blue) text-white placeholder-white placeholder:text-sm px-4 py-3 outline-none border border-transparent focus:border-white/20 transition-colors"
-              required
             />
+            {errors.email && (
+              <div className="text-[#FF6B6B] text-sm">
+                {errors.email.message}
+              </div>
+            )}
           </div>
 
           <div className="flex flex-col gap-2">
@@ -102,14 +128,17 @@ export default function ContactForm() {
               Phone Number
             </label>
             <input
+              {...register("phone")}
               type="tel"
               id="phone"
-              name="phone"
               placeholder="+1 (555) 123-4567"
-              value={formData.phone}
-              onChange={handleChange}
               className="w-full bg-(--primary-blue) text-white placeholder-white placeholder:text-sm px-4 py-3 outline-none border border-transparent focus:border-white/20 transition-colors"
             />
+            {errors.phone && (
+              <div className="text-[#FF6B6B] text-sm">
+                {errors.phone.message}
+              </div>
+            )}
           </div>
         </div>
 
@@ -122,12 +151,10 @@ export default function ContactForm() {
           </label>
           <div className="relative">
             <select
+              {...register("helpTopic")}
+              defaultValue=""
               id="helpTopic"
-              name="helpTopic"
-              value={formData.helpTopic}
-              onChange={handleChange}
               className="w-full appearance-none bg-(--primary-blue) text-white text-sm font-medium px-4 py-3 outline-none border border-transparent focus:border-white/20 transition-colors cursor-pointer"
-              required
             >
               <option value="" disabled hidden>
                 Select an option
@@ -141,6 +168,11 @@ export default function ContactForm() {
               <IoChevronDown className="" />
             </div>
           </div>
+          {errors.helpTopic && (
+            <div className="text-[#FF6B6B] text-sm">
+              {errors.helpTopic.message}
+            </div>
+          )}
         </div>
 
         <div className="flex flex-col gap-2">
@@ -151,25 +183,28 @@ export default function ContactForm() {
             Message
           </label>
           <textarea
+            {...register("message")}
             id="message"
-            name="message"
             rows={4}
             placeholder="Tell us more about what you're looking for..."
-            value={formData.message}
-            onChange={handleChange}
             className="w-full bg-(--primary-blue) text-white placeholder-white placeholder:text-sm px-4 py-3 outline-none border border-transparent focus:border-white/20 transition-colors resize-none"
-            required
           />
+          {errors.message && (
+            <div className="text-[#FF6B6B] text-sm">
+              {errors.message.message}
+            </div>
+          )}
         </div>
 
         <motion.button
           whileHover={{ scale: 1.005 }}
           whileTap={{ scale: 0.995 }}
           type="submit"
+          disabled={isSubmitting}
           className="mt-2 w-full flex items-center justify-center gap-2.5 bg-(--brand-red) hover:bg-rose-800 text-white py-3.5 text-sm font-medium transition-colors cursor-pointer"
         >
           <LuSend />
-          Send Message
+          {isSubmitting ? "Sending..." : "Send Message"}
         </motion.button>
       </form>
     </motion.div>
