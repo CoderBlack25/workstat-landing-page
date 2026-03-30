@@ -2,17 +2,15 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import EmailTemplate from "@/emails/email-template";
 import { contactFormSchema } from "@/lib/schemas/contact";
+import { render } from "@react-email/render";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    //console.log("BODY:", body);
 
-    // ✅ Validate again on server (never trust frontend)
     const parsed = contactFormSchema.safeParse(body);
-    //console.log("PARSED:", parsed);
 
     if (!parsed.success) {
       return NextResponse.json({ error: "Invalid form data" }, { status: 400 });
@@ -20,14 +18,13 @@ export async function POST(req: Request) {
 
     const data = parsed.data;
 
-    // ✅ Send email
+    const html = await render(EmailTemplate({ ...data }));
+
     const response = await resend.emails.send({
-      from: "onboarding@resend.dev", // change later
-      to: "judechukwuma629@gmail.com", // where you want to receive messages
+      from: "onboarding@resend.dev",
+      to: "koderblac@gmail.com",
       subject: `New message from ${data.fullName}`,
-      react: EmailTemplate({
-        ...data,
-      }),
+      html,
     });
 
     return NextResponse.json({ success: true, response });

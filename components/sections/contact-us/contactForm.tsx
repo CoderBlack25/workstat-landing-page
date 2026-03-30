@@ -19,7 +19,6 @@ export default function ContactForm() {
 
   const onSubmit: SubmitHandler<FormFields> = async (data) => {
     try {
-      console.log("Submitting form:", data);
       const res = await fetch("/api/email", {
         method: "POST",
         headers: {
@@ -34,9 +33,6 @@ export default function ContactForm() {
         throw new Error(errorData.error || "Failed to send message");
       }
 
-      const result = await res.json();
-
-      console.log("Success:", result);
       reset();
     } catch (error) {
       console.error("Error:", error);
@@ -159,9 +155,9 @@ export default function ContactForm() {
               <option value="" disabled hidden>
                 Select an option
               </option>
-              <option value="hr-software">HR Software Inquiry</option>
-              <option value="payroll">Payroll Management</option>
-              <option value="support">Technical Support</option>
+              <option value="hr-software-inquiry">HR Software Inquiry</option>
+              <option value="payroll-management">Payroll Management</option>
+              <option value="technical-support">Technical Support</option>
             </select>
 
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-white">
