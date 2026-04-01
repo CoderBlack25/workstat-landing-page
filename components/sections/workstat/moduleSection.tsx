@@ -111,7 +111,7 @@ const ModuleSelection = () => {
           {[...modules, ...modules].map((module, index) => (
             <div
               key={index}
-              className="flex flex-col justify-between p-6 md:pl-7 md:pr-20 md:py-7 bg-(--extra-light) rounded-2xl"
+              className="flex flex-col justify-between p-6 md:pl-7 md:pr-20 md:py-7 bg-(--extra-light)"
             >
               <div>
                 <p className="font-medium text-xs md:text-sm uppercase tracking-wider text-(--charcoal) mb-2">
