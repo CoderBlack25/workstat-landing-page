@@ -40,24 +40,24 @@ const socialLinks = [
 const Footer = () => {
   return (
     <footer className="bg-(--midnight) text-(--light-overlay)">
-      <div className="max-w-7xl mx-auto pt-20 pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[3fr_1fr_1fr_1fr_1fr] gap-10">
-          <div className="space-y-6 max-w-sm">
-            <Image src={workstat} alt="Logo" className="w-32" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-14 sm:pt-16 lg:pt-20 pb-10 sm:pb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[3fr_1fr_1fr_1fr_1fr] gap-8 sm:gap-10">
+          <div className="space-y-5 sm:space-y-6 max-w-sm">
+            <Image src={workstat} alt="Logo" className="w-28 sm:w-32" />
 
-            <p className="leading-relaxed text-(--white-semi)">
+            <p className="leading-relaxed text-(--white-semi) text-sm sm:text-base">
               Workstat brings together employee management, attendance tracking,
               payroll processing, recruitment, and performance tools into one
               connected system.
             </p>
 
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-3">
               {socialLinks.map(({ icon: Icon, href }, i) => (
                 <Link
                   key={i}
                   href={href}
                   target="_blank"
-                  className="w-10 h-10 flex items-center justify-center rounded-full bg-(--ash) text-white hover:bg-(--deep-teal) transition"
+                  className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-(--ash) text-white hover:bg-(--deep-teal) transition"
                 >
                   <Icon size={16} />
                 </Link>
@@ -66,8 +66,8 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-6">Product</h3>
-            <ul className="space-y-4 text-sm">
+            <h3 className="text-white font-semibold mb-4 sm:mb-6">Product</h3>
+            <ul className="space-y-3 sm:space-y-4 text-sm">
               {productLinks.map(({ label, href }) => (
                 <li key={label}>
                   <Link
@@ -82,13 +82,13 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-6">Features</h3>
-            <ul className="space-y-4 text-sm text-nowrap">
+            <h3 className="text-white font-semibold mb-4 sm:mb-6">Features</h3>
+            <ul className="space-y-3 sm:space-y-4 text-sm">
               {featuresLinks.map(({ label, href }) => (
                 <li key={label}>
                   <Link
                     href={href}
-                    className="text-(--white-semi) hover:text-white transition"
+                    className="text-(--white-semi) hover:text-white transition wrap-break-word"
                   >
                     {label}
                   </Link>
@@ -98,8 +98,8 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-6">Company</h3>
-            <ul className="space-y-4 text-sm">
+            <h3 className="text-white font-semibold mb-4 sm:mb-6">Company</h3>
+            <ul className="space-y-3 sm:space-y-4 text-sm">
               {companyLinks.map(({ label, href }) => (
                 <li key={label}>
                   <Link
@@ -114,8 +114,8 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-6">Support</h3>
-            <ul className="space-y-4 text-sm">
+            <h3 className="text-white font-semibold mb-4 sm:mb-6">Support</h3>
+            <ul className="space-y-3 sm:space-y-4 text-sm">
               {supportLinks.map(({ label, href }) => (
                 <li key={label}>
                   <Link
@@ -130,10 +130,10 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-600/30 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-(--white-semi)">
+        <div className="border-t border-gray-600/30 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-(--white-semi) text-center md:text-left">
           <p>© {date.getFullYear()} Workstat. All rights reserved.</p>
 
-          <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center md:justify-end gap-4 sm:gap-6">
             <Link href="#" className="hover:text-white transition">
               Privacy Policy
             </Link>

@@ -95,34 +95,41 @@ const modules: Module[] = [
 
 const ModuleSelection = () => {
   return (
-    <section className="w-full bg-white py-24 overflow-hidden">
+    <section className="w-full bg-white py-12 md:py-24 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6">
-        <p className="text-center font-medium text-(--charcoal)">
+        <p className="text-sm md:text-base text-left md:text-center font-medium text-(--charcoal)">
           Module selection
         </p>
 
-        <h2 className="mt-6 text-center text-[40px] text-(--dark-gray)">
-          Start with what you need. Expand when you’re ready.
+        <h2 className="mt-4 md:mt-6 text-left md:text-center text-2xl md:text-4xl lg:text-[40px] leading-tight text-(--dark-gray)">
+          Start with what you need.Expand when you’re ready.
         </h2>
       </div>
 
-      <div className="mt-20 marquee">
-        <div className="marquee-track gap-8 px-6">
+      <div className="mt-10 md:mt-20 marquee group">
+        <div className="marquee-track gap-6 md:gap-8 px-6 group-hover:[animation-play-state:paused]">
           {[...modules, ...modules].map((module, index) => (
             <div
               key={index}
-              className="flex flex-col justify-between pl-7 pr-20 py-7 bg-(--extra-light)"
+              className="flex flex-col justify-between p-6 md:pl-7 md:pr-20 md:py-7 bg-(--extra-light) rounded-2xl"
             >
-              <p className="font-medium text-(--charcoal)">{module.title}</p>
-              <h2 className="text-[28px] text-(--dark-gray) max-w-xl">
-                {module.description}
-              </h2>
-              <div className="flex justify-center items-center mt-10">
+              <div>
+                <p className="font-medium text-xs md:text-sm uppercase tracking-wider text-(--charcoal) mb-2">
+                  {module.title}
+                </p>
+                <h3 className="text-lg md:text-2xl lg:text-[28px] leading-snug text-(--dark-gray) max-w-70 md:max-w-xl">
+                  {module.description}
+                </h3>
+              </div>
+
+              <div className="flex justify-center items-center mt-8 md:mt-12">
                 <Image
                   src={module.image}
                   width={module.width}
                   height={module.height}
-                  alt=""
+                  alt={module.title}
+                  sizes="(max-width: 768px) 280px, 500px"
+                  className="object-contain"
                 />
               </div>
             </div>

@@ -53,15 +53,15 @@ const slides: Slide[] = [
 export default function TimedSlider() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
-  // 1. Intersection Observer to fade in on scroll
+  // Fade in on scroll
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); // Only trigger once
+          observer.disconnect();
         }
       },
       { threshold: 0.1 },
@@ -71,74 +71,76 @@ export default function TimedSlider() {
     return () => observer.disconnect();
   }, []);
 
-  // 2. Autoplay Timer Logic
+  // Autoplay
   useEffect(() => {
-    // Don't start the timer until the component is visible on screen
     if (!isVisible) return;
 
     const timer = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % slides.length);
     }, 7000);
 
-    // Cleanup: clears the interval if the user clicks an item or unmounts
     return () => clearInterval(timer);
-  }, [isVisible, activeIndex]); // Re-run when activeIndex changes to reset the 7s countdown
+  }, [isVisible, activeIndex]);
 
   return (
     <section
       ref={containerRef}
-      className={`max-w-7xl mx-auto px-6 py-20 bg-white transition-opacity duration-700 ease-in-out ${
+      className={`max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 bg-white transition-opacity duration-700 ease-in-out ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="flex flex-col space-y-4 mb-14">
-        <h2 className="font-medium tracking-wide text-(--charcoal)">
+      <div className="flex flex-col space-y-3 sm:space-y-4 mb-10 sm:mb-14">
+        <h2 className="font-medium tracking-wide text-(--charcoal) text-sm sm:text-base">
           Platform Overview
         </h2>
-        <h3 className="text-[40px] leading-tight text-(--dark-gray)">
+
+        <h3 className="text-2xl sm:text-3xl lg:text-[40px] leading-tight text-(--dark-gray)">
           One platform. Multiple workforce solutions.
         </h3>
-        <p className="text-(--slate-gray)">
+
+        <p className="text-(--slate-gray) text-sm sm:text-base">
           Workstat is designed as a modular system where each function works
-          independently but becomes <br /> more powerful when combined.
+          independently but becomes{" "}
+          <span className="hidden sm:inline">
+            <br />
+          </span>
+          more powerful when combined.
         </p>
       </div>
 
-      {/* Slider Grid Layout */}
-      <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
-        {/* Left Side: Text Accordions */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20">
         <div className="flex flex-col justify-center">
           {slides.map((slide, index) => {
             const isActive = index === activeIndex;
-            // Add a new variable that ensures the component is also visible
             const isAnimating = isActive && isVisible;
+
             return (
               <div
                 key={slide.id}
                 className="py-2 cursor-pointer"
                 onClick={() => setActiveIndex(index)}
               >
-                {/* Accordion Trigger */}
                 <h4
-                  className={`text-[22px] font-medium transition-colors ${isActive ? "text-(--midnight)" : "text-gray-500"}`}
+                  className={`text-lg sm:text-xl lg:text-[22px] font-medium transition-colors ${
+                    isActive ? "text-(--midnight)" : "text-gray-500"
+                  }`}
                 >
                   {slide.title}
                 </h4>
 
-                {/* Progress Bar Container */}
-                <div className="w-full h-1 bg-(--cool-light) mt-3 mb-4 rounded-full overflow-hidden">
+                <div className="w-full h-1 bg-(--cool-light) mt-3 mb-3 sm:mb-4 rounded-full overflow-hidden">
                   <div
-                    // Use the new `isAnimating` variable for the key and class
                     key={
                       isAnimating
                         ? `active-${slide.id}`
                         : `inactive-${slide.id}`
                     }
-                    className={`h-full bg-(--brand-red) rounded-full ${isAnimating ? "animate-load-progress" : "w-0"}`}
+                    className={`h-full bg-(--brand-red) rounded-full ${
+                      isAnimating ? "animate-load-progress" : "w-0"
+                    }`}
                   ></div>
                 </div>
 
-                {/* Accordion Body (Animated Height) */}
                 <div
                   className={`grid transition-all duration-400 ease-in-out ${
                     isActive
@@ -147,7 +149,7 @@ export default function TimedSlider() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="text-(--slate-gray) mt-2 mb-10 leading-relaxed">
+                    <p className="text-(--slate-gray) text-sm sm:text-base mt-2 mb-6 sm:mb-10 leading-relaxed">
                       {slide.description}
                     </p>
                   </div>
@@ -157,8 +159,7 @@ export default function TimedSlider() {
           })}
         </div>
 
-        {/* Right Side: Image Crossfade */}
-        <div className="relative w-full aspect-square md:aspect-auto min-h-100 lg:min-h-125 flex items-center justify-center">
+        <div className="relative w-full aspect-4/3 sm:aspect-square md:aspect-auto min-h-62.5 sm:min-h-87.5 lg:min-h-125 flex items-center justify-center">
           {slides.map((slide, index) => (
             <div
               key={slide.id}
@@ -171,7 +172,7 @@ export default function TimedSlider() {
                 alt={slide.alt}
                 fill
                 className="object-contain"
-                priority={index === 0} // Preload the first image for better LCP
+                priority={index === 0}
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
