@@ -33,8 +33,8 @@ const supportLinks = [{ label: "Contact Us", href: "/contact-us" }];
 
 const socialLinks = [
   { icon: LuLinkedin, href: "https://www.linkedin.com/company/workstat/" },
-  { icon: RiTwitterXLine, href: "https://www.instagram.com/workstatco/" },
-  { icon: LuFacebook, href: "https://x.com/Workstatco" },
+  { icon: RiTwitterXLine, href: "https://x.com/Workstatco" },
+  { icon: LuFacebook, href: "#" },
 ];
 
 const Footer = () => {
