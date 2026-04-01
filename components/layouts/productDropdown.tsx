@@ -12,7 +12,7 @@ type Product = {
   href: string;
 };
 
-const products: Product[] = [
+export const products: Product[] = [
   {
     image: workstat,
     name: "Workstat",

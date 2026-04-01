@@ -12,9 +12,12 @@ export const contactFormSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
   phone: z
     .string()
-    .regex(/^\+?[1-9]\d{6,14}$/, "Please enter a valid phone number")
-    .optional()
-    .or(z.literal("")),
+    .regex(
+      /^[+]?[(]?[0-9]{1,4}[)]?[-\s./0-9]*$/,
+      "Please enter a valid phone number",
+    )
+    .min(7, "Phone number is too short")
+    .max(20, "Phone number is too long"),
   helpTopic: z.string().min(1, "Please select a topic"),
   message: z
     .string()

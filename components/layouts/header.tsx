@@ -2,13 +2,16 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <div className="bg-(--primary-blue) text-white flex items-center justify-center py-4 font-inter text-sm overflow-hidden">
-      <div className="flex gap-1.5 text-nowrap">
-        <h1>
+    <div className="bg-(--primary-blue) text-white py-3 px-4 font-inter">
+      <div className="max-w-7xl mx-auto text-center text-[12px] md:text-sm leading-tight">
+        <p className="inline">
           Introducing our new Employee Management System: Discover how it
-          streamlines workflows and enhances team collaboration!
-        </h1>
-        <Link href="#" className="underline hover:text-white/70">
+          streamlines workflows and enhances team collaboration!{" "}
+        </p>
+        <Link
+          href="#"
+          className="underline hover:text-white/70 whitespace-nowrap"
+        >
           Learn More
         </Link>
       </div>

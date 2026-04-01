@@ -1,6 +1,6 @@
 import MainNavbar from "@/components/layouts/mainNavbar";
 import StatNavbar from "@/components/layouts/statNavbar";
-import SecondHero from "@/components/layouts/secondHero";
+import Hero from "@/components/layouts/heroSection";
 import ValueProp from "@/components/layouts/valueProp";
 import FeatureGrid from "@/components/layouts/featureGrid";
 import PayrollFeatures from "@/components/sections/paystat/payrollFeatures";
@@ -9,7 +9,7 @@ import SetupDetails from "@/components/sections/paystat/setupDetails";
 import BookDemo from "@/components/layouts/bookDemo";
 import workstat from "@/public/icons/workstat-logo2.svg";
 import paystat from "@/public/icons/paystat-logo2.svg";
-import heroimage from "@/public/images/paystat-hero.png";
+import heroImage from "@/public/images/paystat-hero.png";
 import frame1 from "@/public/images/frame1.png";
 import frame2 from "@/public/images/frame2.png";
 import frame3 from "@/public/images/frame3.png";
@@ -28,12 +28,13 @@ const page = () => {
         hoverButtonColor="hover:bg-[#15465c]"
       />
       <StatNavbar logo={paystat} logoAlt="logo" href="/paystat" />
-      <SecondHero
+      <Hero
+        imageVariant="offset"
         heading="Run payroll with accuracy and complete control"
         description="Paystat helps you process payroll faster, reduce errors, and maintain clear, reliable compensation records—so you can focus on running your organization, not fixing payroll issues."
-        secondbutton="Get Started"
-        heroImage={heroimage}
-        marginLeft="ml-22"
+        primaryCta={{ label: "Book a demo", href: "#" }}
+        secondaryCta={{ label: "Get Started", href: "#" }}
+        heroImage={heroImage}
       />
       <ValueProp
         eyebrow="A simpler way to manage payroll"

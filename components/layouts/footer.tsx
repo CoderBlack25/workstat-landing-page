@@ -32,9 +32,9 @@ const companyLinks = [{ label: "About Us", href: "/about" }];
 const supportLinks = [{ label: "Contact Us", href: "/contact-us" }];
 
 const socialLinks = [
-  { icon: LuLinkedin, href: "#" },
-  { icon: RiTwitterXLine, href: "#" },
-  { icon: LuFacebook, href: "#" },
+  { icon: LuLinkedin, href: "https://www.linkedin.com/company/workstat/" },
+  { icon: RiTwitterXLine, href: "https://www.instagram.com/workstatco/" },
+  { icon: LuFacebook, href: "https://x.com/Workstatco" },
 ];
 
 const Footer = () => {

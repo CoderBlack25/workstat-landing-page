@@ -1,5 +1,5 @@
 import MainNavbar from "@/components/layouts/mainNavbar";
-import Hero from "@/components/sections/contact-us/contactHero";
+import Hero from "@/components/layouts/heroSection";
 import ValueProp from "@/components/layouts/valueProp";
 import TalkToUs from "@/components/sections/contact-us/talkToUs";
 import FormSection from "@/components/sections/contact-us/formSection";
@@ -20,9 +20,11 @@ const page = () => {
         hoverButtonColor="hover:bg-[#15465c]"
       />
       <Hero
+        imageVariant="large"
         title="Contact us"
         heading="Get in touch with our team"
         description="Whether you have questions, need a demo, or want to explore how Workstat fits your organization, we're here to help."
+        primaryCta={{ label: "Contact Support", href: "#" }}
         heroImage={heroImage}
       />
       <ValueProp

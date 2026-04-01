@@ -1,5 +1,5 @@
 import MainNavbar from "@/components/layouts/mainNavbar";
-import SecondHero from "@/components/layouts/secondHero";
+import Hero from "@/components/layouts/heroSection";
 import PowerPoint from "@/components/layouts/powerPoint";
 import Lifecycle from "@/components/sections/about/lifecycle";
 import Structure from "@/components/sections/about/structure";
@@ -15,20 +15,16 @@ const page = () => {
         logoAlt="logo"
         hoverTextColor="hover:text-white/70"
         hoverButtonColor="hover:bg-gray-200"
+        mobileDropdown="text-gray-300"
       />
-      <SecondHero
+      <Hero
+        imageVariant="large"
+        theme="dark"
         heading="Building structured systems for managing people at scale"
         description="Workstat exists to help organizations move from fragmented processes to a clear, structured way of managing their workforce."
-        secondbutton="Get Started"
-        bgColor="bg-(--midnight)"
-        headingTextColor="text-white"
-        descriptionTextColor="text-(--light-white)"
-        buttonBgcolor="bg-(--midnight)"
-        buttonBorderColor="border-(--primary-blue)"
-        buttonHoverColor="hover:bg-white/10"
-        buttonTextColor="text-white"
+        primaryCta={{ label: "Book a demo", href: "#" }}
+        secondaryCta={{ label: "Get Started", href: "#" }}
         heroImage={heroImage}
-        marginLeft="ml-5"
       />
       <PowerPoint
         title="A better way to manage people"

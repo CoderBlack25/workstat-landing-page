@@ -1,6 +1,5 @@
 import MainNavbar from "@/components/layouts/mainNavbar";
-import Hero from "@/components/layouts/hero";
-import LogoCarousel from "@/components/sections/workstat/logoCarousel";
+import Hero from "@/components/layouts/heroSection";
 import SolutionSection from "@/components/sections/workstat/solutionSection";
 import TimedSlider from "@/components/sections/workstat/timedSlider";
 import ModuleSelection from "@/components/sections/workstat/moduleSection";
@@ -21,26 +20,22 @@ const page = () => {
         logoAlt="logo"
         hoverTextColor="hover:text-white/70"
         hoverButtonColor="hover:bg-gray-200"
+        mobileDropdown="text-gray-300"
       />
       <Hero
-        heading="Manage your entire workforce from one unified platform"
-        description={`Workstat brings together employee management, attendance tracking,
+        imageVariant="large"
+        theme="dark"
+        heading="Bring calm and control to your team operations"
+        description="Workstat brings together employee management, attendance tracking,
             payroll processing, recruitment, and performance tools into one
             connected system—so your team can operate efficiently from hire to
-            retirement.`}
-        secondbutton="Get Started"
-        bgColor="bg-(--midnight)"
-        headingTextColor="text-white"
-        descriptionTextColor="text-(--light-white)"
-        buttonBgcolor="bg-(--midnight)"
-        buttonBorderColor="border-(--primary-blue)"
-        buttonHoverColor="hover:bg-white/10"
-        buttonTextColor="text-white"
-        extraText={`Built for organizations that want clarity, control, and scale in
-            workforce management.`}
+            retirement."
+        primaryCta={{ label: "Book a demo", href: "#" }}
+        secondaryCta={{ label: "Get Started", href: "#" }}
+        extraText="Pour yourself a cup of tea and relax and focus on what truly matters."
         heroImage={heroImage}
-        logoCarousel={LogoCarousel}
       />
+
       <SolutionSection />
       <TimedSlider />
       <ModuleSelection />

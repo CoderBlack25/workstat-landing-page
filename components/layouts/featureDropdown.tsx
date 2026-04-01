@@ -2,12 +2,11 @@ import Link from "next/link";
 
 type Feature = {
   title: string;
-
   description: string;
   href: string;
 };
 
-const features: Feature[] = [
+export const features: Feature[] = [
   {
     title: "Employee Self-Service",
     description:

@@ -1,6 +1,6 @@
 import MainNavbar from "@/components/layouts/mainNavbar";
 import FeaturesNavbar from "@/components/layouts/featuresNavbar";
-import SecondHero from "@/components/layouts/secondHero";
+import Hero from "@/components/layouts/heroSection";
 import Whatweoffer from "@/components/sections/features-page/whatweoffer";
 import EmployeeSelfService from "@/components/sections/features-page/employeeSelfService";
 import HumanResource from "@/components/sections/features-page/humanResource";
@@ -26,13 +26,14 @@ const page = () => {
         hoverButtonColor="hover:bg-[#15465c]"
       />
       <FeaturesNavbar />
-      <SecondHero
+      <Hero
+        imageVariant="offset"
         title="Flexible HR Solutions"
         heading="Choose the Features You Actually Need"
         description="Subscribe to individual features or get the complete suite. Workstat gives you the flexibility to build the perfect HR solution for your organization."
-        secondbutton="Get Started"
+        primaryCta={{ label: "Book a demo", href: "#" }}
+        secondaryCta={{ label: "Get Started", href: "#" }}
         heroImage={heroImage}
-        marginLeft="ml-22"
       />
       <Whatweoffer />
       <EmployeeSelfService />
