@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { LuLinkedin, LuFacebook } from "react-icons/lu";
+import { LuLinkedin, LuInstagram } from "react-icons/lu";
 import { RiTwitterXLine } from "react-icons/ri";
 import workstat from "@/public/icons/workstat-logo.svg";
 
@@ -34,7 +34,7 @@ const supportLinks = [{ label: "Contact Us", href: "/contact-us" }];
 const socialLinks = [
   { icon: LuLinkedin, href: "https://www.linkedin.com/company/workstat/" },
   { icon: RiTwitterXLine, href: "https://x.com/Workstatco" },
-  { icon: LuFacebook, href: "#" },
+  { icon: LuInstagram, href: "https://www.instagram.com/workstatco/" },
 ];
 
 const Footer = () => {

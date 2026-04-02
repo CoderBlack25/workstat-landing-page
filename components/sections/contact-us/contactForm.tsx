@@ -163,9 +163,11 @@ export default function ContactForm() {
               <option value="" disabled hidden>
                 Select an option
               </option>
-              <option value="hr-software-inquiry">HR Software Inquiry</option>
-              <option value="payroll-management">Payroll Management</option>
-              <option value="technical-support">Technical Support</option>
+              <option value="Paystat">PayStat</option>
+              <option value="Timestat">TimeStat</option>
+              <option value="Workstat">WorkStat</option>
+              <option value="Enquiry">Enquiry</option>
+              <option value="Support">Support</option>
             </select>
 
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 sm:px-4 text-white">
