@@ -41,20 +41,31 @@ const ValueProp = ({
   return (
     <section
       id="overview"
-      className={`w-full ${bgColor} text-white py-28 scroll-mt-28 overflow-hidden`}
+      className={`w-full ${bgColor} text-white py-16 md:py-20 lg:py-28 scroll-mt-28 overflow-hidden`}
     >
       <motion.div
-        className="max-w-7xl mx-auto px-30 flex flex-col justify-center items-center text-center gap-6"
+        className="
+      max-w-7xl mx-auto
+      px-4 sm:px-6 md:px-10 lg:px-20 xl:px-30
+      flex flex-col justify-center items-center text-center
+      gap-4 md:gap-5 lg:gap-6
+    "
         variants={container}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
       >
-        <motion.p variants={item} className="font-medium">
+        <motion.p variants={item} className="font-medium text-sm md:text-base">
           {eyebrow}
         </motion.p>
 
-        <motion.h1 variants={item} className="text-[40px]">
+        <motion.h1
+          variants={item}
+          className="
+        text-2xl sm:text-3xl md:text-4xl lg:text-[40px]
+        leading-tight md:leading-snug
+      "
+        >
           {title}
         </motion.h1>
       </motion.div>

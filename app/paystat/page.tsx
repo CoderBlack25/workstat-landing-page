@@ -46,22 +46,18 @@ const page = () => {
           {
             title: "Process payroll faster without manual calculations",
             image: frame1,
-            imagePaddingTop: "pt-14",
           },
           {
             title: "Maintain accurate and consistent employee records",
             image: frame2,
-            imagePaddingTop: "pt-14",
           },
           {
             title: "Keep full visibility into every payment made",
             image: frame3,
-            imagePaddingTop: "pt-14",
           },
           {
             title: "Reduce costly errors and rework",
             image: frame4,
-            imagePaddingTop: "pt-30",
           },
         ]}
       />

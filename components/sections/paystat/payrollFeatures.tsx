@@ -50,114 +50,137 @@ const fadeRight: Variants = {
 const PayrollFeatures = () => {
   return (
     <motion.section
-      className="w-full bg-white py-24 overflow-hidden"
+      className="w-full bg-white py-12 lg:py-24 overflow-hidden"
       variants={container}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, margin: "-120px" }}
       style={{ willChange: "transform, opacity" }}
     >
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-12 gap-20">
-          <motion.div variants={fadeLeft} className="col-span-5">
-            <p className="font-medium text-(--charcoal) mb-4">
-              Automated payroll that works the way your organization operates
-            </p>
-            <h2 className="text-[32px] text-(--dark-gray)">
-              Generate payroll for all employees with structured, reliable
-              calculations based on your existing data—no spreadsheets, no
-              duplication.
-            </h2>
-          </motion.div>
+      <div className="max-w-7xl mx-auto px-4 lg:px-6">
+        <div className="flex flex-col gap-10 lg:gap-20">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-6">
+            <motion.div
+              variants={fadeLeft}
+              className="flex flex-col justify-center"
+            >
+              <p className="font-medium text-(--charcoal) mb-4">
+                Automated payroll that works the way your organization operates
+              </p>
+              <h2 className="text-2xl lg:text-[32px] text-(--dark-gray)">
+                Generate payroll for all employees with structured, reliable
+                calculations based on your existing data—no spreadsheets, no
+                duplication.
+              </h2>
+            </motion.div>
 
-          <motion.div
-            variants={fadeRight}
-            className="col-span-7 bg-(--extra-light) px-7 pt-7 min-h-65 transition-transform"
-          >
-            <p className="font-medium text-(--charcoal) mb-4">
-              Automated Calculations
-            </p>
-            <h3 className="text-[32px] text-(--dark-gray)">
-              Reliable payroll processing every cycle
-            </h3>
-            <div className="mt-20 mx-10">
-              <Image src={frame5} alt="" />
-            </div>
-          </motion.div>
+            <motion.div
+              variants={fadeRight}
+              className="bg-(--extra-light) px-7 pt-7 transition-transform"
+            >
+              <p className="font-medium text-(--charcoal) mb-4">
+                Automated Calculations
+              </p>
+              <h3 className="text-2xl lg:text-[32px] text-(--dark-gray)">
+                Reliable payroll processing every cycle
+              </h3>
+              <div className="mt-10 lg:mt-20 mx-4 lg:mx-10">
+                <Image src={frame5} alt="" />
+              </div>
+            </motion.div>
+          </div>
 
-          <motion.div
-            variants={fadeRight}
-            className="col-span-7 bg-(--extra-light) px-7 pt-7 min-h-65 transition-transform"
-          >
-            <p className="font-medium text-(--charcoal) mb-4">Organized Data</p>
-            <h3 className="text-[32px] text-(--dark-gray)">
-              All compensation in one place
-            </h3>
-            <div className="mt-20 mx-10">
-              <Image src={frame6} alt="" />
-            </div>
-          </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-6">
+            <motion.div
+              variants={fadeRight}
+              className="bg-(--extra-light) px-7 pt-7 transition-transform order-2 lg:order-1"
+            >
+              <p className="font-medium text-(--charcoal) mb-4">
+                Organized Data
+              </p>
+              <h3 className="text-2xl lg:text-[32px] text-(--dark-gray)">
+                All compensation in one place
+              </h3>
+              <div className="mt-10 lg:mt-20 mx-4 lg:mx-10">
+                <Image src={frame6} alt="" />
+              </div>
+            </motion.div>
 
-          <motion.div variants={fadeLeft} className="col-span-5">
-            <p className="font-medium text-(--charcoal) mb-4">
-              Clear and organized compensation management
-            </p>
-            <h2 className="text-[32px] text-(--dark-gray)">
-              Manage salaries, allowances, and deductions in one place so every
-              employee&apos;s compensation is consistent and easy to track.
-            </h2>
-          </motion.div>
+            <motion.div
+              variants={fadeLeft}
+              className="flex flex-col justify-center order-1 lg:order-2"
+            >
+              <p className="font-medium text-(--charcoal) mb-4">
+                Clear and organized compensation management
+              </p>
+              <h2 className="text-2xl lg:text-[32px] text-(--dark-gray)">
+                Manage salaries, allowances, and deductions in one place so
+                every employee&apos;s compensation is consistent and easy to
+                track.
+              </h2>
+            </motion.div>
+          </div>
 
-          <motion.div variants={fadeLeft} className="col-span-5">
-            <p className="font-medium text-(--charcoal) mb-4">
-              Payroll records you can trust
-            </p>
-            <h2 className="text-[32px] text-(--dark-gray)">
-              Access complete payroll history and generate reports whenever you
-              need them, with clean exports for documentation or external
-              processing.
-            </h2>
-          </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-6">
+            <motion.div
+              variants={fadeLeft}
+              className="flex flex-col justify-center"
+            >
+              <p className="font-medium text-(--charcoal) mb-4">
+                Payroll records you can trust
+              </p>
+              <h2 className="text-2xl lg:text-[32px] text-(--dark-gray)">
+                Access complete payroll history and generate reports whenever
+                you need them, with clean exports for documentation or external
+                processing.
+              </h2>
+            </motion.div>
 
-          <motion.div
-            variants={fadeRight}
-            className="col-span-7 bg-(--extra-light) px-7 pt-7 min-h-65 transition-transform"
-          >
-            <p className="font-medium text-(--charcoal) mb-4">
-              Complete History
-            </p>
-            <h3 className="text-[32px] text-(--dark-gray)">
-              Full audit trails and reporting
-            </h3>
-            <div className="mt-20 mx-10">
-              <Image src={frame8} alt="" />
-            </div>
-          </motion.div>
+            <motion.div
+              variants={fadeRight}
+              className="bg-(--extra-light) px-7 pt-7 transition-transform"
+            >
+              <p className="font-medium text-(--charcoal) mb-4">
+                Complete History
+              </p>
+              <h3 className="text-2xl lg:text-[32px] text-(--dark-gray)">
+                Full audit trails and reporting
+              </h3>
+              <div className="mt-10 lg:mt-20 mx-4 lg:mx-10">
+                <Image src={frame8} alt="" />
+              </div>
+            </motion.div>
+          </div>
 
-          <motion.div
-            variants={fadeRight}
-            className="col-span-7 bg-(--extra-light) px-7 pt-7 min-h-65 transition-transform"
-          >
-            <p className="font-medium text-(--charcoal) mb-4">
-              Full Visibility
-            </p>
-            <h3 className="text-[32px] text-(--dark-gray)">
-              Transparent for everyone
-            </h3>
-            <div className="mt-20 mx-10">
-              <Image src={frame7} alt="" />
-            </div>
-          </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-6">
+            <motion.div
+              variants={fadeRight}
+              className="bg-(--extra-light) px-7 pt-7 transition-transform order-2 lg:order-1"
+            >
+              <p className="font-medium text-(--charcoal) mb-4">
+                Full Visibility
+              </p>
+              <h3 className="text-2xl lg:text-[32px] text-(--dark-gray)">
+                Transparent for everyone
+              </h3>
+              <div className="mt-10 lg:mt-20 mx-4 lg:mx-10">
+                <Image src={frame7} alt="" />
+              </div>
+            </motion.div>
 
-          <motion.div variants={fadeLeft} className="col-span-5">
-            <p className="font-medium text-(--charcoal) mb-4">
-              Full visibility into employee payments
-            </p>
-            <h2 className="text-[32px] text-(--dark-gray)">
-              Give both administrators and employees clear access to payment
-              records, improving transparency and reducing back-and-forth.
-            </h2>
-          </motion.div>
+            <motion.div
+              variants={fadeLeft}
+              className="flex flex-col justify-center order-1 lg:order-2"
+            >
+              <p className="font-medium text-(--charcoal) mb-4">
+                Full visibility into employee payments
+              </p>
+              <h2 className="text-2xl lg:text-[32px] text-(--dark-gray)">
+                Give both administrators and employees clear access to payment
+                records, improving transparency and reducing back-and-forth.
+              </h2>
+            </motion.div>
+          </div>
         </div>
       </div>
     </motion.section>

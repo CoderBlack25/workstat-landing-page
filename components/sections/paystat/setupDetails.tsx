@@ -57,20 +57,20 @@ const SetupDetails = () => {
   return (
     <motion.section
       id="howitworks"
-      className="w-full bg-white py-40 scroll-mt-30"
+      className="w-full bg-white py-20 lg:py-40 scroll-mt-30"
       variants={container}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, margin: "-120px" }}
       style={{ willChange: "transform, opacity" }}
     >
-      <div className="flex flex-col gap-30 max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-[1fr_1.5fr] gap-30">
+      <div className="flex flex-col gap-16 lg:gap-30 max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-12 lg:gap-30">
           <motion.div
             variants={fadeLeft}
-            className="flex flex-col gap-4 h-fit sticky top-35"
+            className="flex flex-col gap-4 lg:h-fit lg:sticky lg:top-35"
           >
-            <h1 className="text-[40px] text-(--dark-gray) leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-[40px] text-(--dark-gray) leading-tight">
               Built for control, without complexity
             </h1>
 
@@ -100,83 +100,89 @@ const SetupDetails = () => {
               },
             ].map((item, i) => (
               <motion.div key={i} variants={fadeUp}>
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-3 sm:gap-4">
                   <p className="font-medium text-(--charcoal)">{item.title}</p>
 
-                  <h2 className="text-[28px] text-(--charcoal)">{item.text}</h2>
+                  <h2 className="text-xl sm:text-2xl lg:text-[28px] text-(--charcoal)">
+                    {item.text}
+                  </h2>
                 </div>
 
-                {i !== 3 && <div className="p-px bg-(--light-gray) my-20" />}
+                {i !== 3 && (
+                  <div className="p-px bg-(--light-gray) my-10 lg:my-20" />
+                )}
               </motion.div>
             ))}
           </motion.div>
         </div>
 
-        <motion.div variants={container} className="grid grid-rows-2 gap-6">
-          <div className="grid grid-cols-2 gap-6">
+        <motion.div variants={container} className="grid gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <motion.div
               variants={card}
-              className="relative flex flex-col space-y-4 justify-between bg-(--extra-light) px-7 pt-7"
+              className="relative flex flex-col justify-between bg-(--extra-light) p-5 sm:p-7 overflow-hidden"
             >
-              <div className="flex flex-col space-y-4 mb-50">
+              <div className="flex flex-col gap-4 mb-24 sm:mb-32 lg:mb-50">
                 <p className="font-medium text-(--charcoal)">
                   Clear, transparent access to earnings
                 </p>
-                <h3 className="text-[28px] text-(--dark-gray)">
+                <h3 className="text-xl sm:text-2xl lg:text-[28px] text-(--dark-gray)">
                   Employees can easily view their payment history and understand
                   their compensation without needing to request information.
                 </h3>
               </div>
 
-              <div className="absolute bottom-0 right-0">
-                <Image src={image1} alt="" className="w-50" />
+              <div className="flex justify-center items-center md:absolute md:bottom-0 md:right-0">
+                <Image src={image1} alt="" className="w-32 sm:w-40 lg:w-50" />
               </div>
             </motion.div>
 
             <motion.div
               variants={card}
-              className="relative flex flex-col space-y-4 justify-between bg-(--extra-light) px-7 pt-7"
+              className="relative flex flex-col justify-between bg-(--extra-light) p-5 sm:p-7 overflow-hidden"
             >
-              <div className="flex flex-col space-y-4 mb-50">
+              <div className="flex flex-col gap-4 mb-24 sm:mb-32 lg:mb-50">
                 <p className="font-medium text-(--charcoal)">
                   Designed for organizations that need reliable payroll
                   operations
                 </p>
-                <h3 className="text-[28px] text-(--dark-gray)">
+                <h3 className="text-xl sm:text-2xl lg:text-[28px] text-(--dark-gray)">
                   Whether you&apos;re managing a growing team or a large
                   workforce, Paystat gives you the structure and consistency
                   needed to run payroll with confidence.
                 </h3>
               </div>
 
-              <div className="absolute bottom-0 right-0">
-                <Image src={image2} alt="" className="w-50" />
+              <div className="flex justify-center items-center md:absolute md:bottom-0 md:right-0">
+                <Image src={image2} alt="" className="w-32 sm:w-40 lg:w-50" />
               </div>
             </motion.div>
           </div>
 
           <motion.div
             variants={card}
-            className="relative flex flex-col space-y-4 justify-between bg-(--extra-light) px-7 pt-7"
+            className="relative flex flex-col justify-between bg-(--extra-light) p-5 sm:p-7 overflow-hidden"
           >
-            <div className="flex flex-col space-y-4 mb-50">
+            <div className="flex flex-col gap-4 mb-24 sm:mb-32 lg:mb-50">
               <p className="font-medium text-(--charcoal)">
                 Stronger when connected to your full workforce system
               </p>
-              <h3 className="text-[28px] text-(--dark-gray) max-w-5xl">
+
+              <h3 className="text-xl sm:text-2xl lg:text-[28px] text-(--dark-gray) max-w-5xl">
                 When used with Workstat, Paystat becomes part of a fully
                 connected system where employee data, attendance, and payroll
                 work together seamlessly.
               </h3>
-              <h3 className="text-[28px] text-(--dark-gray) max-w-5xl">
+
+              <h3 className="text-xl sm:text-2xl lg:text-[28px] text-(--dark-gray) max-w-5xl">
                 Attendance data flows into payroll, employee records stay
                 consistent, and approval processes follow your organizational
                 structure automatically.
               </h3>
             </div>
 
-            <div className="absolute bottom-0 right-0">
-              <Image src={image3} alt="" className="w-50" />
+            <div className="flex justify-center items-center md:absolute md:bottom-0 md:right-0">
+              <Image src={image3} alt="" className="w-32 sm:w-40 lg:w-50" />
             </div>
           </motion.div>
         </motion.div>
