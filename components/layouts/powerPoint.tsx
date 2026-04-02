@@ -46,27 +46,35 @@ const PowerPoint = ({
   desTextColor = "text-(--charcoal)",
 }: PowerPointProps) => {
   return (
-    <section className={`${bgColor} py-30 w-full overflow-hidden relative`}>
+    <section
+      className={`${bgColor} w-full overflow-hidden relative py-16 sm:py-20 lg:py-28`}
+    >
       <motion.div
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="max-w-3xl mx-auto flex flex-col space-y-6 justify-center items-center text-center px-6"
+        className="max-w-3xl lg:max-w-4xl mx-auto flex flex-col items-center text-center px-4 sm:px-6 lg:px-8 space-y-4 sm:space-y-6"
       >
         <motion.h1
           variants={fadeUp}
-          className={`${titleTextColor} text-[40px] leading-tight`}
+          className={`${titleTextColor} text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight`}
         >
           {title}
         </motion.h1>
 
-        <motion.p variants={fadeUp} className={`${desTextColor} font-medium`}>
+        <motion.p
+          variants={fadeUp}
+          className={`${desTextColor} font-medium text-sm sm:text-base md:text-lg max-w-2xl`}
+        >
           {description}
         </motion.p>
 
         {secondaryDescription && (
-          <motion.p variants={fadeUp} className={`${desTextColor} font-medium`}>
+          <motion.p
+            variants={fadeUp}
+            className={`${desTextColor} font-medium text-sm sm:text-base md:text-lg max-w-2xl`}
+          >
             {secondaryDescription}
           </motion.p>
         )}
