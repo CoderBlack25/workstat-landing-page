@@ -2,6 +2,7 @@ import MainNavbar from "@/components/layouts/mainNavbar";
 import StatNavbar from "@/components/layouts/statNavbar";
 import Hero from "@/components/layouts/heroSection";
 import TryTimestat from "@/components/sections/timestat/tryTimestat";
+import ValueProp from "@/components/layouts/valueProp";
 import QuickSetup from "@/components/sections/timestat/quickSetup";
 import Adaptability from "@/components/sections/timestat/adaptability";
 import Deployment from "@/components/sections/timestat/deployment";
@@ -30,6 +31,10 @@ const page = () => {
         primaryCta={{ label: "Book a demo", href: "#" }}
         secondaryCta={{ label: "Get Started", href: "#" }}
         heroImage={heroImage}
+      />
+      <ValueProp
+        eyebrow="A more reliable way to track employees attendance"
+        title="Move beyond manual tracking and unreliable records. Timestat provides a dependable system for capturing attendance, helping you maintain accountability and improve overall workforce discipline."
       />
       <TryTimestat />
       <QuickSetup />

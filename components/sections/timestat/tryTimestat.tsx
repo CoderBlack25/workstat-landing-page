@@ -1,7 +1,6 @@
 "use client";
 
 import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 import icon1 from "@/public/icons/clock.svg";
 import icon2 from "@/public/icons/verification.svg";
@@ -109,7 +108,7 @@ const TryTimestat = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          className="grid grid-cols-3 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {features.map((item, index) => (
             <motion.div
@@ -120,52 +119,41 @@ const TryTimestat = () => {
                 boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.05)",
                 transition: { duration: 0.2 },
               }}
-              className="relative flex flex-col justify-between bg-(--extra-light) p-7 overflow-hidden group cursor-pointer"
+              className="relative flex flex-col justify-between bg-(--extra-light) p-6 sm:p-7 overflow-hidden group cursor-pointer"
             >
-              <div className="flex flex-col space-y-4 max-w-md mb-25 relative z-10">
+              <div className="flex flex-col space-y-4 max-w-md mb-10 sm:mb-20 relative z-10">
                 <p className="text-sm text-(--slate-gray)">{item.title}</p>
 
-                <h2 className="text-2xl text-(--midnight) leading-snug">
+                <h2 className="text-xl sm:text-2xl text-(--midnight) leading-snug">
                   {item.heading}
                 </h2>
 
-                <p className="text-(--slate-gray) leading-relaxed">
+                <p className="text-(--slate-gray) leading-relaxed text-sm sm:text-base">
                   {item.description}
                 </p>
               </div>
 
-              <motion.div className="absolute -bottom-2.5 -right-2.5 opacity-90 transition-transform duration-300 group-hover:scale-105 group-hover:-translate-x-2 group-hover:-translate-y-2">
+              <motion.div
+                className="
+              relative 
+              flex justify-center items-center
+              sm:absolute sm:-bottom-2.5 sm:-right-2.5
+              opacity-90
+              transition-transform duration-300
+              group-hover:scale-105
+              sm:group-hover:-translate-x-2 sm:group-hover:-translate-y-2
+            "
+              >
                 <Image
                   src={item.image}
                   alt={item.heading}
                   width={item.width}
                   height={item.height}
-                  className="object-contain"
+                  className="object-contain max-w-full h-auto"
                 />
               </motion.div>
             </motion.div>
           ))}
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.8 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex flex-col space-y-6 mt-50 max-w-lg"
-        >
-          <p className="font-medium text-(--charcoal)">
-            Dump the manual registers
-          </p>
-          <h1 className="text-[32px] text-(--dark-gray)">
-            Adopt the modern and efficient way of tracking attendance
-          </h1>
-          <Link
-            href=""
-            className="font-medium text-(--charcoal) underline underline-offset-3 hover:text-(--midnight) transition-colors"
-          >
-            Try Timestat
-          </Link>
         </motion.div>
       </div>
     </section>
