@@ -69,39 +69,63 @@ const headerVariants: Variants = {
 
 const TalkToUs = () => {
   return (
-    <section className="bg-white py-30 overflow-hidden relative">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="bg-white py-16 sm:py-20 lg:py-30 overflow-hidden relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <motion.div
           variants={headerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="flex flex-col justify-center items-center text-center text-(--charcoal) font-medium"
+          className="flex flex-col justify-center items-center space-y-2 text-center text-(--charcoal) font-medium"
         >
-          <h1 className="text-(--dark-gray) text-[40px] leading-tight">
+          <h1 className="text-(--dark-gray) text-2xl sm:text-3xl lg:text-[40px] leading-snug sm:leading-tight">
             Talk to us directly
           </h1>
+          <p className="text-(--slate-gray) text-sm md:text-lg">
+            Use the form below to reach us anytime
+          </p>
         </motion.div>
 
+        {/* Cards */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-3 gap-4 mt-16"
+          className="
+        grid 
+        grid-cols-1 
+        sm:grid-cols-2 
+        lg:grid-cols-3 
+        gap-4 sm:gap-6 
+        mt-10 sm:mt-12 lg:mt-16
+      "
         >
           {items.map((item, index) => (
             <motion.div
               key={index}
               variants={cardVariants}
               whileHover={{ scale: 1.04, y: -5 }}
-              className="flex flex-col space-y-3 border border-[#E5E7EB] p-7 transition-shadow hover:shadow-xl"
+              className="
+            flex flex-col space-y-3 
+            border border-[#E5E7EB] 
+            p-5 sm:p-6 lg:p-7 
+            transition-shadow 
+            hover:shadow-xl
+          "
             >
-              <Image src={item.image} alt="" />
-              <h3 className="text-lg font-medium text-[#0A0A0A]">
+              <Image
+                src={item.image}
+                alt=""
+                className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
+              />
+
+              <h3 className="text-base sm:text-lg font-medium text-[#0A0A0A]">
                 {item.title}
               </h3>
-              <p className="text-(--slate-gray) text-[20px]">
+
+              <p className="text-(--slate-gray) text-sm sm:text-base lg:text-[18px] leading-relaxed">
                 {item.description}
               </p>
             </motion.div>

@@ -3,7 +3,7 @@ import Hero from "@/components/layouts/heroSection";
 import ValueProp from "@/components/layouts/valueProp";
 import TalkToUs from "@/components/sections/contact-us/talkToUs";
 import FormSection from "@/components/sections/contact-us/formSection";
-import CallToAction from "@/components/sections/contact-us/callToAction";
+//import CallToAction from "@/components/sections/contact-us/callToAction";
 import workstat from "@/public/icons/workstat-logo2.svg";
 import heroImage from "@/public/images/contact-us-hero.png";
 
@@ -33,7 +33,7 @@ const page = () => {
       />
       <TalkToUs />
       <FormSection />
-      <CallToAction />
+      {/* <CallToAction /> */}
     </div>
   );
 };

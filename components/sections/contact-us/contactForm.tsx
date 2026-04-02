@@ -44,18 +44,20 @@ export default function ContactForm() {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
-      className="w-full max-w-200 p-10 bg-(--secondary-blue)"
+      className="w-full max-w-2xl sm:max-w-3xl lg:max-w-4xl mx-auto 
+      p-5 sm:p-8 lg:p-10 
+      bg-(--secondary-blue)"
     >
       <form
-        className="flex flex-col gap-6"
+        className="flex flex-col gap-5 sm:gap-6"
         noValidate
         onSubmit={handleSubmit(onSubmit)}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
           <div className="flex flex-col gap-2">
             <label
               htmlFor="fullName"
-              className="text-white text-sm font-medium tracking-wide"
+              className="text-white text-sm font-medium"
             >
               Full Name
             </label>
@@ -65,10 +67,12 @@ export default function ContactForm() {
               type="text"
               id="fullName"
               placeholder="John Doe"
-              className="w-full bg-(--primary-blue) text-white placeholder-white placeholder:text-sm px-4 py-3 outline-none border border-transparent focus:border-white/20 transition-colors"
+              className="w-full bg-(--primary-blue) text-white placeholder-white placeholder:text-sm
+              px-3 sm:px-4 py-2.5 sm:py-3
+              outline-none border border-transparent focus:border-white/20 transition-colors"
             />
             {errors.fullName && (
-              <div className="text-[#FF6B6B] text-sm">
+              <div className="text-[#FF6B6B] text-xs sm:text-sm">
                 {errors.fullName.message}
               </div>
             )}
@@ -77,61 +81,64 @@ export default function ContactForm() {
           <div className="flex flex-col gap-2">
             <label
               htmlFor="companyName"
-              className="text-white text-sm font-medium tracking-wide"
+              className="text-white text-sm font-medium"
             >
               Company Name
             </label>
+
             <input
               {...register("companyName")}
               type="text"
               id="companyName"
               placeholder="Acme Inc."
-              className="w-full bg-(--primary-blue) text-white placeholder-white placeholder:text-sm px-4 py-3 outline-none border border-transparent focus:border-white/20 transition-colors"
+              className="w-full bg-(--primary-blue) text-white placeholder-white placeholder:text-sm
+              px-3 sm:px-4 py-2.5 sm:py-3
+              outline-none border border-transparent focus:border-white/20 transition-colors"
             />
             {errors.companyName && (
-              <div className="text-[#FF6B6B] text-sm">
+              <div className="text-[#FF6B6B] text-xs sm:text-sm">
                 {errors.companyName.message}
               </div>
             )}
           </div>
 
           <div className="flex flex-col gap-2">
-            <label
-              htmlFor="email"
-              className="text-white text-sm font-medium tracking-wide"
-            >
+            <label htmlFor="email" className="text-white text-sm font-medium">
               Email Address
             </label>
+
             <input
               {...register("email")}
               type="email"
               id="email"
               placeholder="john@example.com"
-              className="w-full bg-(--primary-blue) text-white placeholder-white placeholder:text-sm px-4 py-3 outline-none border border-transparent focus:border-white/20 transition-colors"
+              className="w-full bg-(--primary-blue) text-white placeholder-white placeholder:text-sm
+              px-3 sm:px-4 py-2.5 sm:py-3
+              outline-none border border-transparent focus:border-white/20 transition-colors"
             />
             {errors.email && (
-              <div className="text-[#FF6B6B] text-sm">
+              <div className="text-[#FF6B6B] text-xs sm:text-sm">
                 {errors.email.message}
               </div>
             )}
           </div>
 
           <div className="flex flex-col gap-2">
-            <label
-              htmlFor="phone"
-              className="text-white text-sm font-medium tracking-wide"
-            >
+            <label htmlFor="phone" className="text-white text-sm font-medium">
               Phone Number
             </label>
+
             <input
               {...register("phone")}
               type="tel"
               id="phone"
               placeholder="+1 (555) 123-4567"
-              className="w-full bg-(--primary-blue) text-white placeholder-white placeholder:text-sm px-4 py-3 outline-none border border-transparent focus:border-white/20 transition-colors"
+              className="w-full bg-(--primary-blue) text-white placeholder-white placeholder:text-sm
+              px-3 sm:px-4 py-2.5 sm:py-3
+              outline-none border border-transparent focus:border-white/20 transition-colors"
             />
             {errors.phone && (
-              <div className="text-[#FF6B6B] text-sm">
+              <div className="text-[#FF6B6B] text-xs sm:text-sm">
                 {errors.phone.message}
               </div>
             )}
@@ -139,18 +146,19 @@ export default function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-2">
-          <label
-            htmlFor="helpTopic"
-            className="text-white text-sm font-medium tracking-wide"
-          >
+          <label htmlFor="helpTopic" className="text-white text-sm font-medium">
             What would you like help with?
           </label>
+
           <div className="relative">
             <select
               {...register("helpTopic")}
               defaultValue=""
               id="helpTopic"
-              className="w-full appearance-none bg-(--primary-blue) text-white text-sm font-medium px-4 py-3 outline-none border border-transparent focus:border-white/20 transition-colors cursor-pointer"
+              className="w-full appearance-none bg-(--primary-blue) text-white text-sm font-medium
+              px-3 sm:px-4 py-2.5 sm:py-3
+              outline-none border border-transparent focus:border-white/20 transition-colors
+              cursor-pointer"
             >
               <option value="" disabled hidden>
                 Select an option
@@ -160,44 +168,49 @@ export default function ContactForm() {
               <option value="technical-support">Technical Support</option>
             </select>
 
-            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-white">
-              <IoChevronDown className="" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 sm:px-4 text-white">
+              <IoChevronDown />
             </div>
           </div>
+
           {errors.helpTopic && (
-            <div className="text-[#FF6B6B] text-sm">
+            <div className="text-[#FF6B6B] text-xs sm:text-sm">
               {errors.helpTopic.message}
             </div>
           )}
         </div>
 
         <div className="flex flex-col gap-2">
-          <label
-            htmlFor="message"
-            className="text-white text-sm font-medium tracking-wide"
-          >
+          <label htmlFor="message" className="text-white text-sm font-medium">
             Message
           </label>
+
           <textarea
             {...register("message")}
             id="message"
             rows={4}
             placeholder="Tell us more about what you're looking for..."
-            className="w-full bg-(--primary-blue) text-white placeholder-white placeholder:text-sm px-4 py-3 outline-none border border-transparent focus:border-white/20 transition-colors resize-none"
+            className="w-full bg-(--primary-blue) text-white placeholder-white placeholder:text-sm
+            px-3 sm:px-4 py-2.5 sm:py-3
+            outline-none border border-transparent focus:border-white/20 transition-colors
+            resize-none"
           />
           {errors.message && (
-            <div className="text-[#FF6B6B] text-sm">
+            <div className="text-[#FF6B6B] text-xs sm:text-sm">
               {errors.message.message}
             </div>
           )}
         </div>
 
         <motion.button
-          whileHover={{ scale: 1.005 }}
-          whileTap={{ scale: 0.995 }}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
           type="submit"
           disabled={isSubmitting}
-          className="mt-2 w-full flex items-center justify-center gap-2.5 bg-(--brand-red) hover:bg-rose-800 text-white py-3.5 text-sm font-medium transition-colors cursor-pointer"
+          className="mt-2 w-full flex items-center justify-center gap-2
+          bg-(--brand-red) hover:bg-rose-800 text-white
+          py-3 sm:py-3.5 text-sm font-medium
+          transition-colors"
         >
           <LuSend />
           {isSubmitting ? "Sending..." : "Send Message"}

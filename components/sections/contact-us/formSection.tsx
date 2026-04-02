@@ -14,18 +14,27 @@ const headerVariants: Variants = {
 
 const FormSection = () => {
   return (
-    <section className="bg-(--deep-teal) py-30 overflow-hidden">
-      <div className="max-w-7xl mx-auto flex flex-col justify-center items-center">
+    <section className="bg-(--deep-teal) py-16 sm:py-20 lg:py-28 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 flex flex-col items-center">
         <motion.div
           variants={headerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-center mb-10"
+          className="text-center mb-8 sm:mb-10 lg:mb-12 max-w-2xl"
         >
-          <p className="text-[32px] text-white">Tell us about your needs</p>
+          <p
+            className="text-white font-medium 
+            text-xl sm:text-2xl md:text-3xl lg:text-4xl 
+            leading-snug"
+          >
+            Tell us about your needs
+          </p>
         </motion.div>
-        <ContactForm />
+
+        <div className="w-full flex justify-center">
+          <ContactForm />
+        </div>
       </div>
     </section>
   );
