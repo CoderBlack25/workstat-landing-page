@@ -1,0 +1,25 @@
+import { MailProvider } from "./types";
+import { ResendProvider } from "./providers/resend";
+import { MailtrapProvider } from "./providers/mailtrap";
+import { Resend } from "resend";
+import { SentMessageInfo } from "nodemailer";
+
+type ResendResponse = Awaited<ReturnType<Resend["emails"]["send"]>>;
+type MailtrapResponse = SentMessageInfo;
+
+type MailProviderUnion =
+  | MailProvider<ResendResponse>
+  | MailProvider<MailtrapResponse>;
+
+export function getMailProvider(): MailProviderUnion {
+  const provider = process.env.MAIL_PROVIDER;
+
+  switch (provider) {
+    case "mailtrap":
+      return new MailtrapProvider();
+
+    case "resend":
+    default:
+      return new ResendProvider(process.env.RESEND_API_KEY!);
+  }
+}
