@@ -10,6 +10,7 @@ import BookDemo from "@/components/layouts/bookDemo";
 import workstat from "@/public/icons/workstat-logo2.svg";
 import paystat from "@/public/icons/paystat-logo2.svg";
 import heroImage from "@/public/images/paystat-hero.png";
+import mobileHero from "@/public/images/mobile-paystat.png";
 import frame1 from "@/public/images/frame1.png";
 import frame2 from "@/public/images/frame2.png";
 import frame3 from "@/public/images/frame3.png";
@@ -17,7 +18,7 @@ import frame4 from "@/public/images/frame4.png";
 
 const page = () => {
   return (
-    <div>
+    <main>
       <MainNavbar
         logo={workstat}
         logoAlt="logo"
@@ -35,6 +36,7 @@ const page = () => {
         primaryCta={{ label: "Book a demo", href: "#" }}
         secondaryCta={{ label: "Get Started", href: "#" }}
         heroImage={heroImage}
+        mobileImage={mobileHero}
       />
       <ValueProp
         eyebrow="A simpler way to manage payroll"
@@ -70,7 +72,7 @@ const page = () => {
         getStartedHref=""
         bookDemoHref=""
       />
-    </div>
+    </main>
   );
 };
 

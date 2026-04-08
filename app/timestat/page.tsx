@@ -10,10 +10,11 @@ import BookDemo from "@/components/layouts/bookDemo";
 import workstat from "@/public/icons/workstat-logo2.svg";
 import timestat from "@/public/icons/timestat-logo3.svg";
 import heroImage from "@/public/images/timestat-hero-image.png";
+import mobileHero from "@/public/images/mobile-timestat.png";
 
 const page = () => {
   return (
-    <div>
+    <main>
       <MainNavbar
         logo={workstat}
         logoAlt="logo"
@@ -31,6 +32,7 @@ const page = () => {
         primaryCta={{ label: "Book a demo", href: "#" }}
         secondaryCta={{ label: "Get Started", href: "#" }}
         heroImage={heroImage}
+        mobileImage={mobileHero}
       />
       <ValueProp
         eyebrow="A more reliable way to track employees attendance"
@@ -46,7 +48,7 @@ const page = () => {
         getStartedHref=""
         bookDemoHref=""
       />
-    </div>
+    </main>
   );
 };
 

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <div className="bg-(--primary-blue) text-white py-3 px-4 font-inter">
+    <header className="bg-(--primary-blue) text-white py-3 px-4 font-inter">
       <div className="max-w-7xl mx-auto text-center text-[12px] md:text-sm leading-tight">
         <p className="inline">
           Introducing our new Employee Management System: Discover how it
@@ -15,7 +15,7 @@ const Header = () => {
           Learn More
         </Link>
       </div>
-    </div>
+    </header>
   );
 };
 

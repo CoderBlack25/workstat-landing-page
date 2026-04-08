@@ -6,10 +6,11 @@ import FormSection from "@/components/sections/contact-us/formSection";
 //import CallToAction from "@/components/sections/contact-us/callToAction";
 import workstat from "@/public/icons/workstat-logo2.svg";
 import heroImage from "@/public/images/contact-us-hero.png";
+import mobileHero from "@/public/images/mobile-contact.png";
 
 const page = () => {
   return (
-    <div>
+    <main>
       <MainNavbar
         logo={workstat}
         logoAlt="logo"
@@ -26,6 +27,7 @@ const page = () => {
         description="Whether you have questions, need a demo, or want to explore how Workstat fits your organization, we're here to help."
         primaryCta={{ label: "Contact Support", href: "#" }}
         heroImage={heroImage}
+        mobileImage={mobileHero}
       />
       <ValueProp
         eyebrow="Let's help you find the right setup"
@@ -34,7 +36,7 @@ const page = () => {
       <TalkToUs />
       <FormSection />
       {/* <CallToAction /> */}
-    </div>
+    </main>
   );
 };
 

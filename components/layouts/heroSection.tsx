@@ -57,6 +57,7 @@ type HeroProps = {
   extraText?: string;
 
   heroImage?: StaticImageData;
+  mobileImage?: StaticImageData;
 
   imageVariant?: ImageVariant;
 
@@ -74,6 +75,7 @@ const Hero = ({
   secondaryCta,
   extraText,
   heroImage,
+  mobileImage,
   variant = "default",
   theme = "light",
   bgClass,
@@ -167,7 +169,7 @@ const Hero = ({
             {extraText && (
               <motion.p
                 variants={fadeUp}
-                className="mt-0 lg:mt-6 text-base lg:text-xl font-normal md:font-medium text-center lg:text-left text-white md:text-(--less-white) leading-tight lg:leading-normal"
+                className="mt-0 lg:mt-6 text-base lg:text-xl font-normal md:font-medium text-center lg:text-left text-white md:text-(--less-white) leading-tight lg:leading-normal italic"
               >
                 {extraText}
               </motion.p>
@@ -180,12 +182,22 @@ const Hero = ({
               className="col-span-12 lg:col-span-5 flex justify-center lg:justify-end"
             >
               <div className={imageStyles[imageVariant]}>
+                {mobileImage && (
+                  <Image
+                    src={mobileImage}
+                    alt="Hero image mobile"
+                    priority
+                    className="w-full h-auto block lg:hidden"
+                    sizes="100vw"
+                  />
+                )}
+
                 <Image
                   src={heroImage}
                   alt="Hero image"
                   priority
+                  className="w-full h-auto hidden lg:block"
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="w-full h-auto"
                 />
               </div>
             </motion.div>

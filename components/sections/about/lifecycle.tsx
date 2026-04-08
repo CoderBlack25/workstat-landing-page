@@ -55,7 +55,7 @@ const Lifecycle = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="flex flex-col space-y-3 text-(--charcoal) font-medium max-w-3xl"
+          className="flex flex-col space-y-3 text-(--charcoal) font-medium max-w-3xl lg:max-w-7xl"
         >
           <p className="text-sm sm:text-base">
             A complete workforce management system

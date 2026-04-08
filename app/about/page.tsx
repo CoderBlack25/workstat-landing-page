@@ -6,10 +6,11 @@ import Structure from "@/components/sections/about/structure";
 import CallToAction from "@/components/sections/about/callToAction";
 import workstat from "@/public/icons/workstat-logo.svg";
 import heroImage from "@/public/images/about-hero-image.png";
+import mobileHero from "@/public/images/mobile-about.png";
 
 const page = () => {
   return (
-    <div>
+    <main>
       <MainNavbar
         logo={workstat}
         logoAlt="logo"
@@ -25,6 +26,7 @@ const page = () => {
         primaryCta={{ label: "Book a demo", href: "#" }}
         secondaryCta={{ label: "Get Started", href: "#" }}
         heroImage={heroImage}
+        mobileImage={mobileHero}
       />
       <PowerPoint
         title="A better way to manage people"
@@ -43,7 +45,7 @@ const page = () => {
         secondaryDescription="This flexibility ensures that Workstat remains useful at every stage—from early growth to large-scale operations."
       />
       <CallToAction />
-    </div>
+    </main>
   );
 };
 

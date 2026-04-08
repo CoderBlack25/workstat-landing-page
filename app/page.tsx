@@ -11,10 +11,11 @@ import Pricing from "@/components/sections/workstat/pricing";
 import BookDemo from "@/components/layouts/bookDemo";
 import workstat from "@/public/icons/workstat-logo.svg";
 import heroImage from "@/public/images/workstat-tea.png";
+import mobileHero from "@/public/images/mobile-tea.png";
 
 const page = () => {
   return (
-    <div>
+    <main>
       <MainNavbar
         logo={workstat}
         logoAlt="logo"
@@ -32,8 +33,9 @@ const page = () => {
             retirement."
         primaryCta={{ label: "Book a demo", href: "#" }}
         secondaryCta={{ label: "Get Started", href: "#" }}
-        extraText="Pour yourself a cup of tea and relax and focus on what truly matters."
+        extraText="Stay focused. Stay in control. WorkStat handles the rest."
         heroImage={heroImage}
+        mobileImage={mobileHero}
       />
 
       <SolutionSection />
@@ -50,7 +52,7 @@ const page = () => {
         getStartedHref=""
         bookDemoHref=""
       />
-    </div>
+    </main>
   );
 };
 

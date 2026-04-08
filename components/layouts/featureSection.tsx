@@ -30,6 +30,7 @@ type FeatureSectionProps = {
   featuresColor?: string;
   checkBgColor?: string;
   image: StaticImageData;
+  mobileImage?: StaticImageData;
   imageAlt: string;
   reverse?: boolean;
   bgColor?: string;
@@ -51,6 +52,7 @@ const FeatureSection = ({
   featuresColor = "text-(--dark-gray)",
   checkBgColor = "bg-(--primary-blue)",
   image,
+  mobileImage,
   imageAlt,
   reverse = false,
   bgColor = "bg-white",
@@ -136,14 +138,24 @@ const FeatureSection = ({
           variants={imageVariant}
           whileHover={{ y: -6 }}
           transition={{ duration: 0.25, ease: "easeOut" }}
-          className={`${imageBgColor} flex justify-center items-center pt-10 sm:pt-16 lg:pt-20 ${
+          className={`${imageBgColor} flex justify-center items-center pt-5 px-5 md:pt-16 md:px-0 lg:pt-20 ${
             reverse ? "lg:order-1" : "order-last lg:order-0"
           }`}
         >
+          {mobileImage && (
+            <Image
+              src={mobileImage}
+              alt={imageAlt}
+              className="w-full max-w-md block md:hidden"
+            />
+          )}
+
           <Image
             src={image}
             alt={imageAlt}
-            className="w-full max-w-md md:max-w-lg lg:max-w-none lg:w-150"
+            className={`w-full max-w-md md:max-w-lg lg:max-w-none lg:w-150 ${
+              mobileImage ? "hidden md:block" : ""
+            }`}
           />
         </motion.div>
       </div>

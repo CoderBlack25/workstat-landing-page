@@ -66,7 +66,7 @@ export default function ContactForm() {
               {...register("fullName")}
               type="text"
               id="fullName"
-              placeholder="John Doe"
+              placeholder=""
               className="w-full bg-(--primary-blue) text-white placeholder-white placeholder:text-sm
               px-3 sm:px-4 py-2.5 sm:py-3
               outline-none border border-transparent focus:border-white/20 transition-colors"
@@ -90,7 +90,7 @@ export default function ContactForm() {
               {...register("companyName")}
               type="text"
               id="companyName"
-              placeholder="Acme Inc."
+              placeholder=""
               className="w-full bg-(--primary-blue) text-white placeholder-white placeholder:text-sm
               px-3 sm:px-4 py-2.5 sm:py-3
               outline-none border border-transparent focus:border-white/20 transition-colors"
@@ -111,7 +111,7 @@ export default function ContactForm() {
               {...register("email")}
               type="email"
               id="email"
-              placeholder="john@example.com"
+              placeholder=""
               className="w-full bg-(--primary-blue) text-white placeholder-white placeholder:text-sm
               px-3 sm:px-4 py-2.5 sm:py-3
               outline-none border border-transparent focus:border-white/20 transition-colors"
@@ -132,7 +132,7 @@ export default function ContactForm() {
               {...register("phone")}
               type="tel"
               id="phone"
-              placeholder="+1 (555) 123-4567"
+              placeholder=""
               className="w-full bg-(--primary-blue) text-white placeholder-white placeholder:text-sm
               px-3 sm:px-4 py-2.5 sm:py-3
               outline-none border border-transparent focus:border-white/20 transition-colors"
@@ -191,7 +191,7 @@ export default function ContactForm() {
             {...register("message")}
             id="message"
             rows={4}
-            placeholder="Tell us more about what you're looking for..."
+            placeholder=""
             className="w-full bg-(--primary-blue) text-white placeholder-white placeholder:text-sm
             px-3 sm:px-4 py-2.5 sm:py-3
             outline-none border border-transparent focus:border-white/20 transition-colors

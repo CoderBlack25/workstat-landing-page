@@ -7,16 +7,23 @@ import FeatureSection from "@/components/layouts/featureSection";
 import BookDemo from "@/components/layouts/bookDemo";
 import workstat from "@/public/icons/workstat-logo2.svg";
 import heroImage from "@/public/images/feature-hero-image.png";
+import mobileHero from "@/public/images/mobile-features.png";
 import dashboard2 from "@/public/images/human-resource.png";
 import dashboard3 from "@/public/images/all-payroll.png";
 import dashboard4 from "@/public/images/learning-dashboard.png";
 import dashboard5 from "@/public/images/time-management.png";
 import dashboard6 from "@/public/images/leave-dashboard.png";
 import dashboard7 from "@/public/images/performance-dashboard.png";
+import mobiledashboard2 from "@/public/images/feature-mobile2.png";
+import mobiledashboard3 from "@/public/images/feature-mobile3.png";
+import mobiledashboard4 from "@/public/images/feature-mobile4.png";
+import mobiledashboard5 from "@/public/images/feature-mobile5.png";
+import mobiledashboard6 from "@/public/images/feature-mobile6.png";
+import mobiledashboard7 from "@/public/images/feature-mobile7.png";
 
 const page = () => {
   return (
-    <div>
+    <main>
       <MainNavbar
         logo={workstat}
         logoAlt="logo"
@@ -35,6 +42,7 @@ const page = () => {
         primaryCta={{ label: "Book a demo", href: "#" }}
         secondaryCta={{ label: "Get Started", href: "#" }}
         heroImage={heroImage}
+        mobileImage={mobileHero}
       />
       <Whatweoffer />
       <EmployeeSelfService />
@@ -45,6 +53,7 @@ const page = () => {
         description="Workstat's Human Resource Management System centralizes employee data and helps organizations maintain clear records, roles, and reporting structures."
         subheading="Keep employee information organized and accessible"
         image={dashboard2}
+        mobileImage={mobiledashboard2}
         imageAlt="Human Resource Management System dashboard"
         reverse
         bgColor="bg-white"
@@ -69,6 +78,7 @@ const page = () => {
         description="Paystat simplifies payroll operations by organizing employee compensation and generating payroll records within a structured system."
         subheading="Process payroll faster with fewer errors"
         image={dashboard3}
+        mobileImage={mobiledashboard3}
         tagColor="text-white"
         titleColor="text-white"
         descriptionColor="text-white"
@@ -99,6 +109,7 @@ const page = () => {
         description="Workstat enables organizations to create and manage training programs that support onboarding, skill development, and professional growth."
         subheading="Encourage continuous learning across your workforce"
         image={dashboard4}
+        mobileImage={mobiledashboard4}
         imageAlt="Learning dashboard"
         reverse
         bgColor="bg-white"
@@ -123,6 +134,7 @@ const page = () => {
         description="Timestat helps organizations monitor employee attendance and working hours while maintaining reliable workforce records."
         subheading="Improve workforce accountability"
         image={dashboard5}
+        mobileImage={mobiledashboard5}
         imageAlt="Time & Attendance Management dashboard"
         bgColor="bg-white"
         imageAnimation="right"
@@ -146,6 +158,7 @@ const page = () => {
         description="Workstat provides a structured system for submitting, reviewing, and tracking employee leave across the organization."
         subheading="Simplify approvals and maintain accurate records"
         image={dashboard6}
+        mobileImage={mobiledashboard6}
         imageAlt="Leave & Holiday Management dashboard"
         reverse
         bgColor="bg-white"
@@ -170,6 +183,7 @@ const page = () => {
         description="Workstat helps organizations evaluate employee performance and monitor development across teams."
         subheading="Make informed workforce decisions"
         image={dashboard7}
+        mobileImage={mobiledashboard7}
         tagColor="text-white"
         titleColor="text-white"
         descriptionColor="text-white"
@@ -199,7 +213,7 @@ const page = () => {
         getStartedHref=""
         bookDemoHref=""
       />
-    </div>
+    </main>
   );
 };
 
