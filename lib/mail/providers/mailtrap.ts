@@ -1,3 +1,4 @@
+import { env } from "../../config/env";
 import nodemailer, { SentMessageInfo } from "nodemailer";
 import { MailProvider, SendEmailOptions } from "../types";
 
@@ -6,11 +7,12 @@ export class MailtrapProvider implements MailProvider<SentMessageInfo> {
 
   constructor() {
     this.transporter = nodemailer.createTransport({
-      host: process.env.MAILTRAP_HOST,
-      port: Number(process.env.MAILTRAP_PORT),
+      host: env.MAILTRAP_HOST,
+      port: Number(env.MAILTRAP_PORT),
+      from: env.MAIL_FROM,
       auth: {
-        user: process.env.MAILTRAP_USER,
-        pass: process.env.MAILTRAP_PASS,
+        user: env.MAILTRAP_USER,
+        pass: env.MAILTRAP_PASS,
       },
     });
   }

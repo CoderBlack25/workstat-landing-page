@@ -1,3 +1,4 @@
+import { env } from "../config/env";
 import { MailProvider } from "./types";
 import { ResendProvider } from "./providers/resend";
 import { MailtrapProvider } from "./providers/mailtrap";
@@ -20,6 +21,6 @@ export function getMailProvider(): MailProviderUnion {
 
     case "resend":
     default:
-      return new ResendProvider(process.env.RESEND_API_KEY!);
+      return new ResendProvider(env.RESEND_API_KEY!);
   }
 }
