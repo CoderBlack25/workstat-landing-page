@@ -32,7 +32,7 @@ const page = () => {
             connected system—so your team can operate efficiently from hire to
             retirement."
         primaryCta={{ label: "Book a demo", href: "#" }}
-        secondaryCta={{ label: "Get Started", href: "#" }}
+        secondaryCta={{ label: "Get Started", href: "https://timestat.workstat.io/" }}
         extraText="Stay focused. Stay in control. WorkStat handles the rest."
         heroImage={heroImage}
         mobileImage={mobileHero}
