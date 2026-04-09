@@ -32,16 +32,12 @@ export default function EmailTemplate({
     <Html>
       <Head />
       <Body style={body}>
-        {/* Outer Wrapper */}
         <Container style={wrapper}>
-          {/* Header */}
           <Section style={header}>
             <Text style={logoText}>Workstat</Text>
           </Section>
 
-          {/* Card */}
           <Container style={card}>
-            {/* Image Banner */}
             <Section style={{ textAlign: "center", marginBottom: "20px" }}>
               <Img
                 src={`${BASE_URL}/images/email-template.png`}
@@ -117,8 +113,6 @@ export default function EmailTemplate({
     </Html>
   );
 }
-
-/* ================= STYLES ================= */
 
 const body = {
   backgroundColor: "#f3f4f6",
