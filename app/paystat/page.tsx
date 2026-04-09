@@ -34,7 +34,7 @@ const page = () => {
         heading="Run payroll with accuracy and complete control"
         description="Paystat helps you process payroll faster, reduce errors, and maintain clear, reliable compensation records—so you can focus on running your organization, not fixing payroll issues."
         primaryCta={{ label: "Book a demo", href: "#" }}
-        secondaryCta={{ label: "Get Started", href: "#" }}
+        secondaryCta={{ label: "Get Started", href: "https://www.paystat.app/register" }}
         heroImage={heroImage}
         mobileImage={mobileHero}
       />
