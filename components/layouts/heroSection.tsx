@@ -153,6 +153,8 @@ const Hero = ({
                 {secondaryCta && (
                   <Link
                     href={secondaryCta.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`inline-flex w-full md:w-full lg:w-auto items-center justify-center gap-2 border px-6 py-3 text-sm font-medium transition-colors ${
                       isDark
                         ? "border-white/20 text-white hover:bg-white/10"
