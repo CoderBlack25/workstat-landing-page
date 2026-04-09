@@ -30,7 +30,7 @@ const page = () => {
         heading="Accurate & Efficient Employee Attendance tracking & Management Solution"
         description="Say goodbye to manual tracking, employee inefficiency, ghost employees, low productivity, and unaccountability in your workplace. Timestat simplifies how organizations track and manage employees' attendance, leaves, shifts, and more."
         primaryCta={{ label: "Book a demo", href: "#" }}
-        secondaryCta={{ label: "Get Started", href: "https://timestat.workstat.io/" }}
+        secondaryCta={{ label: "Get Started", href: "https://timestat.workstat.io/register" }}
         heroImage={heroImage}
         mobileImage={mobileHero}
       />
