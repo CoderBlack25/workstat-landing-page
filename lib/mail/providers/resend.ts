@@ -11,8 +11,12 @@ export class ResendProvider implements MailProvider<ResendResponse> {
   }
 
   async sendEmail(options: SendEmailOptions): Promise<ResendResponse> {
+    const from = options.from
+      ? `${options.from.name} <${options.from.email}>`
+      : "onboarding@resend.dev";
+
     return this.resend.emails.send({
-      from: options.from || "onboarding@resend.dev",
+      from,
       to: options.to,
       subject: options.subject,
       html: options.html,
