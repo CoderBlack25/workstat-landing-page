@@ -1,28 +1,47 @@
-import { env } from "../../config/env";
-import nodemailer, { SentMessageInfo } from "nodemailer";
+import { MailtrapClient, Address } from "mailtrap";
 import { MailProvider, SendEmailOptions } from "../types";
+import { env } from "../../config/env";
 
-export class MailtrapProvider implements MailProvider<SentMessageInfo> {
-  private transporter;
+export class MailtrapProvider implements MailProvider<boolean> {
+  private client: MailtrapClient;
 
   constructor() {
-    this.transporter = nodemailer.createTransport({
-      host: env.MAILTRAP_HOST,
-      port: Number(env.MAILTRAP_PORT),
-      from: env.MAIL_FROM,
-      auth: {
-        user: env.MAILTRAP_USER,
-        pass: env.MAILTRAP_PASS,
-      },
+    this.client = new MailtrapClient({
+      token: env.MAILTRAP_TOKEN,
     });
   }
 
-  async sendEmail(options: SendEmailOptions): Promise<SentMessageInfo> {
-    return this.transporter.sendMail({
-      from: options.from || "test@mailtrap.io",
-      to: options.to,
-      subject: options.subject,
-      html: options.html,
-    });
+  async sendEmail(options: SendEmailOptions): Promise<boolean> {
+    try {
+      const response = await this.client.send({
+        from: {
+          name: options.from?.name || "Workstat",
+          email: options.from?.email || `noreply@${env.MAILTRAP_SENDER_DOMAIN}`,
+        },
+
+        to: [
+          {
+            email: options.to,
+          },
+        ],
+
+        subject: options.subject,
+
+        text: options.text || "",
+
+        html: options.html,
+
+        cc: options.cc as Address[] | undefined,
+
+        bcc: options.bcc as Address[] | undefined,
+      });
+
+      console.log("Mailtrap response:", response);
+
+      return true;
+    } catch (error) {
+      console.error("Mailtrap send error:", error);
+      return false;
+    }
   }
 }

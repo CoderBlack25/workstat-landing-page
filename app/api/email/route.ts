@@ -14,6 +14,22 @@ function getEnvVariable(key: string): string {
   return value;
 }
 
+function parseFrom(from: string): { name: string; email: string } {
+  const match = from.match(/(.*)<(.*)>/);
+
+  if (match) {
+    return {
+      name: match[1].trim(),
+      email: match[2].trim(),
+    };
+  }
+
+  return {
+    name: "Workstat",
+    email: from,
+  };
+}
+
 export async function POST(req: Request) {
   try {
     const body = await req.json();
@@ -33,15 +49,15 @@ export async function POST(req: Request) {
     const MAIL_FROM = getEnvVariable("MAIL_FROM");
 
     const response = await mailProvider.sendEmail({
-      to: "koderblac@gmail.com",
+      to: getEnvVariable("CONTACT_RECEIVER_EMAIL"),
       subject: `New message from ${data.fullName}`,
       html,
-      from: MAIL_FROM,
+
+      from: parseFrom(MAIL_FROM),
     });
 
     return NextResponse.json({
       success: true,
-
       response: process.env.NODE_ENV === "development" ? response : undefined,
     });
   } catch (error) {

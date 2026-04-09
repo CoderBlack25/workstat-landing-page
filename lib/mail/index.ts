@@ -3,10 +3,9 @@ import { MailProvider } from "./types";
 import { ResendProvider } from "./providers/resend";
 import { MailtrapProvider } from "./providers/mailtrap";
 import { Resend } from "resend";
-import { SentMessageInfo } from "nodemailer";
 
 type ResendResponse = Awaited<ReturnType<Resend["emails"]["send"]>>;
-type MailtrapResponse = SentMessageInfo;
+type MailtrapResponse = boolean;
 
 type MailProviderUnion =
   | MailProvider<ResendResponse>
