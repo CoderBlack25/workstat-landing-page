@@ -34,15 +34,22 @@ export default function EmailTemplate({
       <Body style={body}>
         <Container style={wrapper}>
           <Section style={header}>
-            <Text style={logoText}>Workstat</Text>
+            <Img
+              src={`${BASE_URL}images/workstat-logo.png`}
+              alt="Workstat Logo"
+              width="120"
+              style={{ display: "block", margin: "0 auto" }}
+            />
           </Section>
 
           <Container style={card}>
-            <Section style={{ textAlign: "center", marginBottom: "20px" }}>
+            <Section
+              style={{ ...imageBg, textAlign: "center", marginBottom: "20px" }}
+            >
               <Img
-                src={`${BASE_URL}/images/email-template.png`}
+                src={`${BASE_URL}images/email-template.png`}
                 alt="Customer Support"
-                style={{ width: "100%", maxWidth: "300px", margin: "0 auto" }}
+                style={{ width: "50%", maxWidth: "300px", margin: "0 auto" }}
               />
             </Section>
 
@@ -52,20 +59,20 @@ export default function EmailTemplate({
             {/* Customer Info */}
             <Section style={infoSection}>
               <Text style={text}>
-                <strong>Customer name:</strong> {fullName}
+                Customer name: <span style={textDetail}>{fullName}</span>
               </Text>
 
               <Text style={text}>
-                <strong>Company Name:</strong> {companyName}
+                Company Name: <span style={textDetail}>{companyName}</span>
               </Text>
 
               <Text style={text}>
-                <strong>Email Address:</strong> {email}
+                Email Address: <span style={textDetail}>{email}</span>
               </Text>
 
               {phone && (
                 <Text style={text}>
-                  <strong>Phone Number:</strong> {phone}
+                  Phone Number: <span style={textDetail}>{phone}</span>
                 </Text>
               )}
             </Section>
@@ -75,26 +82,26 @@ export default function EmailTemplate({
               <Text style={subHeading}>What would you like help with?</Text>
 
               <Text style={text}>
-                <strong>Selection:</strong> {helpTopic}
+                Selection: <span style={helpText}>{helpTopic}</span>
               </Text>
             </Section>
 
             {/* Message */}
-            <Section style={{ marginTop: "10px" }}>
+            <Section style={{ marginTop: "5px" }}>
               <Text style={messageText}>{message}</Text>
             </Section>
 
             {/* Closing */}
-            <Section style={{ marginTop: "20px" }}>
-              <Text style={text}>
+            <Section style={{ marginTop: "" }}>
+              <Text style={complimentText}>
                 We&apos;re looking forward to working with you!
               </Text>
 
-              <Text style={{ ...text, marginTop: "16px" }}>
-                <strong>Best Regards,</strong>
+              <Text style={{ ...textGreeting, marginTop: "16px" }}>
+                Best Regards,
               </Text>
 
-              <Text style={text}>Workstat Team</Text>
+              <Text style={complimentText}>Workstat Team</Text>
             </Section>
           </Container>
 
@@ -105,7 +112,15 @@ export default function EmailTemplate({
             </Text>
 
             <Text style={copyright}>
-              © {new Date().getFullYear()} Workstat. All rights reserved.
+              {/* <span>
+                <Img
+                  src={`${BASE_URL}/images/paystat-logo.png`}
+                  alt="paystat-logo"
+                  style={{ width: "100%", maxWidth: "36px", margin: "0 auto" }}
+                />
+              </span>{" "} */}
+              © Copyright {new Date().getFullYear()}, All Rights reserved. A
+              product of <span style={spanText}>Workstat.</span>
             </Text>
           </Section>
         </Container>
@@ -115,8 +130,8 @@ export default function EmailTemplate({
 }
 
 const body = {
-  backgroundColor: "#f3f4f6",
-  fontFamily: "Arial, sans-serif",
+  backgroundColor: "#F2F5F8",
+  fontFamily: "inter",
   margin: 0,
   padding: 0,
 };
@@ -129,27 +144,34 @@ const wrapper = {
 };
 
 const header = {
-  textAlign: "center" as const,
+  //textAlign: "center" as const,
   marginBottom: "20px",
 };
 
-const logoText = {
-  fontSize: "24px",
-  fontWeight: "700",
-  color: "#1f3b4d",
-};
+// const logoText = {
+//   fontSize: "24px",
+//   fontWeight: "700",
+//   color: "#1f3b4d",
+// };
 
 const card = {
   backgroundColor: "#ffffff",
-  borderRadius: "8px",
+  //borderRadius: "8px",
   padding: "24px",
   boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
+};
+
+const imageBg = {
+  backgroundColor: "#F7F6FF",
+  paddingTop: "10px",
+  paddingBottom: "10px",
 };
 
 const title = {
   fontSize: "24px",
   textAlign: "center" as const,
-  color: "#1f3b4d",
+  color: "#1B5773",
+  fontWeight: "600",
   marginBottom: "20px",
 };
 
@@ -158,37 +180,66 @@ const infoSection = {
 };
 
 const subHeading = {
-  fontSize: "16px",
+  fontSize: "12px",
   fontWeight: "600",
   marginBottom: "5px",
-  color: "#374151",
+  color: "#3E4451",
 };
 
 const text = {
-  fontSize: "14px",
-  color: "#4b5563",
+  fontSize: "12px",
+  fontWeight: "500",
+  color: "#3E4451",
   margin: "4px 0",
 };
 
+const textDetail = {
+  fontWeight: "700",
+};
+
+const helpText = {
+  fontWeight: "600",
+  color: "#103546",
+};
+
 const messageText = {
-  fontSize: "14px",
-  color: "#4b5563",
+  fontSize: "12px",
+  color: "#667085",
   lineHeight: "1.6",
   marginTop: "8px",
 };
 
+const complimentText = {
+  fontSize: "12px",
+  color: "#667085",
+};
+
+const textGreeting = {
+  fontSize: "12px",
+  fontWeight: "600",
+  color: "#3E4451",
+  margin: "4px 0",
+};
+
 const footer = {
-  textAlign: "center" as const,
-  marginTop: "20px",
+  //textAlign: "center" as const,
+  //marginTop: "10px",
 };
 
 const footerText = {
   fontSize: "12px",
-  color: "#6b7280",
+  color: "#667085",
+  fontWeight: "500",
 };
 
 const copyright = {
-  fontSize: "12px",
-  color: "#9ca3af",
+  fontSize: "10px",
+  color: "#667085",
   marginTop: "8px",
+};
+
+const spanText = {
+  fontSize: "10px",
+  color: "#D41370",
+  fontWeight: "500",
 };
